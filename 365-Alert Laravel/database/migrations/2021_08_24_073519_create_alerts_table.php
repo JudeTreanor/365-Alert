@@ -15,6 +15,9 @@ class CreateAlertsTable extends Migration
     {
         Schema::create('alerts', function (Blueprint $table) {
             $table->id();
+            $table->enum('type',['Very-high','high','medium','low']);
+            $table->string('location');
+            $table->float('water-level-chart');
             $table->timestamps();
         });
     }
