@@ -12,7 +12,7 @@
 
 <?php $__env->startSection('content'); ?>
     <h1>User List</h1>
-    <table border=1 style="margin: 0 auto; text-align:center; text-transform:capitalize" id="table">
+    <table id="table">
         <thead>
             <tr>
                 <th>Username</th>
