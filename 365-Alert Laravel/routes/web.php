@@ -4,6 +4,7 @@ use App\Http\Controllers\AlertController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,9 +52,11 @@ Route::get('/', function () {
 })->name('home');
 
 // Route to the login page
-Route::get('/login', [UserController::class, 'userEdit'])->name('login');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
-Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
 // Route to the procedures
 Route::get('/procedures', function () {
@@ -69,10 +72,10 @@ Route::get('/register', function () {
 
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 //password confirmation
-Route::get('/confirm-password', function () {
+/*Route::get('/confirm-password', function () {
     return view('auth.confirm-password');
 })->middleware('auth')->name('password.confirm');
-
+*/
 
 // Route to the terms and conditions
 Route::get('terms', function () {

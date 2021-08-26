@@ -8,6 +8,8 @@
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('css/register.css'); }}">
 @endsection
+<body>
+
 
 {{-- Main Content Section --}}
 @section('content')
@@ -23,7 +25,7 @@
         </ul>
     </div>
 @endif
-<form action="" method="post">
+<form action="" method="post" id="register" >
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
     <input type="text" name="username" placeholder="Username"><br>
@@ -36,7 +38,7 @@
 </form>
 @endsection
 
-
+</body>
 
 
 {{-- Footer Section --}}
