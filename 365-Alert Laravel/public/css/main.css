@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 375px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    background-color: #037C87;
+    padding: 20px;
+    color: #EFEFEF;
+}
+
+footer {
+    background-color: #037C87;
+    color: #EFEFEF;
+}
