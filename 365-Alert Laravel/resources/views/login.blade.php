@@ -8,7 +8,9 @@
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }}">
 @endsection
+<body>
 
+<main>
 {{-- Main Content Section --}}
 @section('content')
 <h3>Login</h3>
@@ -34,12 +36,13 @@
     <input type="text" name="username" placeholder="Username"><br>
     <input type="password" name="password" placeholder="Password"><br>
 
-    <input type="submit" value="login">
+    <input type="submit" value="login" id="submit2">
 </form>
+<p><span><a href="#">Forgot your password?</a></span></p>
 @endsection
 
-
-
+</main>
+</body>
 {{-- Footer Section --}}
 @section('footer')
 

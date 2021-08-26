@@ -34,8 +34,16 @@
     <input type="password" name="password_confirmation" placeholder="Confirm password"><br>
     <input type="number" name="contact" placeholder="Phone number"><br>
 
-    <input type="submit" value="Register">
+    <div id="checkbox">
+    <input type="checkbox" name="checkbox" value="check" id="agree" />
+    <p> I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
+    </div>
+    <input type="submit" value="Register" id="submit">
+
 </form>
+<div id="log">
+    <p>Already a member?<span><a href="login">Login Here  </a></span></p>
+</div>
 @endsection
 
 </body>
@@ -43,6 +51,7 @@
 
 {{-- Footer Section --}}
 @section('footer')
+
 
 @endsection
 
