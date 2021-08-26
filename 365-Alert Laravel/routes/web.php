@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,10 +65,13 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
-//Route::get('/register', [UserController::class, 'create'])->name('register');
+//Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 
-//Route::post('/register', [UserController::class, 'store'])->name('register');
-
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
+//password confirmation
+Route::get('/confirm-password', function () {
+    return view('auth.confirm-password');
+})->middleware('auth')->name('password.confirm');
 
 
 // Route to the terms and conditions
