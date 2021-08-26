@@ -29,7 +29,7 @@ By default, the username is root and password is also root. (This is for Lamp)
 <!-- This rollbacks and deletes the created tables -->
 ->php artisan migrate:rollback
 
-<!-- This updates our table -->
+<!-- This updates our tables -->
 ->php artisan migrate:refresh
 
 <!-- Drop all tables and migrate them again-->
