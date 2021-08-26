@@ -27,6 +27,8 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
+
 // Route to the Alert Details page
 Route::get('/alert-details', function () {
     return view('alert-details');
@@ -69,13 +71,7 @@ Route::get('/register', function () {
 })->name('register');
 
 //Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
-
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
-//password confirmation
-/*Route::get('/confirm-password', function () {
-    return view('auth.confirm-password');
-})->middleware('auth')->name('password.confirm');
-*/
 
 // Route to the terms and conditions
 Route::get('terms', function () {

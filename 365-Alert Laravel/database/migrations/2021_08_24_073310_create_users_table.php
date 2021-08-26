@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('password');
-            $table->integer('contact');
             $table->boolean('admin')->nullable();
             $table->timestamps();
         });
