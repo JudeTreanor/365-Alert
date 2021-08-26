@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('password');
-            $table->boolean('admin');
+            $table->boolean('admin')->nullable();
             $table->timestamps();
         });
     }

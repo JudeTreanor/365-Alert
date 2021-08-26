@@ -25,6 +25,8 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
+
 // Route to the Alert Details page
 Route::get('/alert-details', function () {
     return view('alert-details');
@@ -63,12 +65,6 @@ Route::get('/procedures', function () {
 Route::get('/register', function () {
     return view('register');
 })->name('register');
-
-//Route::get('/register', [UserController::class, 'create'])->name('register');
-
-//Route::post('/register', [UserController::class, 'store'])->name('register');
-
-
 
 // Route to the terms and conditions
 Route::get('terms', function () {
