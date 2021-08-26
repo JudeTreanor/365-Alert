@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AlertController;
+use App\Http\Controllers\AlertsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -81,3 +81,7 @@ Route::get('user', function () {
 })->name('user');
 
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
+
+//Route to get the api 
+
+Route::get('alerts', [AlertsController::class, 'getApi']);
