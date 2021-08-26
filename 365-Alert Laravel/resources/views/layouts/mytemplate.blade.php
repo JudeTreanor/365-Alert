@@ -16,12 +16,12 @@
 <body>
     <!-- Header with menu and login/register -->
     <header>
+
+        <img src="{{URL::asset('pictures/Menu_Colapsed_white.svg')}}" alt="">
+
         <section>
             <nav>
-                <div id="button">
-                    <button><img src="URL::asset('pictures/Menu_Colapsed_white.svg" alt=""></button>
-                </div>
-                <ul id="menu">
+                <ul class="navigation">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
