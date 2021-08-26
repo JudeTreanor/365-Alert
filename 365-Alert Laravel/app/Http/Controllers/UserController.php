@@ -8,10 +8,29 @@ use App\Models\User;
 class UserController extends Controller
 {   
     // Function to return all viewers to the admin page and put them in a table
-    public function adminUserList()
+    public function adminUsersList()
     {
         $users = User::all();
 
+        return view('admin', ['users' => $users]);
+    }
+
+    // Function to return the Admin view to edit the User
+    public function adminUserEdit($id)
+    {
+        $user = User::find($id);
+
+        return view('admin/useredit', ['user' => $user]);
+    }
+    
+    // Function to delete an user as an Admin
+    public function adminUserDelete($id)
+    {
+        User::destroy($id);
+
+        // retrieve the users
+        $users = User::all();
+        // function to return the admin page
         return view('admin', ['users' => $users]);
     }
 
@@ -45,4 +64,5 @@ class UserController extends Controller
         // Return the Client Settings View
         return view('user', ['user' => $user]);
     }
+
 }
