@@ -3,6 +3,8 @@
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,9 +54,11 @@ Route::get('/', function () {
 })->name('home');
 
 // Route to the login page
-Route::get('/login', [UserController::class, 'userEdit'])->name('login');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
-Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
 // Route to the procedures
 Route::get('/procedures', function () {
@@ -65,6 +69,9 @@ Route::get('/procedures', function () {
 Route::get('/register', function () {
     return view('register');
 })->name('register');
+
+//Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 
 // Route to the terms and conditions
 Route::get('terms', function () {
