@@ -16,29 +16,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route to the about page
-Route::get('/about', function(){
+Route::get('/about', function () {
     return view('about');
 })->name('about');
 
 // Route to the admin page
-Route::get('/admin', function(){
+Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
 // Route to the Alert Details page
-Route::get('/alert-details', function (){
+Route::get('/alert-details', function () {
     return view('alert-details');
 })->name('alert-details');
 
 // Route to the Alerts page
-Route::get('/alerts', function(){
+Route::get('/alerts', function () {
     return view('alerts');
 })->name('alerts');
 
-Route::post('/alerts/{id}', [AlertController::class,'alert-show'])->name('alert-show');
+Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
 
 // Route to the Contact page
-Route::get('/contact', function(){
+Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
@@ -50,23 +50,25 @@ Route::get('/', function () {
 })->name('home');
 
 // Route to the login page
-Route::get('/login', function(){
-    return view('login');
-})->name('login');
+Route::get('/login', [UserController::class, 'userEdit'])->name('login');
 
-Route::post('/login', [UserController::class, 'login-submit'])->name('login-submit');
+Route::post('/login', [UserController::class, 'login'])->name('login');
 
 // Route to the procedures
-Route::get('/procedures', function(){
+Route::get('/procedures', function () {
     return view('procedures');
 })->name('procedures');
 
 // Route to the Register
-Route::get('register', function () {
+Route::get('/register', function () {
     return view('register');
 })->name('register');
 
-Route::post('register', [UserController::class, 'register-submit'])->name('register-submit');
+//Route::get('/register', [UserController::class, 'create'])->name('register');
+
+//Route::post('/register', [UserController::class, 'store'])->name('register');
+
+
 
 // Route to the terms and conditions
 Route::get('terms', function () {
@@ -79,4 +81,3 @@ Route::get('user', function () {
 })->name('user');
 
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
-
