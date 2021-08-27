@@ -26,8 +26,8 @@
                 <td><?php echo e($user->username); ?></td>
                 <td><?php echo e($user->email); ?></td>
                 <td><?php echo e($user->contact); ?></td>
-                <td class="no-border"><a href="<?php echo e(url('edit/' . $user->id)); ?>">Edit User</a></td>
-                <td class="no-border"><a href="<?php echo e(url('delete/' . $user->id)); ?>" style="color: red">Delete User</a></td>
+                <td class="no-border"><a href="<?php echo e(url('admin/edit/' . $user->id)); ?>">Edit User</a></td>
+                <td class="no-border"><a href="<?php echo e(url('admin/delete/' . $user->id)); ?>" style="color: red">Delete User</a></td>
             </tr><br>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>

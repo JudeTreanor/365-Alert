@@ -26,8 +26,8 @@
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->contact }}</td>
-                <td class="no-border"><a href="{{ url('edit/' . $user->id)}}">Edit User</a></td>
-                <td class="no-border"><a href="{{ url('delete/' . $user->id)}}" style="color: red">Delete User</a></td>
+                <td class="no-border"><a href="{{ url('admin/edit/' . $user->id)}}">Edit User</a></td>
+                <td class="no-border"><a href="{{ url('admin/delete/' . $user->id)}}" style="color: red">Delete User</a></td>
             </tr><br>
             @endforeach
         </tbody>
