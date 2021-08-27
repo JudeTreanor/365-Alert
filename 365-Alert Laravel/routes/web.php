@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use Illuminate\Support\Facades\Password;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +59,23 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+//route the forgot password
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
+})->middleware('guest')->name('password.request');
+
+Route::post('/forgot-password', function (Request $request) {
+    $request->validate(['email' => 'required|email']);
+
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+
+    return $status === Password::RESET_LINK_SENT
+        ? back()->with(['status' => __($status)])
+        : back()->withErrors(['email' => __($status)]);
+})->middleware('guest')->name('password.email');
+
 
 // Route to the procedures
 Route::get('/procedures', function () {
