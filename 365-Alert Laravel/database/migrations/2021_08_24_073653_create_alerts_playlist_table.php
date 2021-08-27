@@ -14,7 +14,7 @@ class CreateAlertsPlaylistTable extends Migration
     public function up()
     {
         Schema::create('alerts_playlist', function (Blueprint $table) {
-
+            $table->string('comments');
             $table->integer('users_id')->unsigned();
             $table->integer('alerts_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');

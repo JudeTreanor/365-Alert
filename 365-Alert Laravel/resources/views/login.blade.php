@@ -38,7 +38,7 @@
 </form>
 @endsection
 
-@endsection
+
 
 {{-- Footer Section --}}
 @section('footer')
