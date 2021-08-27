@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class UserController extends Controller
-{   
+{
     // Function to return all viewers to the admin page and put them in a table
     public function adminUsersList()
     {
@@ -45,7 +45,7 @@ class UserController extends Controller
 
     // Function to update a specific user settings
     public function userUpdate(Request $request, $id)
-    {   
+    {
         // Look for the specific User ID
         $user = User::find($id);
 

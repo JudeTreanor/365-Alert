@@ -11,7 +11,27 @@
 
 
 <?php $__env->startSection('content'); ?>
-    
+    <h1>User List</h1>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody style="font-size:30px"> 
+            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <tr>
+                <td><?php echo e($user->username); ?></td>
+                <td><?php echo e($user->email); ?></td>
+                <td><?php echo e($user->contact); ?></td>
+                <td class="no-border"><a href="<?php echo e(url('edit/' . $user->id)); ?>">Edit User</a></td>
+                <td class="no-border"><a href="<?php echo e(url('delete/' . $user->id)); ?>" style="color: red">Delete User</a></td>
+            </tr><br>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </tbody>
+    </table>
 <?php $__env->stopSection(); ?>
 
 
