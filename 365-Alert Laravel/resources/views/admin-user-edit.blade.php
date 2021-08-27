@@ -21,7 +21,7 @@
     <input type="number" name="contact" placeholder="Phone number" value="{{$user->contact}}"><br>
     <label for="Password">Password</label>
     <input type="text" name="password" placeholder="Password" value="{{$user->password}}"><br>
-    <input type="submit">
+    <input type="submit" value="Submit">
    </form>
 @endsection
 

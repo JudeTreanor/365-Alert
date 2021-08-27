@@ -38,10 +38,10 @@ class UserController extends Controller
         $user->save();
 
         // Retrieve the User
-        $user = User::find($id);
+        $users = User::all();
 
         // Return the Client Settings View
-        return view('user', ['user' => $user]);
+        return view('admin', ['users' => $users]);
     }
     
     // Function to delete an user as an Admin
