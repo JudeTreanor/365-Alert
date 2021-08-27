@@ -34,6 +34,7 @@
     <input type="email" name="email" placeholder="Email" class="input-email"><br>
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>
+    <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
     <input type="number" name="contact" placeholder="Phone number"class="input-phone"><br>
 
     <div id="checkbox">
