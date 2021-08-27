@@ -1,12 +1,4 @@
-/*Variables for colors*/
-
-:root {
-    --white: #EFEFEF;
-    --green: #037C87;
-    --blue: #16354D;
-    --lime: #ABBA82;
-    --purple: #2B3371;
-}
+/*general settings*/
 
 * {
     box-sizing: border-box;
@@ -14,16 +6,50 @@
     padding: 0;
 }
 
+
+/*Variables for colors*/
+
+:root {
+    --white: #EFEFEF;
+    --green: #0B9E99;
+    --blue: #16354D;
+    --dark_green: #037C87;
+    --purple: #2B3371;
+}
+
 body {
-    width: 375px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    margin: 0 auto;
 }
 
 header {
     background-color: var(--green);
-    padding: 20px;
     color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation>li {
+    list-style: none;
+}
+
+.register>li {
+    list-style: none;
+}
+
+.navigation>li>a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 20px;
+}
+
+.register>li>a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark_green);
+    padding: 20px;
 }
 
 header img {
@@ -31,14 +57,67 @@ header img {
     height: 100px;
 }
 
-ul {
+ul .navigation {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    text-decoration: none;
 }
 
-footer {
+.navigation {
+    display: none;
+}
+
+.register {
+    display: none;
+}
+
+main {
+    background-color: wheat;
+    height: 500px;
+}
+
+footer img {
+    width: 80px;
+    margin: -20px;
+}
+
+#footer {
     background-color: var(--green);
     color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer>ul>li {
+    list-style-type: none;
+}
+
+#footer>ul>li>a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+/*Desktop view*/
+
+@media screen and (min-width: 1200px) {
+    header img {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+    .navigation {
+        display: flex;
+        text-decoration: none;
+        padding: 10px 50px;
+        background-color: var(--green);
+    }
+    .register {
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        padding: 10px 50px;
+    }
 }

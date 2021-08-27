@@ -87,4 +87,4 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 
 //Route to get the api 
 
-Route::get('alerts', [AlertsController::class, 'getApi']);
+//Route::get('alerts', [AlertsController::class, 'getApi']);
