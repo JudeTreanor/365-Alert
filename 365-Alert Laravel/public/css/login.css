@@ -1,11 +1,3 @@
-body {
-    height: 420px;
-    width: 370px;
-    margin: 50px auto;
-    background-color: #037c87;
-    text-align: center;
-    font-family: roboto;
-}
 input {
     margin-bottom: 17px;
     width: 291;
@@ -17,6 +9,7 @@ input {
 h3 {
     color: white;
     font-size: 20px;
+    margin-bottom: 30px;
 }
 #submit2 {
     background-color: #abba82;
@@ -24,4 +17,24 @@ h3 {
 }
 p {
     color: black;
+}
+img {
+    margin-bottom: -76px;
+}
+::placeholder {
+    color: #037c87;
+    padding-left: 40px;
+    font-size: 16px;
+}
+.input-username {
+    background-image: url("../css/logos/username.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 1px;
+}
+.input-password {
+    background-image: url("../css/logos/password.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 1px;
 }
