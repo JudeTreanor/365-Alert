@@ -23,11 +23,14 @@ Route::get('/about', function () {
 })->name('about');
 
 // Route to the admin page
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin');
 
 Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
+
+Route::get('/admin/edit/{id}', [UserController::class, 'adminUserEdit']);
+
+Route::post('/admin/edit/{id}', [UserController::class, 'adminUserUpdate']);
+
+Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete']);
 
 // Route to the Alert Details page
 Route::get('/alert-details', function () {
@@ -87,4 +90,4 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 
 //Route to get the api 
 
-Route::get('alerts', [AlertsController::class, 'getApi']);
+// Route::get('alerts', [AlertsController::class, 'getApi']);
