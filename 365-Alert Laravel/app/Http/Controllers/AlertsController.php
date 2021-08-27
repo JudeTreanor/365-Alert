@@ -12,13 +12,18 @@ class AlertsController extends Controller
     {
         $alerts = new Client();
 
-        $url = 'https://data.public.lu/en/reuses/heichwaasser-api/';
+
+        $url = 'https://heichwaasser.lu/api/v1/stations';
 
         $response = $alerts->request('GET', $url);
 
-        $responseBody = json_decode($response->getBody());
+        $responseBodys = json_decode($response->getBody());
 
-        dd($responseBody);
+        //dd($responseBody);
+
+        foreach ($responseBodys as $key => $responseBody) {
+            echo $responseBodys;
+        }
 
         //create controller to pull from api
         //take data from api and make alert fuintions with ifs and shit 
@@ -32,7 +37,6 @@ class AlertsController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
