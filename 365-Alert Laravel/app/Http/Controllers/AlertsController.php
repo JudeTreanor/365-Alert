@@ -22,8 +22,19 @@ class AlertsController extends Controller
         //dd($responseBody);
 
         foreach ($responseBodys as $key => $responseBody) {
-            echo $responseBodys;
+            //echo $responseBody->current->value ;
+            if ($responseBody->current->value > $responseBody->maximum->value) {
+                echo $responseBody->city . " WE ARE IN DANGER" .  "<br>";
+            } else if ($responseBody->current->value > $responseBody->maximum->value - 50) {
+                echo $responseBody->city . " is 50cm below maximum" . "<br>";
+            } else if ($responseBody->current->value > $responseBody->maximum->value - 100) {
+                echo $responseBody->city . " is 100cm below maximum" . "<br>";
+            } else {
+                echo $responseBody->city . " is good" . "<br>";
+            }
         }
+
+
 
         //create controller to pull from api
         //take data from api and make alert fuintions with ifs and shit 
