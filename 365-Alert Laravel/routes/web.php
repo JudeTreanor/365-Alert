@@ -37,11 +37,6 @@ Route::get('/alert-details', function () {
     return view('alert-details');
 })->name('alert-details');
 
-// Route to the Alerts page
-Route::get('/alerts', function () {
-    return view('alerts');
-})->name('alerts');
-
 Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
 
 // Route to the Contact page
@@ -90,4 +85,4 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 
 //Route to get the api 
 
-// Route::get('alerts', [AlertsController::class, 'getApi']);
+Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');
