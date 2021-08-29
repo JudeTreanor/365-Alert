@@ -20,7 +20,28 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('admin/useredit', ['user' => $user]);
+        return view('admin-user-edit', ['user' => $user]);
+    }
+
+    public function adminUserUpdate(Request $request, $id)
+    {
+        // Look for the specific User ID
+        $user = User::find($id);
+
+        // Set the Attributes
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->contact = $request->contact;
+
+        // Save on the model instance
+        $user->save();
+
+        // Retrieve the User
+        $users = User::all();
+
+        // Return the Client Settings View
+        return view('admin', ['users' => $users]);
     }
     
     // Function to delete an user as an Admin

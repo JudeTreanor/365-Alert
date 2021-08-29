@@ -12,13 +12,29 @@ class AlertsController extends Controller
     {
         $alerts = new Client();
 
-        $url = 'https://data.public.lu/en/reuses/heichwaasser-api/';
+
+        $url = 'https://heichwaasser.lu/api/v1/stations';
 
         $response = $alerts->request('GET', $url);
 
-        $responseBody = json_decode($response->getBody());
+        $responseBodys = json_decode($response->getBody());
 
-        dd($responseBody);
+        //dd($responseBody);
+
+        foreach ($responseBodys as $key => $responseBody) {
+            //echo $responseBody->current->value ;
+            if ($responseBody->current->value > $responseBody->maximum->value) {
+                echo $responseBody->city . " WE ARE IN DANGER" .  "<br>";
+            } else if ($responseBody->current->value > $responseBody->maximum->value - 50) {
+                echo $responseBody->city . " is 50cm below maximum" . "<br>";
+            } else if ($responseBody->current->value > $responseBody->maximum->value - 100) {
+                echo $responseBody->city . " is 100cm below maximum" . "<br>";
+            } else {
+                echo $responseBody->city . " is good" . "<br>";
+            }
+        }
+
+
 
         //create controller to pull from api
         //take data from api and make alert fuintions with ifs and shit 
@@ -32,7 +48,6 @@ class AlertsController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
