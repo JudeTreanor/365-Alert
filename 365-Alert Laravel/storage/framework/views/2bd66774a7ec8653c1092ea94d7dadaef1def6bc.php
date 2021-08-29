@@ -37,13 +37,17 @@
     <input type="text" name="username" placeholder="Username"><br>
     <input type="password" name="password" placeholder="Password"><br>
 
+
     <input type="submit" value="login" id="submit2">
 </form>
 <p><span><a href="#">Forgot your password?</a></span></p>
+
 <?php $__env->stopSection(); ?>
 
 </main>
 </body>
+
+
 
 <?php $__env->startSection('footer'); ?>
 

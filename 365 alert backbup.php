@@ -1,7 +1,10 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\AlertController;
+
+
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -30,19 +33,19 @@ Route::get('/about', function () {
 })->name('about');
 
 // Route to the admin page
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin');
+
+Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
+
+Route::get('/admin/edit/{id}', [UserController::class, 'adminUserEdit']);
+
+Route::post('/admin/edit/{id}', [UserController::class, 'adminUserUpdate']);
+
+Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete']);
 
 // Route to the Alert Details page
 Route::get('/alert-details', function () {
     return view('alert-details');
 })->name('alert-details');
-
-// Route to the Alerts page
-Route::get('/alerts', function () {
-    return view('alerts');
-})->name('alerts');
 
 Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
 
@@ -122,13 +125,7 @@ Route::get('/register', function () {
 })->name('register');
 
 //Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
-
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
-//password confirmation
-/*Route::get('/confirm-password', function () {
-    return view('auth.confirm-password');
-})->middleware('auth')->name('password.confirm');
-*/
 
 // Route to the terms and conditions
 Route::get('terms', function () {
@@ -141,3 +138,7 @@ Route::get('user', function () {
 })->name('user');
 
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
+
+//Route to get the api 
+
+Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');

@@ -1,0 +1,44 @@
+/*Variables for colors*/
+
+:root {
+    --white: #EFEFEF;
+    --green: #037C87;
+    --blue: #16354D;
+    --lime: #ABBA82;
+    --purple: #2B3371;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 375px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: var(--green);
+    padding: 20px;
+    color: var(--white);
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+}
