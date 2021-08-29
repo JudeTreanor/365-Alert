@@ -19,46 +19,45 @@
 
         <img src="{{URL::asset('pictures/Menu_Colapsed_white.svg')}}" alt="">
 
-        <section>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Alert</a></li>
-                    <li><a href="#">Measures</a></li>
-                </ul>
-                <h2>365 Alert</h2>
+        <h2 id="logo">365 Alert</h2>
 
-                <ul id="register">
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-            </nav>
-        </section>
+        <img src="{{URL::asset('pictures/User_WhiteStroke_Header.svg')}}" alt="">
+
     </header>
 
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Alert</a></li>
+        <li><a href="#">Measures</a></li>
+    </ul>
+
+    <ul class="register">
+        <li><a href="#">Log in</a></li>
+        <li><a href="#">Sign Up</a></li>
+    </ul>
+
+
     <main class="content">
-        @include('layouts.nav')
         @yield('content')
     </main>
     <footer>
-        <!-- footer section with two divs and logo image -->
-        <section>
-            <div class="container">
-                <ul id="social">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twiiter</a></li>
-                </ul>
+        <!-- footer with two divs and logo image -->
+        <section id="footer">
+            <div id="container">
 
-                <ul id="terms">
-                    <li><a href="#">Cookies</a></li>
-                    <li><a href="#">Pricacy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms and conditions</a></li>
-                </ul>
+                <img src="{{URL::asset('pictures/Facebook_Footer_white.svg')}}" alt="">
+                <img src="{{URL::asset('pictures/Instagram_Footer_white.svg')}}" alt="">
+                <img src="{{URL::asset('pictures/Twitter_Footer_white.svg')}}" alt="">
+
             </div>
+            <ul class="terms">
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Pricacy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+            </ul>
 
             <div class="logo">
                 <h3>Logo</h3>
@@ -68,6 +67,7 @@
 
         @yield('footer')
     </footer>
+    @include('layouts.nav')
     @yield('scripts')
 </body>
 
