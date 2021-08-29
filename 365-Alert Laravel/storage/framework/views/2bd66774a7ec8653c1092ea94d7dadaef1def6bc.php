@@ -8,7 +8,9 @@
 <?php $__env->startSection('css'); ?>
     <link rel="stylesheet" href="<?php echo e(URL::asset('css/login.css')); ?>">
 <?php $__env->stopSection(); ?>
+<body>
 
+<main>
 
 <?php $__env->startSection('content'); ?>
 <h3>Login</h3>
@@ -35,10 +37,15 @@
     <input type="text" name="username" placeholder="Username"><br>
     <input type="password" name="password" placeholder="Password"><br>
 
-    <input type="submit" value="login">
+
+    <input type="submit" value="login" id="submit2">
 </form>
+<p><span><a href="#">Forgot your password?</a></span></p>
+
 <?php $__env->stopSection(); ?>
 
+</main>
+</body>
 
 
 

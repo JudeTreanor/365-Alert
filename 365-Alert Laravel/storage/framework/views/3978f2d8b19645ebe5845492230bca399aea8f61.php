@@ -33,9 +33,17 @@
     <input type="password" name="password" placeholder="Password"><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password"><br>
     <input type="number" name="contact" placeholder="Phone number"><br>
+    <div id="checkbox">
+    <input type="checkbox" name="checkbox" value="check" id="agree" />
+    <p> I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
+    </div>
+    <input type="submit" value="Register" id="submit">
 
-    <input type="submit" value="Register">
 </form>
+<div id="log">
+    <p>Already a member?<span><a href="login">Login Here  </a></span></p>
+</div>
+
 <?php $__env->stopSection(); ?>
 
 </body>
@@ -43,6 +51,7 @@
 
 
 <?php $__env->startSection('footer'); ?>
+
 
 <?php $__env->stopSection(); ?>
 

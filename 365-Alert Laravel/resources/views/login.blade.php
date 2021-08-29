@@ -7,10 +7,15 @@
 {{-- CSS Link --}}
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }}">
-@endsection
 
+@endsection
+<body>
+
+<main>
 {{-- Main Content Section --}}
 @section('content')
+
+<img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
 <h3>Login</h3>
 
 @if (session('status'))
@@ -31,15 +36,20 @@
 <form action="" method="post">
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="password" name="password" placeholder="Password"><br>
 
-    <input type="submit" value="login">
+
+    <input type="text" name="username" placeholder="Username" class="input-username" onfocus="this.placeholder=''"
+    onblur="this.placeholder='enter your text'" >
+
+    <input type="password" name="password" placeholder="Password" class="input-password" ><br>
+<p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
+    <input type="submit" value="login" id="submit2">
 </form>
+
 @endsection
 
-
-
+</main>
+</body>
 {{-- Footer Section --}}
 @section('footer')
 
