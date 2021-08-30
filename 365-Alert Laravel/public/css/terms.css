@@ -17,19 +17,19 @@
 
 main {
     font-family: 'Roboto', sans-serif;
-    color: var(--blue);
+    color: var(--white);
     justify-content: flex-start;
 }
 
 h1 {
-    color: var(--green);
+    color: var(--blue);
     padding-top: 20px;
     font-size: 3rem;
 }
 
 h2 {
     font-size: 2rem;
-    color: var(--green);
+    color: var(--blue);
 }
 
 p {

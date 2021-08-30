@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*Variables for colors*/
+
+:root {
+    --white: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
+    --red: #D90000;
+    --orange: #FF6501;
+}
+
+main {
+    background-color: var(--background-white);
+    text-align: center;
+    margin: 0 auto;
+}
+
+#emergency img {
+    width: 100%;
+}
+
+#danger h2 {
+    background-color: var(--dark_green);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--white);
+    padding: 50px;
+}
+
+.danger p {
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+.icon-block {
+    background: url('../pictures/Alert_Warning_Red.svg') no-repeat -50px -10px/200px white;
+    padding-left: 100px;
+    min-height: 100px;
+    text-align: left;
+}
