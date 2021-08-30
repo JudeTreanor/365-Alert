@@ -1,24 +1,21 @@
-/*general settings*/
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 /*Variables for colors*/
 
 :root {
-    --white: #EFEFEF;
-    --green: #0B9E99;
-    --blue: #16354D;
-    --dark_green: #037C87;
-    --purple: #2B3371;
+    --white: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
     margin: 0 auto;
 }
@@ -31,21 +28,21 @@ header {
     align-items: center;
 }
 
-.navigation>li {
+.navigation > li {
     list-style: none;
 }
 
-.register>li {
+.register > li {
     list-style: none;
 }
 
-.navigation>li>a {
+.navigation > li > a {
     text-decoration: none;
     color: var(--white);
     padding: 20px;
 }
 
-.register>li>a {
+.register > li > a {
     text-decoration: none;
     color: var(--white);
     background-color: var(--dark_green);
@@ -91,15 +88,14 @@ footer img {
     align-items: center;
 }
 
-#footer>ul>li {
+#footer > ul > li {
     list-style-type: none;
 }
 
-#footer>ul>li>a {
+#footer > ul > li > a {
     text-decoration: none;
     color: var(--white);
 }
-
 
 /*Desktop view*/
 
