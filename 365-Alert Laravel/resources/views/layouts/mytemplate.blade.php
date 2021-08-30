@@ -53,9 +53,6 @@
 
             </div>
             <ul class="terms">
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Pricacy</a></li>
-                <li><a href="#">Contact</a></li>
                 <li><a href="#">Terms and conditions</a></li>
             </ul>
 

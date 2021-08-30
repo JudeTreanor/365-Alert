@@ -71,20 +71,22 @@ ul .navigation {
     display: none;
 }
 
+.logo {
+    display: none;
+}
+
 main {
-    background-color: wheat;
-    height: 500px;
+    background-color: var(--dark_green);
 }
 
 footer img {
-    width: 80px;
+    width: 100px;
     margin: -20px;
 }
 
 #footer {
     background-color: var(--green);
     color: var(--white);
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
