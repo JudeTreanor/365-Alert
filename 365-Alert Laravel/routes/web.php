@@ -41,12 +41,16 @@ Route::get('/email', function () {
 
 // Route to the admin page
 
+// Route for the admin page to display all of the users list
 Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
 
+// Route to edit a specific user selected in the list
 Route::get('/admin/edit/{id}', [UserController::class, 'adminUserEdit']);
 
+// Route to update the user information
 Route::post('/admin/edit/{id}', [UserController::class, 'adminUserUpdate']);
 
+// Route to delete specific user 
 Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete']);
 
 // Route to the Alert Details page
@@ -54,6 +58,7 @@ Route::get('/alert-details', function () {
     return view('alert-details');
 })->name('alert-details');
 
+// Route to show a specific alert details
 Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
 
 // Route to the Contact page
@@ -68,18 +73,21 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-// Route to the login page
+// Route to the show the login page
 Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+// Route to submit the login form
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 //route the forgot password
 
+// Route to the forgotten password page
 Route::get('/forgot-password', function () {
     return view('forgot-password');
 })->middleware('guest')->name('password.request');
 
+// Route to submit the forgotten password form
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
 
@@ -146,8 +154,8 @@ Route::get('user', function () {
     return view('user');
 })->name('user');
 
+// Route to submit the User modification
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
 
 //Route to get the api
-
 Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');
