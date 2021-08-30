@@ -9,42 +9,56 @@ use GuzzleHttp\Client;
 class AlertsController extends Controller
 {
     public function getApi()
-    {
+    {   
+        // Create a new client
         $alerts = new Client();
 
-
+        // Set the URL of the API to get the stations JSON
         $url = 'https://heichwaasser.lu/api/v1/stations';
 
+        // Save the API request answer to a variable
         $response = $alerts->request('GET', $url);
 
+        // Decode the JSON file into an Object
         $responseBodys = json_decode($response->getBody());
 
-        
-
+        // Looping through the Object 
         foreach ($responseBodys as $response) {
-            // Alert Assigning
+
+            // Nested Loop to Iterate through the alert_levels array
             foreach ($response->alert_levels as $key => $level) {
-                $redAlertLevel = 
                 
-                if ($response->current->value >= $redAlertLevel) {
-                    echo $response->city . " is in Red Alert" .  "<br>";
+                // Conditionals to save the water levels into variables and rehuse them to check
+                // if the current water levels are at certain levels or normal
+                if ($level->name === 'Cote de vigilance') {
                     
-                } else {
-                    $orangeAlertLevel = $level->value;
-                    if ($response->current->value >= $orangeAlertLevel) {
-                        echo $response->city . " is in Orange Alert" . "<br>";
+                    $yellowAlertLevel = $level->value;
+                    
+                    if ($response->current->value >= $yellowAlertLevel) {
+                        echo "Yellow Alert";
                     }
+                } else if ($level->name === 'Cote de préalerte') {
+                    
+                    $orangeAlertLevel = $level->value;
+
+                    if ($response->current->value >= $orangeAlertLevel) {
+                        echo "Orange Alert";
+                    }
+                } else if ($level->name === "Cote d'alerte") {
+                    
+                    $redAlertLevel = $level->value;
+
+                    if ($response->current->value >= $redAlertLevel) {
+                        echo "Red Alert";
+                    }
+
+                } else if ($response->current->value <= $response->minimum->value) {
+                    echo $response->city . " is dry";
+
+                } else {
+                    echo $response->city . " is " . $response->current->value . " cm and everything is okei<br>";
                 }
-                // Comparing the current water level(value) with the maximum with the values that the API has set
-                // if ($response->current->value >= $redAlertLevel) {
-                //     echo $response->city . " is in Red Alert" .  "<br>";
-    
-                // } else if ($response->current->value >= $orangeAlertLevel) {
-                //     echo $response->city . " is in Orange Alert" . "<br>";
-    
-                // } else {
-                //     echo $response->city . " is good" . "<br>";
-                // }
+
         }
     }
             
