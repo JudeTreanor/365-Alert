@@ -61,12 +61,13 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
-//route the forgot password
 
+//route the forgot password
 Route::get('/forgot-password', function () {
     return view('forgot-password');
 })->middleware('guest')->name('password.request');
 
+//route post forgot password
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
 
@@ -81,8 +82,8 @@ Route::post('/forgot-password', function (Request $request) {
 
 //route to reset-password
 Route::get('/reset-password/{token}', function ($token) {
-    return view('auth.reset-password', ['token' => $token]);
-})->middleware('guest')->name('password.reset');
+    return view('reset-password', ['token' => $token]);
+})->middleware('guest')->name('password.request');
 
 Route::post('/reset-password', function (Request $request) {
     $request->validate([
