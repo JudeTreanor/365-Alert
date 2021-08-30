@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 /*Variables for colors*/
 
 :root {
@@ -13,6 +12,12 @@
     --blue: #16354d;
     --dark_green: #037c87;
     --purple: #2b3371;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 body {
@@ -29,21 +34,21 @@ header {
     align-items: center;
 }
 
-.navigation>li {
+.navigation > li {
     list-style: none;
 }
 
-.register>li {
+.register > li {
     list-style: none;
 }
 
-.navigation>li>a {
+.navigation > li > a {
     text-decoration: none;
     color: var(--white);
     padding: 20px;
 }
 
-.register>li>a {
+.register > li > a {
     text-decoration: none;
     color: var(--white);
     background-color: var(--dark_green);
@@ -90,15 +95,14 @@ footer img {
     padding: 20px;
 }
 
-#footer>ul>li {
+#footer > ul > li {
     list-style-type: none;
 }
 
-#footer>ul>li>a {
+#footer > ul > li > a {
     text-decoration: none;
     color: var(--white);
 }
-
 
 /*Desktop view*/
 
