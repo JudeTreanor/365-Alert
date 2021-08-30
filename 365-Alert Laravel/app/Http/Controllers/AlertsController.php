@@ -19,20 +19,36 @@ class AlertsController extends Controller
 
         $responseBodys = json_decode($response->getBody());
 
-        //dd($responseBody);
+        
 
-        foreach ($responseBodys as $key => $responseBody) {
-            //echo $responseBody->current->value ;
-            if ($responseBody->current->value > $responseBody->maximum->value) {
-                echo $responseBody->city . " WE ARE IN DANGER" .  "<br>";
-            } else if ($responseBody->current->value > $responseBody->maximum->value - 50) {
-                echo $responseBody->city . " is 50cm below maximum" . "<br>";
-            } else if ($responseBody->current->value > $responseBody->maximum->value - 100) {
-                echo $responseBody->city . " is 100cm below maximum" . "<br>";
-            } else {
-                echo $responseBody->city . " is good" . "<br>";
-            }
+        foreach ($responseBodys as $response) {
+            // Alert Assigning
+            foreach ($response->alert_levels as $key => $level) {
+                $redAlertLevel = 
+                
+                if ($response->current->value >= $redAlertLevel) {
+                    echo $response->city . " is in Red Alert" .  "<br>";
+                    
+                } else {
+                    $orangeAlertLevel = $level->value;
+                    if ($response->current->value >= $orangeAlertLevel) {
+                        echo $response->city . " is in Orange Alert" . "<br>";
+                    }
+                }
+                // Comparing the current water level(value) with the maximum with the values that the API has set
+                // if ($response->current->value >= $redAlertLevel) {
+                //     echo $response->city . " is in Red Alert" .  "<br>";
+    
+                // } else if ($response->current->value >= $orangeAlertLevel) {
+                //     echo $response->city . " is in Orange Alert" . "<br>";
+    
+                // } else {
+                //     echo $response->city . " is good" . "<br>";
+                // }
         }
+    }
+            
+
 
 
 

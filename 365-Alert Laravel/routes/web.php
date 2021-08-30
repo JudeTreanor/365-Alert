@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\AlertsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -10,6 +11,12 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
+
+//use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +32,12 @@ use Illuminate\Support\Str;
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+//Makes a mailable, access it from /email. Edit it in welcome.blade
+Route::get('/email', function () {
+    Mail::to('hello@example.com')->send(new WelcomeMail());
+    return new WelcomeMail();
+});
 
 // Route to the admin page
 
