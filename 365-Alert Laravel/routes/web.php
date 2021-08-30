@@ -160,7 +160,3 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 
 //Route to get the api
 Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');
-
-Route::get('/client-settings', function () {
-    return view('client-settings');
-})->name('client-settings');
