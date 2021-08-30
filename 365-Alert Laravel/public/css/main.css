@@ -89,6 +89,7 @@ footer img {
     color: var(--white);
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 
 #footer>ul>li {
