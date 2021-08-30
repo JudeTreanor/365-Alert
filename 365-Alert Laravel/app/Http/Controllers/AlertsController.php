@@ -19,10 +19,10 @@ class AlertsController extends Controller
 
         $responseBodys = json_decode($response->getBody());
 
-        //dd($responseBody);
+        
 
         foreach ($responseBodys as $key => $responseBody) {
-            //echo $responseBody->current->value ;
+            
             if ($responseBody->current->value > $responseBody->maximum->value) {
                 echo $responseBody->city . " WE ARE IN DANGER" .  "<br>";
             } else if ($responseBody->current->value > $responseBody->maximum->value - 50) {
@@ -34,7 +34,7 @@ class AlertsController extends Controller
             }
         }
 
-
+        
 
         //create controller to pull from api
         //take data from api and make alert fuintions with ifs and shit 
