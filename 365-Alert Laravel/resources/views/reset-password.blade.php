@@ -10,7 +10,7 @@
 {{-- Main Content Section --}}
 @section('content')
 <img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
-<h3>Forgot password</h3>
+<h3>reset password</h3>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
