@@ -17,15 +17,15 @@
     <!-- Header with menu and login/register -->
     <header>
 
-        <img src="{{URL::asset('pictures/Menu_Colapsed_white.svg')}}" alt="">
+        <img id="action" src="{{URL::asset('pictures/Menu_Colapsed_white.svg')}}" alt="">
 
         <h2 id="logo">365 Alert</h2>
 
-        <img src="{{URL::asset('pictures/User_WhiteStroke_Header.svg')}}" alt="">
+        <img id="user-icon" src="{{URL::asset('pictures/User_WhiteStroke_Header.svg')}}" alt="">
 
     </header>
 
-    <ul class="navigation">
+    <ul id="navigation">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -66,6 +66,7 @@
     </footer>
     @include('layouts.nav')
     @yield('scripts')
+    <script src="{{URL::asset('js/template.js')}}"></script>
 </body>
 
 </html>
