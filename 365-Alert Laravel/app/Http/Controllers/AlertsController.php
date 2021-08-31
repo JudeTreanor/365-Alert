@@ -64,7 +64,7 @@ class AlertsController extends Controller
         }
             
 
-
+        return view('alerts');
 
 
         //create controller to pull from api
