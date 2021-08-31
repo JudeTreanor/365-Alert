@@ -53,7 +53,7 @@
 
             </div>
             <ul class="terms">
-                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="<?php echo e(URL::asset('terms')); ?>">Terms and conditions</a></li>
             </ul>
 
             <div class="logo">
