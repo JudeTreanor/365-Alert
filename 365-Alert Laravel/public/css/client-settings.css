@@ -14,8 +14,17 @@
     --purple: #2b3371;
 }
 
+#settings-bar {
+    background-color: var(--dark_green);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--white);
+    padding: 50px;
+}
+
 h3 {
     color: var(--white);
+
     font-size: 20px;
     margin-bottom: 30px;
 }
