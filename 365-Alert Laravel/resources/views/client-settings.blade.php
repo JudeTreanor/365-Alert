@@ -14,7 +14,7 @@
         <h1 id="client">Client Settings</h1>
 
         <section id="settings-bar">
-
+            <h2>Personal Details</h2>
 
         </section>
     </main>
