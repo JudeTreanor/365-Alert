@@ -1,0 +1,58 @@
+.content {
+	background-color: #fff;
+}
+
+:root {
+	--grey: #efefef;
+	--green: #0b9e99;
+	--blue: #16354d;
+	--dark_green: #037c87;
+	--purple: #2b3371;
+	--darkgrey: #dcdcdc;
+}
+
+.contact_image img {
+	width: 100%;
+}
+
+#contact_title {
+	background-color: #037c87;
+	padding: 50px;
+	font-size: 24px;
+	font-family: Roboto;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: white;
+}
+
+form {
+	background-color: #efefef;
+	padding: 50px;
+}
+
+#submit_button {
+	color: white;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 15px;
+	padding: 15px 25px 15px 25px;
+	font-weight: 600;
+	background-color: #0b9e99;
+	border-radius: 30px;
+	border-style: none;
+}
+
+#name,
+#email,
+#message {
+	border: 1px solid #dcdcdc;
+	font-family: Roboto;
+}
+
+#form{
+	text-align: left;
+}
+
+#form label{
+	text-align: left;
+}
