@@ -11,27 +11,27 @@
 
 
 <?php $__env->startSection('content'); ?>
-    <h1>User List</h1>
-    <table id="table">
-        <thead>
-            <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-            </tr>
-        </thead>
-        <tbody style="font-size:30px"> 
-            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <tr>
-                <td><?php echo e($user->username); ?></td>
-                <td><?php echo e($user->email); ?></td>
-                <td><?php echo e($user->contact); ?></td>
-                <td class="no-border"><a href="<?php echo e(url('admin/edit/' . $user->id)); ?>">Edit User</a></td>
-                <td class="no-border"><a href="<?php echo e(url('admin/delete/' . $user->id)); ?>" style="color: red">Delete User</a></td>
-            </tr><br>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </tbody>
-    </table>
+    <h1 id="section-title">Users</h1>
+    <section id="users-list">
+        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <article id="user-article">    
+            <div id="names">
+                <p class="label">First Name</p>
+                <p class="user-data"><?php echo e($user->firstname); ?></p>
+                <p class="label">Last Name</p>
+                <p class="user-data"><?php echo e($user->lastname); ?></p>
+            </div>
+            <div id="contact">
+                <p class="label">Email</p>
+                <p class="user-data"><?php echo e($user->email); ?></p>
+                <p class="label">Passwrod</p>
+                <p class="user-data"><?php echo e($user->password); ?></p>
+                <p class="label">Phone Number</p>
+                <p class="user-data"><?php echo e($user->contact); ?></p>
+            </div>
+        </article>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </section>
 <?php $__env->stopSection(); ?>
 
 
