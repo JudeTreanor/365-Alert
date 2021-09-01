@@ -67,10 +67,12 @@ class AlertsController extends Controller
                     echo $response->city . " is dry";
                 }
 
+
                 echo json_encode($results, JSON_PRETTY_PRINT);
             }
         }
         return $results = [$redAlertLevel, $response->city . " is on Red Alert<br>", $orangeAlertLevel, $response->city . " is on Orange Alert<br>", $yellowAlertLevel, $response->city . " is on Yellow Alert<br>"];
+
 
 
 

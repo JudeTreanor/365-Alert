@@ -31,13 +31,14 @@ header {
 
 #navigation>li {
     list-style: none;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 
 #navigation>li>a {
     text-decoration: none;
     color: var(--white);
+    text-transform: uppercase;
 }
 
 .register>li {
@@ -51,9 +52,13 @@ header {
     padding: 20px;
 }
 
+
 header img {
     width: 100px;
-    height: 100px;
+}
+
+#user-icon{
+    width: 75px;
 }
 
 ul .navigation {
@@ -78,6 +83,11 @@ ul .navigation {
 #navigation.opened {
     transform: translateX(0%);
 }
+
+#navigation>li>a:active {
+    background-color: var(--dark_green);
+}
+
 #action {
     width: -10px;
 }
