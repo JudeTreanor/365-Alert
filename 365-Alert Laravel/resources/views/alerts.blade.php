@@ -21,43 +21,28 @@
 
 {{-- Scripts links --}}
 @section('scripts')
-
-@endsection
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <div id="results_container"></div>
-</head>
-
-<body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
     <script>
-        /* Wait for the page to be loaded/ready */
-        $(function() {
+        $(function (){
+            $('form').submit(function(e) {
+                e.preventDefault();
 
-            // Ajax call
-            $.ajax({
+                // AJAX call
+                $.ajax({
                     url: 'AlertsController.php',
-                    method: 'get'
+                    method: 'post',
+                    data: $("form").serialize(),
+                    dataType: 'json'
                 })
-                .done(function(result) {
-                    // If AJAX call worked
-                    $('#results_container').html(result);
+
+                .done(function(result){
+                    console.log(result);
                 })
                 .fail(function(result) {
-                    console.log('AJAX FAILED');
-                });
-        });
+                        console.log('AJAX FAILED');
+                })
+            })
+        })
     </script>
-</body>
-
-</html>
+@endsection
