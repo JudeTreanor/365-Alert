@@ -41,6 +41,10 @@
             padding-bottom: 50px;
         }
         
+        #danger p {
+            padding-left: 40px;
+        }
+        
         .icon-alert-red {
             background: url('../pictures/Alert_Warning_Red.svg') no-repeat -50px -10px/200px white;
             padding-left: 100px;
@@ -153,6 +157,26 @@
         }
         /*Help section*/
         
+        .help {
+            background-image: url('../pictures/CGDIS_3 copie.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: left;
+            font-size: 17px;
+            height: 225px;
+            position: relative;
+        }
+        
         .help img {
-            width: 100%;
+            width: 140px;
+            padding-top: 65px;
+            padding-left: 9px;
+        }
+        
+        .last .help p {
+            position: absolute;
+            padding-top: 170px;
+            padding-left: 58px;
+            color: var(--white);
         }
