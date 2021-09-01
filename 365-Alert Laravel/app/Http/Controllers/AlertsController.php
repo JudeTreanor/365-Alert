@@ -60,9 +60,7 @@ class AlertsController extends Controller
                 if ($response->current->value <= $response->minimum->value) {
                     echo $response->city . " is dry";
                 }
-            }
-        }
-            
+
 
         return view('alerts');
 

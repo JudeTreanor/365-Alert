@@ -26,16 +26,20 @@
     </header>
 
     <ul id="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Alert</a></li>
-        <li><a href="#">Measures</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
+        <li><a href="{{ route('alerts') }}">Alert</a></li>
+        <li><a href="{{ route('procedures') }}">Procedures</a></li>
+        <li><a href="{{ route('terms') }}">Terms</a></li>
+        <li><a href="{{ route('user') }}">User</a></li>
+        <li><a href="{{ route('admin') }}">Admin</a></li>
+        <li><a href="{{ route('alert-details') }}">Alert Details</a></li>
     </ul>
 
     <ul class="register">
-        <li><a href="#">Log in</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li><a href="{{ route('login') }}">Log in</a></li>
+        <li><a href="{{ route('register') }}">Sign Up</a></li>
     </ul>
 
 
@@ -53,7 +57,7 @@
 
             </div>
             <ul class="terms">
-                <li><a href="{{URL::asset('terms')}}">Terms and conditions</a></li>
+                <li><a href="{{ route('terms') }}">Terms and conditions</a></li>
             </ul>
 
             <div class="logo">
@@ -64,7 +68,7 @@
 
         @yield('footer')
     </footer>
-    @include('layouts.nav')
+    {{-- @include('layouts.nav') --}}
     @yield('scripts')
     <script src="{{URL::asset('js/template.js')}}"></script>
 </body>
