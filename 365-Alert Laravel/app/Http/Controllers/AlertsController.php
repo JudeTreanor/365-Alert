@@ -27,43 +27,42 @@ class AlertsController extends Controller
 
             // Nested Loop to Iterate through the alert_levels array
             foreach ($response->alert_levels as $key => $level) {
-                
+                $answer = 250;
                 // Conditionals to save the water levels into variables and rehuse them to check
                 // if the current water levels are at certain levels or normal
-                if ($level->name === 'Cote de vigilance') {
-                    
-                    $yellowAlertLevel = $level->value;
-                    
-                    if ($response->current->value >= $yellowAlertLevel) {
-                        echo "Yellow Alert";
-                    }
-                } else if ($level->name === 'Cote de préalerte') {
-                    
-                    $orangeAlertLevel = $level->value;
-
-                    if ($response->current->value >= $orangeAlertLevel) {
-                        echo "Orange Alert";
-                    }
-                } else if ($level->name === "Cote d'alerte") {
-                    
+                if ($level->name === "Cote d'alerte") {
+                
                     $redAlertLevel = $level->value;
 
-                    if ($response->current->value >= $redAlertLevel) {
-                        echo "Red Alert";
+                    if ($answer >= $redAlertLevel) {
+                        echo $response->city . " is on Red Alert<br>";
                     }
 
-                } else if ($response->current->value <= $response->minimum->value) {
-                    echo $response->city . " is dry";
+                } else if ($level->name === 'Cote de préalerte') {
+                
+                    $orangeAlertLevel = $level->value;
 
-                } else {
-                    echo $response->city . " is " . $response->current->value . " cm and everything is okei<br>";
+                    if ($answer >= $orangeAlertLevel) {
+                        echo $response->city . " is on Orange Alert<br>";
+                    }
+
+                } else if ($level->name === 'Cote de vigilance') {
+                    
+                    $yellowAlertLevel = $level->value;
+                
+                    if ($answer >= $yellowAlertLevel) {
+                        echo $response->city . " is on Yellow Alert<br>";
+                    }else {
+                        echo $response->city . " is " . $response->current->value . " cm and everything is okei<br>";
+                    }
+                } 
+                
+                if ($response->current->value <= $response->minimum->value) {
+                    echo $response->city . " is dry";
                 }
 
-            }
-        }
+
         return view('alerts');
-
-
 
 
         //create controller to pull from api
