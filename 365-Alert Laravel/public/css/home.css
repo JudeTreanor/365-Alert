@@ -1,3 +1,25 @@
-h1 {
-    color:blue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*Variables for colors*/
+
+ :root {
+    --white: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
+    --red: #D90000;
+    --orange: #FF6501;
+}
+
+.flood-map h2 {
+    color: var(--white);
+    background-color: var(--dark_green);
+    padding: 30px;
 }

@@ -11,7 +11,9 @@
 
 {{-- Main Content Section --}}
 @section('content')
-    <h1>THIS IS OUR HOME</h1>
+    <section class="flood-map">
+        <h2>Luxembourg Flood Map</h2>
+    </section>
 @endsection
 
 {{-- Footer Section --}}
