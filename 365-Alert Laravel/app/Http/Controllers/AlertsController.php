@@ -31,48 +31,55 @@ class AlertsController extends Controller
         foreach ($responseBodys as $response) {
             // Nested Loop to Iterate through the alert_levels array
             foreach ($response->alert_levels as $key => $level) {
+                //  $results[] = [$response->id, "lmao", $response->city . " is on Red Alert<br>"];
 
                 // Conditionals to save the water levels into variables and rehuse them to check
                 // if the current water levels are at certain levels or normal
                 if ($level->name === 'Cote d’alerte') {
-
                     $redAlertLevel = $level->value;
 
                     if ($response->current->value >= $redAlertLevel) {
-                        $response->city . " is on Red Alert<br>";
-
-                        //return $results = [$redAlertLevel, $response->city . " is on Red Alert<br>", $orangeAlertLevel, $response->city . " is on Orange Alert<br>"];
+                        //    $response->city . " is on Red Alert<br>";
+                        $results[] = ["id" => $response->id,  "city" => $response->city,   "alert" =>  $redAlertLevel, "bad"];
+                    } else {
+                        $results[] = ["id" => $response->id, "city" => $response->city, "is fine"];
                     }
                 } else if ($level->name === 'Cote de préalerte') {
 
                     $orangeAlertLevel = $level->value;
 
                     if ($response->current->value >= $orangeAlertLevel) {
-                        $response->city . " is on Orange Alert<br>";
+                        //  $response->city . " is on Orange Alert<br>";
                         //  return $results = [$orangeAlertLevel, $response->city . " is on Orange Alert<br>"];
+
+                        $results[] = ["id" => $response->id,  "city" => $response->city,   "alert" =>  $orangeAlertLevel];
+                    } else {
+
+                        $results[] = ["id" => $response->id, "city" => $response->city, "is fine"];
                     }
                 } else if ($level->name === 'Cote de vigilance') {
 
                     $yellowAlertLevel = $level->value;
 
                     if ($response->current->value >= $yellowAlertLevel) {
-                        $response->city . " is on Yellow Alert<br>";
+
+                        // $response->city . " is on Yellow Alert<br>";
+                        $results[] = ["id" => $response->id,  "city" => $response->city,   "alert" =>  $yellowAlertLevel];
                         //   return $results = [$yellowAlertLevel, $response->city . " is on Yellow Alert<br>"];
                     } else {
                         // return $response->city . " is " . $response->current->value . " cm and everything is okei<br>";
+                        $results[] = ["id" => $response->id, "city" => $response->city, "is fine"];
                     }
                 }
 
                 if ($response->current->value <= $response->minimum->value) {
-                    echo $response->city . " is dry";
+                    $results[] = ["id" => $response->id, "city" => $response->city, "is low on water"];
                 }
-
-
-                echo json_encode($results, JSON_PRETTY_PRINT);
             }
         }
-        return $results = [$redAlertLevel, $response->city . " is on Red Alert<br>", $orangeAlertLevel, $response->city . " is on Orange Alert<br>", $yellowAlertLevel, $response->city . " is on Yellow Alert<br>"];
+        echo json_encode($results, JSON_PRETTY_PRINT);
 
+        //ret
 
 
 
