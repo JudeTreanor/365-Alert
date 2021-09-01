@@ -47,10 +47,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function sendPasswordResetNotification($token)
+/*    public function sendPasswordResetNotification($token)
     {
         $url = 'https://example.com/reset-password?token=' . $token;
 
         $this->notify(new ResetPasswordNotification($url));
-    }
+    }*/
 }

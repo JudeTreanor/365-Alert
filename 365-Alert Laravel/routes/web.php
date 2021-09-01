@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\AlertsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\RegisteredUserController;
+
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
@@ -80,7 +80,12 @@ Route::get('/login', function () {
 
 // Route to submit the login form
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
-
+//route register
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
+//Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 // Route to the forgotten password page
 Route::get('/forgot-password', function () {
     return view('forgot-password');
@@ -100,11 +105,12 @@ Route::post('/forgot-password', function (Request $request) {
 })->middleware('guest')->name('password.email');
 
 //route to reset-password
-Route::get('/reset-password/{token}', function ($token) {
+Route::get('/reset-password/token={token}', function ($token) {
     return view('reset-password', ['token' => $token]);
 })->middleware('guest')->name('password.update');
 
-Route::post('/reset-password', function (Request $request) {
+Route::post('/reset-password/token={token}', function (Request $request) {
+
     $request->validate([
         'token' => 'required',
         'email' => 'required|email',
@@ -135,13 +141,9 @@ Route::get('/procedures', function () {
     return view('procedures');
 })->name('procedures');
 
-// Route to the Register
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
 
-//Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
-Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
+
+
 
 // Route to the terms and conditions
 Route::get('terms', function () {
