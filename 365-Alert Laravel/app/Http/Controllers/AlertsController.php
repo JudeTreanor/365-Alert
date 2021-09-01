@@ -59,9 +59,9 @@ class AlertsController extends Controller
                     echo $response->city . " is " . $response->current->value . " cm and everything is okei<br>";
                 }
 
+            }
         }
-    }
-            
+        return view('alerts');
 
 
 

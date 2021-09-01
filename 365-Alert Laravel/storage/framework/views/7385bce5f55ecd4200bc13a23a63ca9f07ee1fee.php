@@ -26,16 +26,20 @@
     </header>
 
     <ul id="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Alert</a></li>
-        <li><a href="#">Measures</a></li>
+        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+        <li><a href="<?php echo e(route('about')); ?>">About</a></li>
+        <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
+        <li><a href="<?php echo e(route('alerts')); ?>">Alert</a></li>
+        <li><a href="<?php echo e(route('procedures')); ?>">Procedures</a></li>
+        <li><a href="<?php echo e(route('terms')); ?>">Terms</a></li>
+        <li><a href="<?php echo e(route('user')); ?>">User</a></li>
+        <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
+        <li><a href="<?php echo e(route('alert-details')); ?>">Alert Details</a></li>
     </ul>
 
     <ul class="register">
-        <li><a href="#">Log in</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li><a href="<?php echo e(route('login')); ?>">Log in</a></li>
+        <li><a href="<?php echo e(route('register')); ?>">Sign Up</a></li>
     </ul>
 
 
@@ -53,7 +57,7 @@
 
             </div>
             <ul class="terms">
-                <li><a href="<?php echo e(URL::asset('terms')); ?>">Terms and conditions</a></li>
+                <li><a href="<?php echo e(route('terms')); ?>">Terms and conditions</a></li>
             </ul>
 
             <div class="logo">
@@ -64,7 +68,7 @@
 
         <?php echo $__env->yieldContent('footer'); ?>
     </footer>
-    <?php echo $__env->make('layouts.nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
     <?php echo $__env->yieldContent('scripts'); ?>
     <script src="<?php echo e(URL::asset('js/template.js')); ?>"></script>
 </body>
