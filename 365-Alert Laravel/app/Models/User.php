@@ -20,8 +20,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstName',
-        'lastName',
+        'firstname',
+        'lastname',
         'email',
         'password',
         'contact',
@@ -47,7 +47,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-/*    public function sendPasswordResetNotification($token)
+    /*    public function sendPasswordResetNotification($token)
     {
         $url = 'https://example.com/reset-password?token=' . $token;
 

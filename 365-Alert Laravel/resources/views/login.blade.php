@@ -39,7 +39,7 @@
 
 
     <input type="email" name="email" placeholder="email" class="input-email" onfocus="this.placeholder=''"
-    onblur="this.placeholder='enter your text'" >
+    onblur="this.placeholder='Email'" >
 
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
 <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>

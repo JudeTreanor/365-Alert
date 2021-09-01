@@ -1,3 +1,12 @@
 h1 {
-    color:blue;
+    color: blue;
+}
+img {
+    width: 361px;
+}
+ul {
+    background-color: #efefef;
+}
+section {
+    width: 361px;
 }
