@@ -79,7 +79,7 @@ class AlertsController extends Controller
         }
         echo json_encode($results, JSON_PRETTY_PRINT);
 
-        //ret
+        //should be working
 
 
 
