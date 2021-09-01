@@ -38,7 +38,7 @@
     @csrf
 
 
-    <input type="text" name="username" placeholder="Username" class="input-username" onfocus="this.placeholder=''"
+    <input type="email" name="email" placeholder="email" class="input-email" onfocus="this.placeholder=''"
     onblur="this.placeholder='enter your text'" >
 
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
@@ -48,8 +48,7 @@
 
 @endsection
 
-</main>
-</body>
+
 {{-- Footer Section --}}
 @section('footer')
 
@@ -57,5 +56,6 @@
 
 {{-- Scripts links --}}
 @section('scripts')
-
+</main>
+</body>
 @endsection

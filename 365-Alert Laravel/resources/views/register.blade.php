@@ -30,7 +30,8 @@
 <form action="" method="post" id="register" >
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
-    <input type="text" name="username" placeholder="Username" class="input-username"><br>
+    <input type="text" name="first_name" placeholder="First name" class="input-first"><br>
+    <input type="text" name="last_name" placeholder="Last names" class="input-last"><br>
     <input type="email" name="email" placeholder="Email" class="input-email"><br>
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>
