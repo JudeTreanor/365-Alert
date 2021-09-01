@@ -102,7 +102,7 @@ Route::post('/forgot-password', function (Request $request) {
 //route to reset-password
 Route::get('/reset-password/{token}', function ($token) {
     return view('reset-password', ['token' => $token]);
-})->middleware('guest')->name('password.request');
+})->middleware('guest')->name('password.update');
 
 Route::post('/reset-password', function (Request $request) {
     $request->validate([

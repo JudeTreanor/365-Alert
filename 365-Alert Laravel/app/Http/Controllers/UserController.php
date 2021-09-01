@@ -29,7 +29,8 @@ class UserController extends Controller
         $user = User::find($id);
 
         // Set the Attributes
-        $user->username = $request->username;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->contact = $request->contact;
@@ -43,7 +44,7 @@ class UserController extends Controller
         // Return the Client Settings View
         return view('admin', ['users' => $users]);
     }
-    
+
     // Function to delete an user as an Admin
     public function adminUserDelete($id)
     {
@@ -71,7 +72,8 @@ class UserController extends Controller
         $user = User::find($id);
 
         // Set the Attributes
-        $user->username = $request->username;
+        $user->firstName = $request->firstName;
+        $user->lastName = $request->lastName;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->contact = $request->contact;
@@ -85,5 +87,4 @@ class UserController extends Controller
         // Return the Client Settings View
         return view('user', ['user' => $user]);
     }
-
 }

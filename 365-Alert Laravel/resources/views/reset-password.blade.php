@@ -22,7 +22,7 @@
     </div>
 @endif
 
-<form action="{{ route('password.request', ['token' => $token]) }}" method="post" id="PassReset" >
+<form action="{{ route('password.update', ['token' => $token]) }}" method="post" id="PassReset" >
     @csrf
     <input type="hidden" name="token" value="{{$token}}">
     <input type="password" name="password" placeholder="New password" class="input-email" onfocus="this.placeholder=''" onblur="this.placeholder='email'">
