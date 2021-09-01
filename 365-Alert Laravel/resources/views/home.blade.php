@@ -1,3 +1,4 @@
+
 {{-- Extending the template --}}
 @extends('layouts.mytemplate')
 
@@ -62,3 +63,4 @@
 @section('scripts')
 
 @endsection
+

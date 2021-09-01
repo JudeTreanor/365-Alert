@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\AlertsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
@@ -69,7 +69,7 @@ Route::get('/contact', function () {
 Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-submit');
 
 // Route to the Home page
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 })->name('home');
 
@@ -165,3 +165,6 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 
 //Route to get the api
 Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('logout');
