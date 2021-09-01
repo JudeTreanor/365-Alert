@@ -9,8 +9,10 @@
 @endsection
 {{-- Main Content Section --}}
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">s
 <img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
-<h3>reset password</h3>
+
+<h3>Reset password</h3>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -21,10 +23,11 @@
     </div>
 @endif
 
-<form action="{{ route('password.request', ['token' => $token]) }}" method="post" id="PassReset" >
+<form action="{{ route('password.update', ['token' => $token]) }}" method="post" id="PassReset" >
     @csrf
     <input type="hidden" name="token" value="{{$token}}">
-    <input type="password" name="password" placeholder="New password" class="input-email" onfocus="this.placeholder=''" onblur="this.placeholder='email'">
+    <input type="email" name="email" placeholder="email" class="input-email" >
+    <input type="password" name="password" placeholder="New password" class="input-password" onfocus="this.placeholder=''" onblur="this.placeholder='password'">
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>
 
 
