@@ -153,6 +153,11 @@ Route::get('user', function () {
     return view('user');
 })->name('user');
 
+// Route to the about page
+Route::get('client-settings', function () {
+    return view('client-settings');
+})->name('client-settings');
+
 // Route to submit the User modification
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
 

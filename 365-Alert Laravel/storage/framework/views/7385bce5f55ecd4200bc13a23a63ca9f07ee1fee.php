@@ -17,15 +17,15 @@
     <!-- Header with menu and login/register -->
     <header>
 
-        <img src="<?php echo e(URL::asset('pictures/Menu_Colapsed_white.svg')); ?>" alt="">
+        <img id="action" src="<?php echo e(URL::asset('pictures/Menu_Colapsed_white.svg')); ?>" alt="">
 
         <h2 id="logo">365 Alert</h2>
 
-        <img src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt="">
+        <img id="user-icon" src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt="">
 
     </header>
 
-    <ul class="navigation">
+    <ul id="navigation">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -53,7 +53,7 @@
 
             </div>
             <ul class="terms">
-                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="<?php echo e(URL::asset('terms')); ?>">Terms and conditions</a></li>
             </ul>
 
             <div class="logo">
@@ -66,6 +66,7 @@
     </footer>
     <?php echo $__env->make('layouts.nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->yieldContent('scripts'); ?>
+    <script src="<?php echo e(URL::asset('js/template.js')); ?>"></script>
 </body>
 
 </html><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/layouts/mytemplate.blade.php ENDPATH**/ ?>
