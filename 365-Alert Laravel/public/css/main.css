@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 /*Variables for colors*/
 
 :root {
@@ -29,35 +28,33 @@ header {
     align-items: center;
 }
 
-#navigation>li {
+#navigation > li {
     list-style: none;
     padding-bottom: 20px;
 }
 
-
-#navigation>li>a {
+#navigation > li > a {
     text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
 }
 
-.register>li {
+.register > li {
     list-style: none;
 }
 
-.register>li>a {
+.register > li > a {
     text-decoration: none;
     color: var(--white);
     background-color: var(--dark_green);
     padding: 20px;
 }
 
-
 header img {
     width: 100px;
 }
 
-#user-icon{
+#user-icon {
     width: 75px;
 }
 
@@ -84,7 +81,7 @@ ul .navigation {
     transform: translateX(0%);
 }
 
-#navigation>li>a:active {
+#navigation > li > a:active {
     background-color: var(--dark_green);
 }
 
@@ -101,6 +98,7 @@ ul .navigation {
 
 main {
     background-color: var(--dark_green);
+    text-align: -webkit-center;
 }
 
 footer img {
@@ -116,15 +114,14 @@ footer img {
     padding: 20px;
 }
 
-#footer>ul>li {
+#footer > ul > li {
     list-style-type: none;
 }
 
-#footer>ul>li>a {
+#footer > ul > li > a {
     text-decoration: none;
     color: var(--white);
 }
-
 
 /*Desktop view*/
 

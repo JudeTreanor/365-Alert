@@ -15,7 +15,7 @@
 @section('content')
 <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }}">
 <img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
-<h3>Register</h3>
+<h3>Sign up</h3>
 
 
 @if ($errors->any())
@@ -31,7 +31,7 @@
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
     <input type="text" name="firstname" placeholder="First name" class="input-first"><br>
-    <input type="text" name="lastname" placeholder="Last names" class="input-last"><br>
+    <input type="text" name="lastname" placeholder="Last name" class="input-last"><br>
     <input type="email" name="email" placeholder="Email" class="input-email"><br>
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>

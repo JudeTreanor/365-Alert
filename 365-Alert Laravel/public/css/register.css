@@ -5,13 +5,19 @@ input {
     border-radius: 15px;
     color: #037c87;
     border-style: none;
+    padding-left: 45px;
 }
 h3 {
     color: white;
     font-size: 20px;
 }
+img {
+    margin-bottom: -76px;
+    width: 367px;
+}
 ::placeholder {
     color: #037c87;
+    padding-left: 45px;
 }
 #checkbox {
     display: flex;
@@ -31,11 +37,11 @@ h3 {
     background-image: url("../css/logos/Email.svg");
     background-position: left;
     background-repeat: no-repeat;
-    padding-left: 1px;
+    padding-left: 45px;
 }
 .input-phone {
     background-image: url("../css/logos/phone.svg");
     background-position: left;
     background-repeat: no-repeat;
-    padding-left: 1px;
+    padding-left: 45px;
 }
