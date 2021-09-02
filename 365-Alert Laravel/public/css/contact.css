@@ -1,6 +1,11 @@
-.content {
-	background-color: #fff;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
+/*Variables for colors*/
 
 :root {
 	--grey: #efefef;
@@ -11,10 +16,18 @@
 	--darkgrey: #dcdcdc;
 }
 
+/*Main*/
+
+main {
+	background-color: #efefef;
+}
+
+/*Intro Image*/
 .contact_image img {
 	width: 100%;
 }
 
+/*Intro Title*/
 #contact_title {
 	background-color: #037c87;
 	padding: 50px;
@@ -23,23 +36,29 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	color: white;
+    
 }
+
+/* Form */
+
 
 form {
 	background-color: #efefef;
 	padding: 50px;
+
 }
 
 #submit_button {
 	color: white;
 	text-transform: uppercase;
 	font-family: Roboto;
-	font-size: 15px;
-	padding: 15px 25px 15px 25px;
+	font-size: 14px;
+    padding: 10px 50px 10px 50px;
 	font-weight: 600;
 	background-color: #0b9e99;
-	border-radius: 30px;
 	border-style: none;
+    border-radius: 20px;
+    text-align: center; 
 }
 
 #name,
@@ -47,12 +66,55 @@ form {
 #message {
 	border: 1px solid #dcdcdc;
 	font-family: Roboto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    padding-right: 150px;
 }
 
 #form{
 	text-align: left;
+    font-family: Roboto;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+
 }
 
-#form label{
-	text-align: left;
+
+#form textarea {
+    padding-right: 150px;
 }
+
+label{
+    color: #2b3371;
+    font-weight: 600;
+    font-family: Roboto;
+}
+
+.form_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+
+
+}
+
+.containerSubmit{
+    display: flex;
+    justify-content: center;
+}
+
+/* Links to other websites */
+
+.images img{
+    height: 100px;
+    margin: 15px;
+}
+
+
+
+
+

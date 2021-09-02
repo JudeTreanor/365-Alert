@@ -1,3 +1,82 @@
-h1 {
-    color:blue;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
+
+
+/*Variables for colors*/
+
+ :root {
+    --white: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
+    --red: #D90000;
+    --orange: #FF6501;
+    --grey: #8F8F8F;
+}
+
+
+/*Luxembourg Flood Map section*/
+
+.flood-map h2 {
+    background-color: var(--dark_green);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    padding: 30px;
+}
+
+
+/*My Alerts section*/
+
+.my-alerts h2 {
+    background-color: var(--dark_green);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    padding: 30px;
+}
+
+
+/* Red alert*/
+
+.icon-alert-red {
+    border-left: 10px solid red;
+    background: url('../pictures/Alert_Warning_Red.svg') no-repeat -66px 30px/240px white;
+    padding: 30px 0 30px 100px;
+    min-height: 100px;
+    text-align: left;
+}
+
+.red-alert p {
+    color: var(--grey);
+    padding-bottom: 20px;
+}
+
+.red-buttons button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+/* 
+.alert {
+    position: relative;
+}
+
+#danger {
+    position: absolute;
+    left: 0;
+}
+*/
+
