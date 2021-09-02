@@ -12,14 +12,14 @@
 {{-- Main Content Section --}}
 @section('content')
 
-<h1>THIS IS OUR HOME</h1>
+
 <section>
     <img src="{{URL::asset('../pictures/Home_Register_Cropped.jpg')}}" alt="">
 
     <ul>
         <li>
             <img src="" alt="">
-            <img src="{{URL::asset('../pictures/Flood_Alert_Email_Main.svg')}}" alt=""><br>
+            <img src="{{URL::asset('../pictures/Flood_Alert_Email_Main.svg')}}" id="phone" alt=""><br>
             <span>Receive an email alert <br> with possible floods</span>
             <img src="{{URL::asset('../pictures/Check_Water_Level_Main.svg')}}" alt=""><br>
             <span>Check the water level <br>of any location</span>
@@ -29,7 +29,10 @@
 
         </li>
     </ul>
-
+<div>
+    <h3>LUXEMBOURG FLOOD</h3>
+    <img src="{{URL::asset('../pictures/Map2.png')}}" id="map" alt="">
+</div>
 </section>
 
 

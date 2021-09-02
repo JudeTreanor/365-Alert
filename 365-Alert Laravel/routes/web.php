@@ -72,6 +72,11 @@ Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-
 Route::get('/home', function () {
     return view('home');
 })->name('home');
+Route::get('/home1', function () {
+    return view('home1');
+})->name('home1');
+
+
 
 // Route to the show the login page
 Route::get('/login', function () {

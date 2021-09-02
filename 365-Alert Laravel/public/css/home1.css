@@ -4,9 +4,24 @@ h1 {
 img {
     width: 361px;
 }
+#phone {
+    width: 361px;
+    margin-top: 61px;
+
+    margin-bottom: -74px;
+}
 ul {
     background-color: #efefef;
 }
 section {
     width: 361px;
+    display: grid;
+}
+h3 {
+    padding: 36px;
+}
+li {
+    padding-bottom: 46px;
+}
+@media screen and (min-width: 600px) {
 }
