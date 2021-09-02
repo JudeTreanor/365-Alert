@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*Variables for colors*/
+
+:root {
+	--grey: #efefef;
+	--green: #0b9e99;
+	--blue: #16354d;
+	--dark_green: #037c87;
+	--purple: #2b3371;
+	--darkgrey: #dcdcdc;
+	--red: #d90000;
+	--orange: #ff6501;
+	--darkgrey: #8f8f8f;
+	--yellow: #ffcc01;
+}
+
+body,
+main {
+	background-color: #fff;
+}
+/*Flood Map Image*/
+
+.flood-map img {
+	width: 100%;
+}
+
+/*Title*/
+
+.flood-map h1 {
+	background-color: var(--dark_green);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--white);
+	padding: 50px;
+	font-family: Roboto;
+}
+
+/*Alerts section*/
+
+.alerts_title {
+	background-color: var(--dark_green);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--white);
+	padding: 30px;
+}
+
+/*Alerts - individual*/
+
+.alert {
+	font-family: Roboto;
+	color: white;
+	padding: 30px;
+}
+
+.alert_container {
+	background-color: #efefef;
+	margin: 0 auto;
+	padding: 20px;
+	width: 100%;
+}
+
+#location {
+	color: black;
+	font-family: Roboto;
+	text-align: left;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+#alert_type,
+#description,
+#river,
+#water_level,
+#updated {
+	color: var(--darkgrey);
+	font-family: Roboto;
+	text-align: left;
+}
+
+.buttons_container button{
+
+}

@@ -11,9 +11,32 @@
 
 {{-- Main Content Section --}}
 @section('content')
+<section class="flood-map">
+    <h1>Luxembourg Flood Map</h1>
+    <div class="map">
+        <img src="{{URL::asset('pictures/Map2.PNG')}}" alt="">
+    </div>
+</section>
+<h2 class="alerts_title">Alerts</h2>
+<section>
     @foreach ($alerts as $alert)
-        
+    <article class="alert_container">
+        <div class="alert">
+            <h3 id="location">Location: {{$alert->location}}</h3>
+            <p id="alert_type">Alert Type: {{$alert->type}}</p>
+            <p id="description">Description {{$alert->description}}</p>
+            <p id="river">River: {{$alert->river}}</p>
+            <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
+            <p id="updated">Last updated: {{$alert->updated_at}}</p>
+        </div>
+        <div class="buttons_container">
+            <button type="submit">Water Chart</button>
+            <button type="submit">Comments</button>
+            <button type="submit">Add To List</button>
+        </div>
+    </article>
     @endforeach
+</section>
 @endsection
 
 {{-- Footer Section --}}
