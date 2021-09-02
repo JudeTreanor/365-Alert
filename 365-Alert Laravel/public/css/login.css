@@ -20,21 +20,24 @@ p {
 }
 img {
     margin-bottom: -76px;
+    width: 367px;
 }
+
 ::placeholder {
     color: #037c87;
     padding-left: 40px;
     font-size: 16px;
 }
-.input-username {
-    background-image: url("../css/logos/username.svg");
+.input-email {
+    background-image: url("../css/logos/email.svg");
     background-position: left;
     background-repeat: no-repeat;
-    padding-left: 1px;
+
+    padding-left: 45px;
 }
 .input-password {
     background-image: url("../css/logos/password.svg");
     background-position: left;
     background-repeat: no-repeat;
-    padding-left: 1px;
+    padding-left: 45px;
 }

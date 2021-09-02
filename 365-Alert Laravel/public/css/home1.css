@@ -4,11 +4,13 @@ h1 {
 img {
     width: 361px;
 }
-#phone {
+#letter {
     width: 361px;
     margin-top: 61px;
 
     margin-bottom: -74px;
+    position: relative;
+    opacity: 0.45px;
 }
 ul {
     background-color: #efefef;
@@ -16,12 +18,33 @@ ul {
 section {
     width: 361px;
     display: grid;
+    text-align: center;
 }
 h3 {
     padding: 36px;
 }
 li {
     padding-bottom: 46px;
+    list-style: none;
 }
 @media screen and (min-width: 600px) {
+}
+#explainSite {
+    position: absolute;
+    padding: 95px;
+    color: white;
+}
+#telefone {
+    opacity: 0.45;
+}
+a {
+    background-color: teal;
+    transform: none;
+    color: white;
+    text-decoration: none;
+    width: 291px;
+    height: 43px;
+    border-radius: 15px;
+    padding: 2px 46px;
+    border-style: none;
 }
