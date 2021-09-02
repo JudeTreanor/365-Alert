@@ -64,6 +64,7 @@ li {
     border-radius: 20px;
     display: block;
     margin-bottom: 20px;
+    width: 50%;
 }
 
 #buttons li {
