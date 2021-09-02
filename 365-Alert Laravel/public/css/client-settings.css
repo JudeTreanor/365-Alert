@@ -38,14 +38,11 @@ input {
     border: 2px solid;
     height: 50px;
     width: 70%;
-    text-align: center;
+    padding-left: 20px;
 }
 ul,
 li {
     text-decoration: none;
-}
-
-#cbox {
 }
 
 #subbutton {
@@ -216,10 +213,43 @@ footer img {
         padding: 10px 50px;
         background-color: var(--green);
     }
+
+    #client {
+        color: var(--white);
+    }
     .register {
         display: flex;
         justify-content: flex-start;
         text-decoration: none;
         padding: 10px 50px;
+    }
+    input {
+        width: 50%;
+    }
+
+    #user-details {
+        display: flex;
+        justify-content: space-between;
+    }
+    div,
+    .red-button {
+        width: 200px;
+    }
+    #password-form,
+    input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 100px;
+    }
+    #current-password,
+    #new-password,
+    #confirm-password,
+    #subbutton {
+        width: 35%;
+    }
+    #subbutton {
+        width: 185px;
+        margin-top: 15px;
     }
 }
