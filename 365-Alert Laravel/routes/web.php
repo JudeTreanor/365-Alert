@@ -164,4 +164,4 @@ Route::get('client-settings', function () {
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
 
 //Route to get the api
-Route::get('/alerts', [AlertController::class, 'getApi'])->name('alerts');
+Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');

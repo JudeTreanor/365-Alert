@@ -17,6 +17,7 @@ class CreateAlertsTable extends Migration
             $table->unsignedInteger('id');
             $table->primary('id');
             $table->enum('type', ['Red', 'Orange', 'Yellow', 'Green', 'Dry']);
+            $table->enum('trend',['rest', 'down','up']);
             $table->string('location');
             $table->string('river');
             $table->float('water_level');

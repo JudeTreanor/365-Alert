@@ -41,6 +41,7 @@ class AlertController extends Controller
 
                         // Set the Attributes
                         $alert->type = 'Red';
+                        $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
 
@@ -60,6 +61,7 @@ class AlertController extends Controller
 
                         // Set the Attributes
                         $alert->type = 'Orange';
+                        $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
 
@@ -79,6 +81,7 @@ class AlertController extends Controller
 
                         // Set the Attributes
                         $alert->type = 'Yellow';
+                        $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
 
@@ -93,6 +96,7 @@ class AlertController extends Controller
 
                         // Set the Attributes
                         $alert->type = 'Green';
+                        $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
 
@@ -109,6 +113,7 @@ class AlertController extends Controller
 
                     // Set the Attributes
                     $alert->type = 'Dry';
+                    $alert->trend = $response->trend;
                     $alert->water_level = $response->current->value;
                     $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
 
@@ -117,7 +122,14 @@ class AlertController extends Controller
                 }
             }
         }
-        
-        return view('alerts');
     }
+    public function showAlerts()
+    {
+        $this->getApi();
+
+        $alerts = Alert::all();
+        
+        return view('alerts', ['alerts' => $alerts]);
+    }
+
 }
