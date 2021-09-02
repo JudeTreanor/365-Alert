@@ -14,11 +14,99 @@
     --purple: #2b3371;
 }
 
+change-buttons {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#change-password {
+    background-color: var(--white);
+    text-align: left;
+    padding: 50px;
+}
+
+input {
+    margin-bottom: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    height: 50px;
+    width: 70%;
+    text-align: center;
+}
+ul,
+li {
+    text-decoration: none;
+}
+
+#cbox {
+}
+
+#subbutton {
+    align-items: left;
+    background-color: var(--green);
+}
+
+.red-buttons button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+#buttons li {
+    list-style: none;
+
+    background-color: var(--green);
+    margin-top: 20px;
+
+    border-radius: 25px;
+
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
+
+label {
+    color: var(--purple);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+}
+
 #settings-bar {
     background-color: var(--blue);
     text-transform: capitalize;
     font-weight: 500;
     color: var(--white);
+    padding: 50px;
+}
+
+.user-username,
+.user-email,
+.user-phone {
+    margin-bottom: 50px;
+}
+
+#user-details {
+    background-color: var(--white);
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: 500;
+    color: var(--purple);
     padding: 50px;
 }
 
