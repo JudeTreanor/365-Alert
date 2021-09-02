@@ -1,12 +1,65 @@
+section {
+    width: 361px;
+    display: grid;
+    text-align: center;
+}
 h1 {
     color: blue;
 }
 img {
     width: 361px;
 }
+#img1,
+#img2,
+#img3 {
+    margin-bottom: -74px;
+}
 ul {
     background-color: #efefef;
 }
-section {
-    width: 361px;
+
+h3 {
+    padding: 36px;
+}
+li {
+    list-style: none;
+}
+@media screen and (min-width: 600px) {
+}
+#register {
+    position: absolute;
+    padding: 95px;
+    color: white;
+    margin: 64px 12px;
+}
+#login {
+    position: absolute;
+    padding: 80px;
+    color: white;
+    margin: 52px 34px;
+}
+
+#telefone {
+    opacity: 0.45;
+}
+a {
+    background-color: teal;
+    transform: none;
+    color: white;
+    text-decoration: none;
+    width: 291px;
+    height: 43px;
+    border-radius: 15px;
+    padding: 2px 46px;
+    border-style: none;
+}
+p {
+    padding: 99px;
+    position: absolute;
+    margin: -81px 1px;
+    color: white;
+    margin-top: -28px;
+}
+#procedures {
+    margin-bottom: 50px;
 }

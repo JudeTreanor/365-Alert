@@ -11,7 +11,9 @@
 
 {{-- Main Content Section --}}
 @section('content')
-
+    @foreach ($alerts as $alert)
+        
+    @endforeach
 @endsection
 
 {{-- Footer Section --}}

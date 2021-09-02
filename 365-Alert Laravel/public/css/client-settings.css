@@ -14,11 +14,96 @@
     --purple: #2b3371;
 }
 
+change-buttons {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#change-password {
+    background-color: var(--white);
+    text-align: left;
+    padding: 50px;
+}
+
+input {
+    margin-bottom: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    height: 50px;
+    width: 70%;
+    padding-left: 20px;
+}
+ul,
+li {
+    text-decoration: none;
+}
+
+#subbutton {
+    align-items: left;
+    background-color: var(--green);
+}
+
+.red-buttons button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+#buttons li {
+    list-style: none;
+
+    background-color: var(--green);
+    margin-top: 20px;
+
+    border-radius: 25px;
+
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
+
+label {
+    color: var(--purple);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+}
+
 #settings-bar {
     background-color: var(--blue);
     text-transform: capitalize;
     font-weight: 500;
     color: var(--white);
+    padding: 50px;
+}
+
+.user-username,
+.user-email,
+.user-phone {
+    margin-bottom: 50px;
+}
+
+#user-details {
+    background-color: var(--white);
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: 500;
+    color: var(--purple);
     padding: 50px;
 }
 
@@ -128,10 +213,43 @@ footer img {
         padding: 10px 50px;
         background-color: var(--green);
     }
+
+    #client {
+        color: var(--white);
+    }
     .register {
         display: flex;
         justify-content: flex-start;
         text-decoration: none;
         padding: 10px 50px;
+    }
+    input {
+        width: 50%;
+    }
+
+    #user-details {
+        display: flex;
+        justify-content: space-between;
+    }
+    div,
+    .red-button {
+        width: 200px;
+    }
+    #password-form,
+    input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 100px;
+    }
+    #current-password,
+    #new-password,
+    #confirm-password,
+    #subbutton {
+        width: 35%;
+    }
+    #subbutton {
+        width: 185px;
+        margin-top: 15px;
     }
 }

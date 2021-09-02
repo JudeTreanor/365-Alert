@@ -38,8 +38,7 @@
     </ul>
 
     <ul class="register">
-        <li><a href="{{ route('login') }}">Log in</a></li>
-        <li><a href="{{ route('register') }}">Sign Up</a></li>
+        <button><a href="{{ route('home') }}">My Account</a></button>
     </ul>
 
 

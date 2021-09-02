@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 /*Variables for colors*/
 
 :root {
@@ -19,6 +18,13 @@ body {
     font-family: "Roboto", sans-serif;
     text-align: center;
     margin: 0 auto;
+
+}
+
+main {
+    text-align: -webkit-center;
+    background-color: var(--dark_green);
+    height: 100%;
 }
 
 header {
@@ -29,39 +35,38 @@ header {
     align-items: center;
 }
 
-#navigation>li {
+#navigation > li {
     list-style: none;
     padding-bottom: 20px;
 }
 
-
 #navigation>li>a {
+
     text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
 }
 
-.register>li {
+.register > li {
     list-style: none;
 }
 
-.register>li>a {
+.register > li > a {
     text-decoration: none;
     color: var(--white);
     background-color: var(--dark_green);
     padding: 20px;
 }
 
-
 header img {
     width: 100px;
 }
 
-#user-icon{
+#user-icon {
     width: 75px;
 }
 
-ul .navigation {
+ul #navigation {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -80,17 +85,19 @@ ul .navigation {
     height: 100vh;
     width: 50%;
 }
+
 #navigation.opened {
     transform: translateX(0%);
 }
 
-#navigation>li>a:active {
+#navigation > li > a:active {
     background-color: var(--dark_green);
 }
 
 #action {
     width: -10px;
 }
+
 .register {
     display: none;
 }
@@ -99,9 +106,6 @@ ul .navigation {
     display: none;
 }
 
-main {
-    background-color: var(--dark_green);
-}
 
 footer img {
     width: 100px;
@@ -114,17 +118,17 @@ footer img {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
 }
 
-#footer>ul>li {
+#footer > ul > li {
     list-style-type: none;
 }
 
-#footer>ul>li>a {
+#footer > ul > li > a {
     text-decoration: none;
     color: var(--white);
 }
-
 
 /*Desktop view*/
 
@@ -133,18 +137,35 @@ footer img {
         display: none;
     }
     header {
-        justify-content: center;
+        justify-content: space-between;
     }
-    .navigation {
+    header h2 {
+        padding: 30px;
+    }
+    #logo {
         display: flex;
-        text-decoration: none;
-        padding: 10px 50px;
-        background-color: var(--green);
+        justify-content: flex-start;
     }
-    .register {
+    #navigation {
+        position: initial;
+        height: 30px;
         display: flex;
         justify-content: flex-start;
         text-decoration: none;
         padding: 10px 50px;
+        border-radius: 15px;
+        transform: translateX(0);
+        position: absolute;
+        top: 20
+    }
+    .register {
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        padding: 10px 50px;
+        border-radius: 15px;
+        position: absolute;
+        top: 20px;
+        right: 0;
     }
 }
