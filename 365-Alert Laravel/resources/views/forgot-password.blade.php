@@ -20,7 +20,7 @@
     @csrf
 
     <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
-    onblur="this.placeholder='enter your text'">
+    onblur="this.placeholder='email'">
 
     <input type="submit" value="Send" id="send1">
 
