@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +17,15 @@
     --red: #D90000;
     --orange: #FF6501;
     --grey: #8F8F8F;
+    --yellow: #FFcc01;
 }
 
 
 /*Luxembourg Flood Map section*/
+
+main {
+    text-align: -webkit-center;
+}
 
 .flood-map h2 {
     background-color: var(--dark_green);
@@ -31,8 +35,16 @@
     padding: 30px;
 }
 
+.flood-map img {
+    width: 100%;
+}
+
 
 /*My Alerts section*/
+
+.my-alerts {
+    background-color: var(--green);
+}
 
 .my-alerts h2 {
     background-color: var(--dark_green);
@@ -46,16 +58,28 @@
 /* Red alert*/
 
 .icon-alert-red {
-    border-left: 10px solid red;
-    background: url('../pictures/Alert_Warning_Red.svg') no-repeat -66px 30px/240px white;
+    border-left: 10px solid var(--red);
+    border-radius: 10px;
+    background: url('../pictures/Alert_Warning_Red.svg') no-repeat -60px 25px/240px var(--white);
     padding: 30px 0 30px 100px;
     min-height: 100px;
     text-align: left;
+    margin-bottom: 10px;
+}
+
+.red-alert h3 {
+    padding-left: 20px;
 }
 
 .red-alert p {
     color: var(--grey);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.red-alert #extreme {
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 .red-buttons button {
@@ -66,17 +90,164 @@
     text-transform: uppercase;
     font-weight: 500;
     margin-left: 10px;
+    border-radius: 20px;
+}
+
+.red-buttons {
+    padding-top: 30px;
+    padding-left: 10px;
+    margin-left: -100px;
 }
 
 
-/* 
-.alert {
+/* .alert {
     position: relative;
 }
 
 #danger {
     position: absolute;
-    left: 0;
-}
-*/
+    padding-left: 20px;
+} */
 
+
+/* Orange alert*/
+
+.icon-alert-orange {
+    border-left: 10px solid var(--orange);
+    border-radius: 10px;
+    background: url('../pictures/Alert_Warning_Orange.svg') no-repeat -60px 25px/240px var(--white);
+    padding: 30px 0 30px 100px;
+    min-height: 100px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.orange-alert h3 {
+    padding-left: 20px;
+}
+
+.orange-alert p {
+    color: var(--grey);
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.orange-alert #extreme {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.orange-buttons button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.orange-buttons {
+    padding-top: 30px;
+    padding-left: 10px;
+    margin-left: -100px;
+}
+
+
+/* Yellow alert*/
+
+.icon-alert-yellow {
+    border-left: 10px solid var(--yellow);
+    border-radius: 10px;
+    background: url('../pictures/Alert_Warning_Yellow.svg') no-repeat -60px 25px/240px var(--white);
+    padding: 30px 0 30px 100px;
+    min-height: 100px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.yellow-alert h3 {
+    padding-left: 20px;
+}
+
+.yellow-alert p {
+    color: var(--grey);
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.yellow-alert #extreme {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.yellow-buttons button {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.yellow-buttons {
+    padding-top: 30px;
+    padding-left: 10px;
+    margin-left: -100px;
+}
+
+
+/* Need Help section */
+
+.need-help h2 {
+    background-color: var(--dark_green);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    padding: 30px;
+}
+
+.need-help img {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+}
+
+.bottom-center {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+
+.container #bottom-text {
+    background-color: red;
+}
+
+@media screen and (min-width: 1200px) {
+    header img {
+        display: none;
+    }
+    header {
+        justify-content: center;
+    }
+}

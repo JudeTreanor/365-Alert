@@ -21,6 +21,12 @@ body {
     margin: 0 auto;
 }
 
+main {
+    text-align: -webkit-center;
+    background-color: var(--dark_green);
+    height: 100%;
+}
+
 header {
     background-color: var(--green);
     color: var(--white);
@@ -33,7 +39,6 @@ header {
     list-style: none;
     padding-bottom: 20px;
 }
-
 
 #navigation>li>a {
     text-decoration: none;
@@ -52,16 +57,15 @@ header {
     padding: 20px;
 }
 
-
 header img {
     width: 100px;
 }
 
-#user-icon{
+#user-icon {
     width: 75px;
 }
 
-ul .navigation {
+ul #navigation {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -80,6 +84,7 @@ ul .navigation {
     height: 100vh;
     width: 50%;
 }
+
 #navigation.opened {
     transform: translateX(0%);
 }
@@ -91,16 +96,13 @@ ul .navigation {
 #action {
     width: -10px;
 }
+
 .register {
     display: none;
 }
 
 .logo {
     display: none;
-}
-
-main {
-    background-color: var(--dark_green);
 }
 
 footer img {
@@ -133,18 +135,35 @@ footer img {
         display: none;
     }
     header {
-        justify-content: center;
+        justify-content: space-between;
     }
-    .navigation {
+    header h2 {
+        padding: 30px;
+    }
+    #logo {
         display: flex;
-        text-decoration: none;
-        padding: 10px 50px;
-        background-color: var(--green);
+        justify-content: flex-start;
     }
-    .register {
+    #navigation {
+        position: initial;
+        height: 30px;
         display: flex;
         justify-content: flex-start;
         text-decoration: none;
         padding: 10px 50px;
+        border-radius: 15px;
+        transform: translateX(0);
+        position: absolute;
+        top: 20
+    }
+    .register {
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        padding: 10px 50px;
+        border-radius: 15px;
+        position: absolute;
+        top: 20px;
+        right: 0;
     }
 }
