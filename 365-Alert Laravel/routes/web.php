@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use App\Http\Controllers\AlertsController;
+use App\Http\Controllers\AlertController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -164,7 +164,10 @@ Route::get('client-settings', function () {
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
 
 //Route to get the api
-Route::get('alerts', [AlertsController::class, 'getApi'])->name('alerts');
+
+Route::get('/alerts', [AlertController::class, 'getApi'])->name('alerts');
+
 Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')
     ->name('logout');
+
