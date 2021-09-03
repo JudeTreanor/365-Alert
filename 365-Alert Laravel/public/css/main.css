@@ -145,3 +145,13 @@ footer img {
         padding: 10px 50px;
     }
 }
+
+/* forms */
+
+.checkbox input {
+    display: block;
+    float: left;
+    margin-top: 1px;
+    margin-right: 8px;
+}
+/* end forms */
