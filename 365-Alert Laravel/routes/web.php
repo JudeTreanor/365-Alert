@@ -94,4 +94,12 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 //Route to get the api
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
+
+
+
+
+
+
+
+
 require __DIR__ . '/myauth.php';
