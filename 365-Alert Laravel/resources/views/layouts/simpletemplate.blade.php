@@ -33,14 +33,6 @@
         <li><a href="{{ route('contact') }}">Contact</a></li>
     </ul>
 
-    <ul class="register">
-        <button><a href="{{ route('home') }}">My Account</a></button>
-        <button><a href="{{ route('home') }}">Log Out</a></button>
-    </ul>
-
-
-
-
     <main class="content">
         @yield('content')
     </main>
