@@ -1,6 +1,6 @@
 section {
     width: 361px;
-    display: grid;
+
     text-align: center;
 }
 h1 {
@@ -32,7 +32,7 @@ li {
 .register-box {
     padding: 40px 20px;
     background: url('../pictures/Home_Register_Cropped.jpg') no-repeat center center/cover;
-    opacity: 0.80;
+
 }
 
 .register-box p {

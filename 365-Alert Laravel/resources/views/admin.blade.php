@@ -41,6 +41,7 @@
             </div>
         </article>
     </section>
+
 @endsection
 
 {{-- Footer Section --}}

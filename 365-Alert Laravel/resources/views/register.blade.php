@@ -1,5 +1,5 @@
 {{-- Extending the template --}}
-@extends('layouts.mytemplate')
+@extends('layouts.simpletemplate')
 
 {{-- Setting the Page title --}}
 @section('title', 'Register')
