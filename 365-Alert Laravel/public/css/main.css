@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 /*Variables for colors*/
 
 :root {
@@ -18,7 +19,6 @@ body {
     font-family: "Roboto", sans-serif;
     text-align: center;
     margin: 0 auto;
-
 }
 
 main {
@@ -35,23 +35,22 @@ header {
     align-items: center;
 }
 
-#navigation > li {
+#navigation>li {
     list-style: none;
     padding-bottom: 20px;
 }
 
 #navigation>li>a {
-
     text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
 }
 
-.register > li {
+.register>li {
     list-style: none;
 }
 
-.register > li > a {
+.register>li>a {
     text-decoration: none;
     color: var(--white);
     background-color: var(--dark_green);
@@ -90,7 +89,7 @@ ul #navigation {
     transform: translateX(0%);
 }
 
-#navigation > li > a:active {
+#navigation>li>a:active {
     background-color: var(--dark_green);
 }
 
@@ -106,7 +105,6 @@ ul #navigation {
     display: none;
 }
 
-
 footer img {
     width: 100px;
     margin: -20px;
@@ -121,23 +119,21 @@ footer img {
     width: 100%;
 }
 
-#footer > ul > li {
+#footer>ul>li {
     list-style-type: none;
 }
 
-#footer > ul > li > a {
+#footer>ul>li>a {
     text-decoration: none;
     color: var(--white);
 }
+
 
 /*Desktop view*/
 
 @media screen and (min-width: 1200px) {
     header img {
         display: none;
-    }
-    header {
-        justify-content: space-between;
     }
     header h2 {
         padding: 30px;
@@ -146,17 +142,21 @@ footer img {
         display: flex;
         justify-content: flex-start;
     }
+    #menu-container {
+        position: relative;
+    }
     #navigation {
-        position: initial;
-        height: 30px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        height: 30px;
         text-decoration: none;
-        padding: 10px 50px;
-        border-radius: 15px;
         transform: translateX(0);
-        position: absolute;
-        top: 20
+        margin-top: -52px;
+        margin-left: 180px;
+    }
+    #navigation li a {
+        margin-left: -15px;
+        font-weight: 500;
     }
     .register {
         display: flex;
@@ -165,7 +165,24 @@ footer img {
         padding: 10px 50px;
         border-radius: 15px;
         position: absolute;
-        top: 20px;
+        top: 16px;
         right: 0;
+    }
+    .register button {
+        justify-content: space-around;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 20px;
+        border: 1px var(--white) solid;
+        border-color: var(--white);
+        background-color: var(--green);
+        color: var(--white);
+        margin-left: 20px;
+    }
+    .register a {
+        font-weight: 500;
+        justify-content: space-between;
+        text-decoration: none;
+        color: var(--white);
     }
 }
