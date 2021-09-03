@@ -27,7 +27,7 @@
         </ul>
     </div>
 @endif
-<form action="" method="post" id="register" >
+<form  action="" method="post" id="register" >
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
     <input type="text" name="firstname" placeholder="First name" class="input-first"><br>
@@ -38,10 +38,10 @@
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
     <input type="number" name="contact" placeholder="Phone number"class="input-phone"><br>
 
-    <div id="checkbox">
-    <input type="checkbox" name="checkbox" value="check" id="agree" />
-    <p> I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
-    </div>
+    <p>I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
+    <input type="checkbox" name="checkbox" value="check" id="agree" /> <br>
+
+
     <input type="submit" value="Register" id="submit">
 
 </form>
