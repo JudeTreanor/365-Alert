@@ -11,7 +11,7 @@
 
 {{-- Main Content Section --}}
 @section('content')
-    
+
 @endsection
 
 {{-- Footer Section --}}

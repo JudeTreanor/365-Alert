@@ -16,10 +16,11 @@ class CreateAlertsTable extends Migration
         Schema::create('alerts', function (Blueprint $table) {
             $table->unsignedInteger('id');
             $table->primary('id');
-            $table->enum('type', ['Red', 'Orange', 'Yellow', 'Green', 'Dry']);
+            $table->enum('type', ['Red', 'Orange', 'Yellow', 'Green', 'Dry'])->nullable();
+            $table->enum('trend',['rest', 'down','up'])->nullable();
             $table->string('location');
             $table->string('river');
-            $table->float('water_level');
+            $table->float('water_level')->nullable();
             $table->timestamps();
         });
     }

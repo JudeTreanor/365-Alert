@@ -25,6 +25,8 @@ main {
 /*Intro Image*/
 .contact_image img {
 	width: 100%;
+    margin-bottom: -10px;
+    
 }
 
 /*Intro Title*/
@@ -41,7 +43,6 @@ main {
 
 /* Form */
 
-
 form {
 	background-color: #efefef;
 	padding: 50px;
@@ -53,8 +54,8 @@ form {
 	text-transform: uppercase;
 	font-family: Roboto;
 	font-size: 14px;
-    padding: 10px 50px 10px 50px;
 	font-weight: 600;
+    padding: 10px 50px 10px 50px;
 	background-color: #0b9e99;
 	border-style: none;
     border-radius: 20px;
@@ -98,8 +99,6 @@ label{
     display: flex;
     justify-content: center;
     height: 600px;
-
-
 }
 
 .containerSubmit{
@@ -111,7 +110,7 @@ label{
 
 .images img{
     height: 100px;
-    margin: 15px;
+    margin-bottom: 50px;
 }
 
 

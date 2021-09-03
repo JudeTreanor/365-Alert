@@ -41,7 +41,7 @@
         <div class="icon-block icon-alert-orange">
             <h3>Danger</h3>
             <br>
-            <p>The flood prediction center is in prealert status. Information about flooding
+            <p>The flood prediction center is in prealert status. Information about flooding
                 is made available and updated if there
                 is a change of situation. Water levels
                 are updated up to every 15 minutes.</p>
@@ -203,11 +203,14 @@
 
     </section>
 
-    <section>
+    <section class="last">
         <div class="help">
-            <img src="<?php echo e(URL::asset('pictures/CGDIS_3 copie.jpg')); ?>" alt="">
-            <p>112</p>
             <div class="call">
+                <p>112</p>
+                <img src="<?php echo e(URL::asset('pictures/CGDIS_112_White.svg')); ?>" alt="">
+            </div>
+            <div class="web">
+                <p></p>
             </div>
         </div>
     </section>

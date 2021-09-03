@@ -15,7 +15,7 @@
 
 
             <img src="{{ URL::asset('../css/logos/User_WhiteStroke_Circle.svg') }}" alt="">
-            <h1 id="client">Client Settings</h1>
+            <h1 id="client">My Account</h1>
 
             <section id="settings-bar">
                 <h2>Personal Details</h2>
@@ -55,17 +55,22 @@
                 <h2>Change Password</h2>
             </section>
             <section id="change-password">
-                <form action="sumbit">
-                    <label for="current_password">Current Password</label> <br>
-                    <input type="text" name="current_password" id="" placeholder="Enter Current Password"> <br>
-
-                    <label for="new_password">New Password</label> <br>
-                    <input type="text" name="new_password" id="" placeholder="Enter New Password"> <br>
-
-                    <label for="confirm_password">Current Password</label> <br>
-                    <input type="text" name="confirm_password" id="" placeholder="Confirm New Password"> <br>
-
-                    <input id="subbutton" type="submit">
+                <form id="password-form" action="sumbit">
+                    <div id="current-password">
+                        <label for="current_password">Current Password</label> <br>
+                        <input type="text" name="current_password" id="" placeholder="Enter Current Password"> <br>
+                    </div>
+                    <div id="new-password">
+                        <label for="new_password">New Password</label> <br>
+                        <input type="text" name="new_password" id="" placeholder="Enter New Password"> <br>
+                    </div>
+                    <div id="confirm-password">
+                        <label for="confirm_password">Confirm New Password</label> <br>
+                        <input type="text" name="confirm_password" id="" placeholder="Confirm New Password"> <br>
+                    </div>
+                    <div id="sub-button">
+                        <input id="subbutton" type="submit">
+                    </div>
 
 
                 </form>
