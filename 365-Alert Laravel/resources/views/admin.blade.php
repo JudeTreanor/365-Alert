@@ -32,6 +32,7 @@
         </article>
         @endforeach
     </section>
+    
 @endsection
 
 {{-- Footer Section --}}
