@@ -180,3 +180,10 @@
             padding-left: 58px;
             color: var(--white);
         }
+        
+        @media screen and (min-width: 1200px) {
+            .emergency img {
+                width: 100%;
+                height: 100%;
+            }
+        }
