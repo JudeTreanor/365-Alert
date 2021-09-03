@@ -39,7 +39,7 @@
         </ul>
 
         <ul class="register">
-            <button><a href="{{ route('home') }}">My Account</a></button>
+            <button><a href="{{ route('home') }}">My Settings</a></button>
             <button><a href="{{ route('logout') }}">Log Out</a></button>
         </ul>
 

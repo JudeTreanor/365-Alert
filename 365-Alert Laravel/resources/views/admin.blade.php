@@ -32,6 +32,15 @@
         </article>
         @endforeach
     </section>
+
+    <section id="alerts-list">
+        @foreach ($alerts as $alert)
+        <article id="alert-article">
+            <div id="alerts">
+                <p clas></p>
+            </div>
+        </article>
+    </section>
 @endsection
 
 {{-- Footer Section --}}
