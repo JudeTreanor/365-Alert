@@ -1,20 +1,26 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 /*Variables for colors*/
 
-:root {
+/* :root {
     --white: #efefef;
     --green: #0b9e99;
     --blue: #16354d;
     --dark_green: #037c87;
     --purple: #2b3371;
+} */
+
+/* user details*/
+
+#user-details .user-username,
+#user-details .user-email,
+#user-details .user-phone {
+    margin-bottom: 50px;
 }
 
-change-buttons {
+/* end user details*/
+
+/* change buttons*/
+
+#change-buttons {
     background-color: var(--green);
     color: var(--white);
     text-align: center;
@@ -24,7 +30,24 @@ change-buttons {
     text-transform: uppercase;
     font-weight: 500;
     margin-left: 10px;
+    background-color: var(--green);
 }
+
+#change-buttons .red-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#change-buttons .red-buttons button {
+    margin: 8px;
+}
+#change-buttons button {
+    background-color: var(--green);
+    border: none;
+}
+
+/* end change buttons*/
 
 #change-password {
     background-color: var(--white);
@@ -32,7 +55,15 @@ change-buttons {
     padding: 50px;
 }
 
-input {
+#change-password .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+#change-password .row .col {
+    width: 100%;
+}
+
+#change-password input {
     margin-bottom: 50px;
     border-radius: 25px;
     border: 2px solid;
@@ -40,63 +71,18 @@ input {
     width: 70%;
     padding-left: 20px;
 }
-ul,
-li {
-    text-decoration: none;
-}
 
-#subbutton {
-    align-items: left;
-    background-color: var(--green);
-}
-
-.red-buttons button {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-left: 10px;
-    border-radius: 20px;
+#change-password label {
     display: block;
-    margin-bottom: 20px;
-    width: 50%;
+    line-height: 20px;
+    margin-bottom: 4px;
 }
 
-#buttons li {
-    list-style: none;
-
-    background-color: var(--green);
-    margin-top: 20px;
-
-    border-radius: 25px;
-
-    text-align: center;
-    align-items: center;
-    height: 50px;
+#change-password .sub-button {
+    margin-top: 24px;
 }
 
-label {
-    color: var(--purple);
-    text-transform: capitalize;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-#settings-bar {
-    background-color: var(--blue);
-    text-transform: capitalize;
-    font-weight: 500;
-    color: var(--white);
-    padding: 50px;
-}
-
-.user-username,
-.user-email,
-.user-phone {
-    margin-bottom: 50px;
-}
+/*user-details*/
 
 #user-details {
     background-color: var(--white);
@@ -107,134 +93,44 @@ label {
     padding: 50px;
 }
 
-h3 {
+/* end user-details */
+
+/*settings-bar*/
+
+#settings-bar {
+    background-color: var(--blue);
+    text-transform: capitalize;
+    font-weight: 500;
     color: var(--white);
-
-    font-size: 20px;
-    margin-bottom: 30px;
+    padding: 50px;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    margin: 0 auto;
-}
-
-header {
-    background-color: var(--green);
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigation > li {
-    list-style: none;
-}
-
-.register > li {
-    list-style: none;
-}
-
-.navigation > li > a {
-    text-decoration: none;
-    color: var(--white);
-    padding: 20px;
-}
-
-.register > li > a {
-    text-decoration: none;
-    color: var(--white);
-    background-color: var(--dark_green);
-    padding: 20px;
-}
-
-header img {
-    width: 100px;
-    height: 100px;
-}
-
-ul .navigation {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
-
-.navigation {
-    display: none;
-}
-
-.register {
-    display: none;
-}
-
-.logo {
-    display: none;
-}
-
-main {
-    background-color: var(--dark_green);
-}
-
-footer img {
-    width: 100px;
-    margin: -20px;
-}
-
-#footer {
-    background-color: var(--green);
-    color: var(--white);
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-#footer > ul > li {
-    list-style-type: none;
-}
-
-#footer > ul > li > a {
-    text-decoration: none;
-    color: var(--white);
-}
+/* end settings-bar*/
 
 /*Desktop view*/
 
-@media screen and (min-width: 1200px) {
-    header img {
-        display: none;
-    }
-    header {
-        justify-content: center;
-    }
-    .navigation {
-        display: flex;
-        text-decoration: none;
-        padding: 10px 50px;
-        background-color: var(--green);
-    }
-
-    #client {
-        color: var(--white);
-    }
-    .register {
-        display: flex;
-        justify-content: flex-start;
-        text-decoration: none;
-        padding: 10px 50px;
-    }
-    input {
-        width: 50%;
-    }
-
+@media screen and (min-width: 980px) {
     #user-details {
         display: flex;
         justify-content: space-between;
     }
-    div,
-    .red-button {
-        width: 200px;
+
+    #change-buttons .red-buttons {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
     }
+
+    #change-buttons {
+        border-radius: 25px;
+    }
+
+    #change-password .row .col {
+        text-align: center;
+        width: 50%;
+    }
+    /* 
     #password-form,
     input {
         display: flex;
@@ -251,5 +147,5 @@ footer img {
     #subbutton {
         width: 185px;
         margin-top: 15px;
-    }
+    } */
 }
