@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\Models\Alert;
+use App\Models\User;
+use App\Models\Playlist;
 use Carbon\Carbon;
 
 class AlertController extends Controller
@@ -40,7 +42,8 @@ class AlertController extends Controller
                         $alert = Alert::find($response->id);
 
                         // Set the Attributes
-                        $alert->type = 'Red';
+                        $alert->type = 'Extreme Danger';
+                        $alert->description = 'alert';
                         $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
@@ -60,7 +63,8 @@ class AlertController extends Controller
                         $alert = Alert::find($response->id);
 
                         // Set the Attributes
-                        $alert->type = 'Orange';
+                        $alert->type = 'Danger';
+                        $alert->description = 'pre-alert';
                         $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
@@ -80,7 +84,8 @@ class AlertController extends Controller
                         $alert = Alert::find($response->id);
 
                         // Set the Attributes
-                        $alert->type = 'Yellow';
+                        $alert->type = 'Potential Danger';
+                        $alert->description = 'caution';
                         $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
@@ -95,7 +100,8 @@ class AlertController extends Controller
                         $alert = Alert::find($response->id);
 
                         // Set the Attributes
-                        $alert->type = 'Green';
+                        $alert->type = 'Low Danger';
+                        $alert->description = 'awareness';
                         $alert->trend = $response->trend;
                         $alert->water_level = $response->current->value;
                         $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
@@ -112,7 +118,8 @@ class AlertController extends Controller
                     $alert = Alert::find($response->id);
 
                     // Set the Attributes
-                    $alert->type = 'Dry';
+                    $alert->type = 'Dried Up River';
+                    $alert->description = 'awareness';
                     $alert->trend = $response->trend;
                     $alert->water_level = $response->current->value;
                     $alert->updated_at = Carbon::now()->format('Y-m-d H:i:s');
@@ -130,6 +137,17 @@ class AlertController extends Controller
         $alerts = Alert::all();
         
         return view('alerts', ['alerts' => $alerts]);
+    }
+    public function addAlert($user_id, $alert_id)
+    {
+        $playlist = new Playlist;
+
+        $playlist->users_id = $user_id;
+        $playlist->alerts_id = $alert_id;
+
+        $playlist->save();
+
+        return back()->withInput();
     }
 
 }
