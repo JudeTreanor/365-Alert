@@ -87,4 +87,13 @@ class UserController extends Controller
         // Return the Client Settings View
         return view('user', ['user' => $user]);
     }
+
+
+    public function loggedUserShow($id)
+    {
+        // Look for the specific User ID
+        $user = User::find($id);
+
+        return view('user', ['user' => $user]);
+    }
 }
