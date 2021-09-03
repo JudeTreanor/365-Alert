@@ -60,11 +60,11 @@ Route::get('/contact', function () {
 Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-submit');
 
 // Route to the Home page
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/home1', function () {
+Route::get('/', function () {
     return view('home1');
 })->name('home1');
 
