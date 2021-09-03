@@ -21,20 +21,23 @@
 <section>
     @foreach ($alerts as $alert)
     <article class="alert_container">
+        <div id="sidebar_color"></div>
+        <img src="{{URL::asset('pictures/Alert_Warning_Red.svg')}}" alt="">
         <div class="alert">
-            <h3 id="location">Location: {{$alert->location}}</h3>
-            <p id="alert_type">Alert Type: {{$alert->type}}</p>
+            <h3 id="location">{{$alert->location}}</h3>
+            <p id="alert_type">{{$alert->type}}</p>
             <p id="description">Description {{$alert->description}}</p>
             <p id="river">River: {{$alert->river}}</p>
             <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
             <p id="updated">Last updated: {{$alert->updated_at}}</p>
+            <div class="buttons_container">
+                <button type="submit">Add To List</button>
+            </div>
         </div>
-        <div class="buttons_container">
-            <button type="submit">Water Chart</button>
-            <button type="submit">Comments</button>
-            <button type="submit">Add To List</button>
-        </div>
+        
     </article>
+    
+    
     @endforeach
 </section>
 @endsection

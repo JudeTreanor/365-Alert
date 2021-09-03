@@ -20,7 +20,8 @@
 }
 
 body,
-main {
+main,
+section {
 	background-color: #fff;
 }
 /*Flood Map Image*/
@@ -52,17 +53,23 @@ main {
 
 /*Alerts - individual*/
 
+#sidebar_color {
+	display: flex;
+	width: 20px;
+	background-color: var(--red);
+}
+
 .alert {
 	font-family: Roboto;
+	font-size: 15px;
 	color: white;
-	padding: 30px;
 }
 
 .alert_container {
 	background-color: #efefef;
 	margin: 0 auto;
-	padding: 20px;
-	width: 100%;
+	display: flex;
+	margin-bottom: 10px;
 }
 
 #location {
@@ -71,6 +78,7 @@ main {
 	text-align: left;
 	text-transform: uppercase;
 	padding-bottom: 10px;
+	padding-top: 20px;
 }
 
 #alert_type,
@@ -83,6 +91,28 @@ main {
 	text-align: left;
 }
 
-.buttons_container button{
+.alert_container img {
+	width: 120px;
+}
 
+.buttons_container {
+	margin-top: 20px;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	background-color: #efefef;
+}
+
+.buttons_container button {
+	color: white;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 10px 20px 10px 20px;
+	background-color: #0b9e99;
+	border-style: none;
+	border-radius: 20px;
+	text-align: center;
+	margin-bottom: 20px;
 }
