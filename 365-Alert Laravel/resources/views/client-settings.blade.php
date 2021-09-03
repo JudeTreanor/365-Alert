@@ -55,23 +55,23 @@
                 <h2>Change Password</h2>
             </section>
             <section id="change-password">
-                <form id="password-form" action="sumbit">
-                    <div id="current-password">
-                        <label for="current_password">Current Password</label> <br>
-                        <input type="text" name="current_password" id="" placeholder="Enter Current Password"> <br>
+                <form class="row" action="sumbit">
+                    <div class="col current-password">
+                        <label for="current_password">Current Password</label>
+                        <input type="text" name="current_password" id="current_password"
+                            placeholder="Enter Current Password">
                     </div>
-                    <div id="new-password">
-                        <label for="new_password">New Password</label> <br>
-                        <input type="text" name="new_password" id="" placeholder="Enter New Password"> <br>
+                    <div class="col new-password">
+                        <label for="new_password">New Password</label>
+                        <input type="text" name="new_password" id="new_password" placeholder="Enter New Password">
                     </div>
-                    <div id="confirm-password">
-                        <label for="confirm_password">Confirm New Password</label> <br>
-                        <input type="text" name="confirm_password" id="" placeholder="Confirm New Password"> <br>
+                    <div class="col confirm-password">
+                        <label for="confirm_password">Confirm New Password</label>
+                        <input type="text" name="confirm_password" id="confirm_password" placeholder="Confirm New Password">
                     </div>
-                    <div id="sub-button">
-                        <input id="subbutton" type="submit">
+                    <div class="col">
+                        <input class="sub-button" value="Send" type="submit">
                     </div>
-
 
                 </form>
             </section>
@@ -97,8 +97,10 @@
 
             </section>
             <section id="user-details">
-                <input id="cbox" type="checkbox">
-                <p id="cbox">Lmao box gang</p>
+                <div class="checkbox">
+                    <input id="cbox" type="checkbox">
+                    <p id="cbox">Lmao box gang</p>
+                </div>
             </section>
         </body>
     </main>
