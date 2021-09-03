@@ -22,38 +22,38 @@
             </section>
 
             <section id="user-details">
-                @foreach ($users as $user)
 
 
-                    <div class="user-username">
-                        <h2>Username</h2>
-                        <p>
-                            {{ $users->firstname }}
-                        </p>
-                    </div>
-                    <div class="user-email">
-                        <h2>Email</h2>
-                        <p>
-                            {{ $user->email }}
-                        </p>
-                    </div>
-                    <div class="user-phone">
-                        <h2>Phone</h2>
-                        <p>
-                            {{ $user->contact }}
-                        </p>
-                    </div>
 
-                    <div id="change-buttons">
-                        <div class="red-buttons">
-                            <button type="submit">Change Username</button>
-                            <button type="submit">Change Email</button>
-                            <button type="submit">Change Phone</button>
-                        </div>
-                    </div>
-                    </div>
+                <div class="user-username">
+                    <h2>Username</h2>
+                    <p>
+                        {{ $user->firstname }}
+                    </p>
+                </div>
+                <div class="user-email">
+                    <h2>Email</h2>
+                    <p>
+                        {{ $user->email }}
+                    </p>
+                </div>
+                <div class="user-phone">
+                    <h2>Phone</h2>
+                    <p>
+                        {{ $user->contact }}
+                    </p>
+                </div>
 
-                @endforeach
+
+                <div id="change-buttons">
+                    <div class="red-buttons">
+                        <button type="submit">Change Username</button>
+                        <button type="submit">Change Email</button>
+                        <button type="submit">Change Phone</button>
+                    </div>
+                </div>
+                </div>
+
             </section>
             <section id="settings-bar">
                 <h2>Change Password</h2>
