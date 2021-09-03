@@ -53,4 +53,8 @@ class User extends Authenticatable
 
         $this->notify(new ResetPasswordNotification($url));
     }*/
+    public function userPlaylist()
+    {
+        return $this->belongsTo(Playlist::class);
+    }
 }

@@ -38,8 +38,7 @@
     </ul>
 
     <ul class="register">
-        <li><a href="<?php echo e(route('login')); ?>">Log in</a></li>
-        <li><a href="<?php echo e(route('register')); ?>">Sign Up</a></li>
+        <button><a href="<?php echo e(route('home')); ?>">My Account</a></button>
     </ul>
 
 
