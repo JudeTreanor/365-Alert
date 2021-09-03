@@ -13,3 +13,7 @@
         <li style="list-style-type: none"><a style="padding: 10px"  href="{{ route('alert-details') }}">Alert Details</a></li>
     </ul>
 </nav>
+
+
+<?php
+

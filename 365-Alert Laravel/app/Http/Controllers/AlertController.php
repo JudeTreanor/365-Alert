@@ -130,24 +130,31 @@ class AlertController extends Controller
             }
         }
     }
+
     public function showAlerts()
     {
         $this->getApi();
 
         $alerts = Alert::all();
+        $users = User::all();
         
-        return view('alerts', ['alerts' => $alerts]);
+        return view('alerts', ['alerts' => $alerts, 'users' => $users]);
     }
+
     public function addAlert($user_id, $alert_id)
     {
         $playlist = new Playlist;
 
-        $playlist->users_id = $user_id;
-        $playlist->alerts_id = $alert_id;
+        $playlist->user_id = $user_id;
+        $playlist->alert_id = $alert_id;
 
         $playlist->save();
 
         return back()->withInput();
+    }
+    public function alertPlaylist()
+    {
+        
     }
 
 }

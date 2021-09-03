@@ -55,6 +55,6 @@ class User extends Authenticatable
     }*/
     public function userPlaylist()
     {
-        return $this->belongsTo(Playlist::class);
+        return $this->belongsTo(Playlist::class, 'user_id', 'id');
     }
 }
