@@ -14,10 +14,12 @@ class CreateAlertsTable extends Migration
     public function up()
     {
         Schema::create('alerts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->enum('type', ['Very-high', 'high', 'medium', 'low']);
+            $table->unsignedInteger('id');
+            $table->primary('id');
+            $table->enum('type', ['Red', 'Orange', 'Yellow', 'Green', 'Dry']);
             $table->string('location');
-            $table->float('water-level-chart');
+            $table->string('river');
+            $table->float('water_level');
             $table->timestamps();
         });
     }
