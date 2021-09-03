@@ -107,10 +107,9 @@ main {
         font-weight: 400;
         padding: 100px;
     }
-    
 }
-/*Responsive Mode Tablet and Desktop*/
 
+/*Responsive Mode Tablet and Desktop*/
 
 @media 
   (min-device-width: 800px) 
@@ -121,16 +120,15 @@ main {
         color: white;
         font-weight: 400;
         padding: 200px;
-        
     }
     
     .about_team {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: center;
-        
+        justify-content: center; 
     }
+
     .about {
         width: 300px;
         padding: 0px;
@@ -139,7 +137,6 @@ main {
     .about img{
         width: 150px;
         height: 150px;
-
     }
 
     

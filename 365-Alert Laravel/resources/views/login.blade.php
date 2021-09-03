@@ -15,7 +15,7 @@
 {{-- Main Content Section --}}
 @section('content')
 
-<img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
+<img src="{{URL::asset('../css/logos/house.svg')}}" alt="" class="icon_365" >
 <h3>Login</h3>
 
 @if (session('status'))
@@ -36,13 +36,12 @@
 <form action="" method="post">
     <!-- Security token for Laravel : Mandatory in forms -->
     @csrf
-
-
-    <input type="email" name="email" placeholder="email" class="input-email" onfocus="this.placeholder=''"
-    onblur="this.placeholder='Email'" >
-
-    <input type="password" name="password" placeholder="Password" class="input-password" ><br>
-<p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
+    <section class="flex_container">
+        <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
+        onblur="this.placeholder='Email'" >
+        <input type="password" name="password" placeholder="Password" class="input-password" >
+    </section>
+    <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
     <input type="submit" value="login" id="submit2">
 </form>
 

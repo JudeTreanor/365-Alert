@@ -14,7 +14,7 @@
 {{-- Main Content Section --}}
 @section('content')
 <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }}">
-<img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
+<img src="{{URL::asset('../css/logos/house.svg')}}" class="icon_365" alt="">
 <h3>Sign up</h3>
 
 
@@ -37,16 +37,14 @@
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
     <input type="number" name="contact" placeholder="Phone number"class="input-phone"><br>
-
-    <p>I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
-    <input type="checkbox" name="checkbox" value="check" id="agree" /> <br>
-
-
+    <div class="container_legal">
+        <input type="checkbox" name="checkbox" value="check" id="agree" />
+        <p>I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
+    </div>
     <input type="submit" value="Register" id="submit">
-
 </form>
 <div id="log">
-    <p>Already a member?<span><a href="login">Login Here  </a></span></p>
+    <p>Already a member?<span><a href="login">Login Here</a></span></p>
 </div>
 @endsection
 
