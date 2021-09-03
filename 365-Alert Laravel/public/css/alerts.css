@@ -17,6 +17,8 @@
 	--orange: #ff6501;
 	--darkgrey: #8f8f8f;
 	--yellow: #ffcc01;
+	--alertgreen: #12600a;
+	--alertbrown: #a37114;
 }
 
 body,
@@ -41,6 +43,150 @@ section {
 	font-family: Roboto;
 }
 
+/*Map details*/
+
+.map_main_container {
+	display: flex;
+	margin: 5px;
+	margin-bottom: 15px;
+}
+.map_details_container h2 {
+	text-align: left;
+	text-align: left;
+	font-family: Roboto;
+	font-size: 15px;
+	padding: 5px;
+	color: var(--darkgrey);
+}
+
+/*Circles on Map Toggle Colors*/
+
+
+.red_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--red);	
+}
+
+.orange_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--orange);
+}
+
+.yellow_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--yellow);
+}
+
+.green_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--alertgreen);
+}
+
+.brown_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--alertbrown);
+}
+
+/*Circles on Map Location*/
+
+#location_1{
+	position: fixed;
+	top: 440px;
+	right: 326px;
+}
+
+
+ol {
+	list-style-position: inside;
+	text-align: left;
+	padding: 5px;
+	color: var(--darkgrey);
+	column-count: 2;
+	
+
+}
+ol li {
+	font-size: 13px;
+}
+
+ul li {
+	font-size: 13px;
+	list-style: none;
+	display: flex;
+}
+
+ul {
+	padding: 5px;
+}
+
+.level_description h3 {
+	padding-bottom: 10px;
+	padding-left: 5px;
+	font-size: 15px;
+}
+
+.level_description {
+	text-align: left;
+	padding: 5px;
+	color: var(--darkgrey);
+}
+
+/*map details - level*/
+#red_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--red);
+	margin-right: 5px;
+}
+
+#orange_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--orange);
+	margin-right: 5px;
+}
+
+#yellow_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--yellow);
+	margin-right: 5px;
+}
+
+#green_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--alertgreen);
+	margin-right: 5px;
+}
+
+#brown_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--alertbrown);
+	margin-right: 5px;
+}
+
 /*Alerts section*/
 
 .alerts_title {
@@ -56,7 +202,6 @@ section {
 #sidebar_color {
 	display: flex;
 	width: 20px;
-	background-color: var(--red);
 }
 
 .alert {
@@ -72,9 +217,15 @@ section {
 	margin-bottom: 10px;
 }
 
+#alert_icon {
+	width: 120px;
+	margin-top: 20px;
+}
+
 #location {
 	color: black;
 	font-family: Roboto;
+	font-size: 18px;
 	text-align: left;
 	text-transform: uppercase;
 	padding-bottom: 10px;
@@ -82,13 +233,16 @@ section {
 }
 
 #alert_type,
-#description,
 #river,
+#description,
 #water_level,
 #updated {
 	color: var(--darkgrey);
 	font-family: Roboto;
 	text-align: left;
+}
+#description {
+	margin-bottom: 10px;
 }
 
 .alert_container img {
@@ -115,4 +269,83 @@ section {
 	border-radius: 20px;
 	text-align: center;
 	margin-bottom: 20px;
+}
+
+#alert_type {
+	color: var(--darkgrey);
+	text-decoration: underline;
+	font-family: Roboto;
+	font-weight: 600;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+/*Toggle Classes - Alert Types*/
+
+/*Red: Extreme Danger*/
+
+.extreme_danger_sidebar {
+	background-color: var(--red);
+	background-image: url(../pictures/Alert_Warning_Red.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
+}
+
+.extreme_danger_icon {
+	background-image: url(../pictures/Alert_Warning_Red.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
+}
+
+/*Orange: Danger*/
+.danger_sidebar {
+	background-color: var(--orange);
+}
+
+.danger_icon {
+	background-image: url(../pictures/Alert_Warning_Orange.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
+}
+
+/*Yellow: Potential Danger*/
+
+.potential_danger_sidebar {
+	background-color: var(--yellow);
+}
+
+.potential_danger_icon {
+	background-image: url(../pictures/Alert_Warning_Yellow.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
+}
+
+/*Green: Low Danger*/
+
+.low_danger_sidebar {
+	background-color: var(--alertgreen);
+}
+
+.low_danger_icon {
+	background-image: url(../pictures/Alert_Warning_Green.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
+}
+
+/*Brown: Dried Up River*/
+
+.dried_up_sidebar {
+	background-color: var(--alertbrown);
+}
+
+.dried_up_icon {
+	background-image: url(../pictures/Alert_Warning_Dry.svg);
+	background-repeat: no-repeat;
+	width: 120px;
+	margin-top: 20px;
 }
