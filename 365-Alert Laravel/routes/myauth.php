@@ -82,5 +82,6 @@ Route::post('/reset-password/token={token}', function (Request $request) {
 
 // route to the logout
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+
     ->middleware('auth')
     ->name('logout');
