@@ -32,7 +32,7 @@ main {
     text-transform: uppercase;
     font-weight: 600;
     color: var(--white);
-    padding: 50px;
+    padding: 30px;
 }
 
 .flood-map img {
