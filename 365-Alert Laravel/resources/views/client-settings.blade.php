@@ -22,34 +22,38 @@
             </section>
 
             <section id="user-details">
-                <div class="user-username">
-                    <h2>Username</h2>
-                    <p>
+                @foreach ($users as $user)
 
-                    </p>
-                </div>
-                <div class="user-email">
-                    <h2>Email</h2>
-                    <p>
 
-                    </p>
-                </div>
-                <div class="user-phone">
-                    <h2>Phone</h2>
-                    <p>
-
-                    </p>
-                </div>
-
-                <div id="change-buttons">
-                    <div class="red-buttons">
-                        <button type="submit">Change Username</button>
-                        <button type="submit">Change Email</button>
-                        <button type="submit">Change Phone</button>
+                    <div class="user-username">
+                        <h2>Username</h2>
+                        <p>
+                            {{ $users->firstname }}
+                        </p>
                     </div>
-                </div>
-                </div>
+                    <div class="user-email">
+                        <h2>Email</h2>
+                        <p>
+                            {{ $user->email }}
+                        </p>
+                    </div>
+                    <div class="user-phone">
+                        <h2>Phone</h2>
+                        <p>
+                            {{ $user->contact }}
+                        </p>
+                    </div>
 
+                    <div id="change-buttons">
+                        <div class="red-buttons">
+                            <button type="submit">Change Username</button>
+                            <button type="submit">Change Email</button>
+                            <button type="submit">Change Phone</button>
+                        </div>
+                    </div>
+                    </div>
+
+                @endforeach
             </section>
             <section id="settings-bar">
                 <h2>Change Password</h2>

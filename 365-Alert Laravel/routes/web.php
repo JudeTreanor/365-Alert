@@ -102,6 +102,8 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
 
+Route::get("client-settings/{id}", [UserController::class, 'loggedUserShow'])->name("client-settings");
+
 
 
 
@@ -111,4 +113,3 @@ require __DIR__ . '/myauth.php';
 // Route to add to the playlist a specific alert
 
 Route::get('/add-alert/{user_id}/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
-
