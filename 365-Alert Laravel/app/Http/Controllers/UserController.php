@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -89,11 +90,13 @@ class UserController extends Controller
     }
 
 
-    public function loggedUserShow($id)
+    public function loggedUserShow()
     {
+        $id = Auth::user()->id;
         // Look for the specific User ID
-        $user = User::find($id);
+        dd($id);
+        $users = User::find($id);
 
-        return view('user', ['user' => $user]);
+        return view('client-settings', ['users' => $users]);
     }
 }
