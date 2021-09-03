@@ -28,10 +28,11 @@
     </header>
 
 
-    <ul id="navigation">
+    <ul id="nav-two">
         <li><a href="{{ route('about') }}">About</a></li>
         <li><a href="{{ route('contact') }}">Contact</a></li>
     </ul>
+
 
     <main class="content">
         @yield('content')
@@ -60,7 +61,9 @@
     </footer>
     {{-- @include('layouts.nav') --}}
     @yield('scripts')
-    <script src="{{ URL::asset('js/template.js') }}"></script>
+
+    <script src="{{ URL::asset('js/templateTwo.js') }}"></script>
+
 </body>
 
 </html>

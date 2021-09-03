@@ -7,12 +7,15 @@
 
 <?php $__env->startSection('css'); ?>
     <link rel="stylesheet" href="<?php echo e(URL::asset('css/login.css')); ?>">
+
 <?php $__env->stopSection(); ?>
 <body>
 
 <main>
 
 <?php $__env->startSection('content'); ?>
+
+<img src="<?php echo e(URL::asset('../css/logos/house.svg')); ?>" alt="">
 <h3>Login</h3>
 
 <?php if(session('status')): ?>
@@ -34,18 +37,17 @@
 <form action="" method="post">
     <!-- Security token for Laravel : Mandatory in forms -->
     <?php echo csrf_field(); ?>
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="password" name="password" placeholder="Password"><br>
 
 
+    <input type="email" name="email" placeholder="email" class="input-email" onfocus="this.placeholder=''"
+    onblur="this.placeholder='Email'" >
+
+    <input type="password" name="password" placeholder="Password" class="input-password" ><br>
+<p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
     <input type="submit" value="login" id="submit2">
 </form>
-<p><span><a href="#">Forgot your password?</a></span></p>
 
 <?php $__env->stopSection(); ?>
-
-</main>
-</body>
 
 
 
@@ -55,7 +57,8 @@
 
 
 <?php $__env->startSection('scripts'); ?>
-
+</main>
+</body>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.mytemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/login.blade.php ENDPATH**/ ?>

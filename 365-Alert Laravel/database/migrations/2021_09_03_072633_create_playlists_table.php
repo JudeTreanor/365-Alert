@@ -18,6 +18,7 @@ class CreatePlaylistsTable extends Migration
             $table->integer('alert_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('alert_id')->references('id')->on('alerts')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
