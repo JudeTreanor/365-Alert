@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\middleware\EnsureUserIsLoggedIn;
 
 
 
@@ -81,7 +82,7 @@ Route::post('/reset-password/token={token}', function (Request $request) {
 })->middleware('guest')->name('password.update');
 
 // route to the logout
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
 
-    ->middleware('auth')
+    ->middleware(EnsureUserIsLoggedIn::class)->name('logout')
     ->name('logout');
