@@ -6,12 +6,12 @@
 
 
 <?php $__env->startSection('css'); ?>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="<?php echo e(URL::asset('css/alert-details.css')); ?>">    
 <?php $__env->stopSection(); ?>
 
 
 <?php $__env->startSection('content'); ?>
-    
+
 <?php $__env->stopSection(); ?>
 
 
