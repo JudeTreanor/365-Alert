@@ -13,12 +13,17 @@
 @section('content')
 
 
-<section>
-    <img id="telefone" src="{{URL::asset('../pictures/Home_Register_Cropped.jpg')}}" alt="">
-    <p>Be alert 365 days if potential flood appears <br> </p>
-    <span id="register"> <a href="{{ route('register') }}">Sign up</a></span><br>
-    <span id="login"> <a href="{{ route('login') }}">Login</a></span>
+<section class="home">
 
+    <div class="register-box">
+        <p class="intro-text">Be alert 365 days if potential flood appears</p>
+        <p>
+            <a class="btn btn-register" href="{{ route('register') }}">Sign up</a>
+        </p>
+        <p>
+            <a class="btn btn-login" href="{{ route('login') }}">Login</a>
+        </p>
+    </div>
 
     <ul>
         <li>
@@ -27,15 +32,15 @@
             <span>Receive an email alert <br> with possible floods</span>
             <img class="img" src="{{URL::asset('../pictures/Check_Water_Level_Main.svg')}}" id="img2" alt=""><br>
             <span>Check the water level <br>of any location</span>
-            <img class="img" src="{{URL::asset('../pictures/Procedures_Main.svg')}}"id="img3" alt=""><br>
+            <img class="img" src="{{URL::asset('../pictures/Procedures_Main.svg')}}" id="img3" alt=""><br>
             <span id="procedures">Follow important safest <br>procedures</span>
 
         </li>
     </ul>
-<div>
-    <h3>LUXEMBOURG FLOOD</h3>
-    <img src="{{URL::asset('../pictures/Map2.png')}}" id="map" alt="">
-</div>
+    <div>
+        <h3>LUXEMBOURG FLOOD</h3>
+        <img src="{{URL::asset('../pictures/Map2.png')}}" id="map" alt="">
+    </div>
 </section>
 
 

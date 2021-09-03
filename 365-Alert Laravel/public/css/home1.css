@@ -24,25 +24,44 @@ h3 {
 li {
     list-style: none;
 }
+
 @media screen and (min-width: 600px) {
 }
-#register {
-    position: absolute;
-    padding: 95px;
-    color: white;
-    margin: 64px 12px;
+
+/* register-box */
+.register-box {
+    padding: 40px 20px;
+    background: url('../pictures/Home_Register_Cropped.jpg') no-repeat center center/cover;
 }
-#login {
-    position: absolute;
-    padding: 80px;
-    color: white;
-    margin: 52px 34px;
+
+.register-box p {
+    margin: 18px 0;
 }
+
+.register-box .intro-text {
+margin-bottom: 18px;
+}
+
+.register-box .btn {
+
+}
+
+.register-box .btn.btn-register {
+
+}
+
+.register-box .btn.btn-login {
+
+}
+
+
+/* end register box */
 
 #telefone {
     opacity: 0.45;
 }
-a {
+
+.btn {
     background-color: teal;
     transform: none;
     color: white;
@@ -53,13 +72,7 @@ a {
     padding: 2px 46px;
     border-style: none;
 }
-p {
-    padding: 99px;
-    position: absolute;
-    margin: -81px 1px;
-    color: white;
-    margin-top: -28px;
-}
+
 #procedures {
     margin-bottom: 50px;
 }
