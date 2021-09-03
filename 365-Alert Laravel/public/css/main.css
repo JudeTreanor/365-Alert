@@ -187,3 +187,13 @@ footer img {
         color: var(--white);
     }
 }
+
+/* forms */
+
+.checkbox input {
+    display: block;
+    float: left;
+    margin-top: 1px;
+    margin-right: 8px;
+}
+/* end forms */

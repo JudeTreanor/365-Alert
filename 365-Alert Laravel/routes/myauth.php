@@ -1,5 +1,5 @@
 <?php
-/*
+
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Password;
@@ -9,22 +9,25 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Middleware\TrustHosts;
 
 
 
 
-//route to the login
+
+
+// Route to the show the login page
 Route::get('/login', function () {
     return view('login');
 })->name('login');
 
 // Route to submit the login form
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
-// Route to the Register
+
+//route register
 Route::get('/register', function () {
     return view('register');
 })->name('register');
+
 //Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 
@@ -47,11 +50,12 @@ Route::post('/forgot-password', function (Request $request) {
 })->middleware('guest')->name('password.email');
 
 //route to reset-password
-Route::get('/reset-password/{token}', function ($token) {
+Route::get('/reset-password/token={token}', function ($token) {
     return view('reset-password', ['token' => $token]);
-})->middleware('guest')->name('password.request');
+})->middleware('guest')->name('password.update');
 
-Route::post('/reset-password', function (Request $request) {
+Route::post('/reset-password/token={token}', function (Request $request) {
+
     $request->validate([
         'token' => 'required',
         'email' => 'required|email',
@@ -75,3 +79,8 @@ Route::post('/reset-password', function (Request $request) {
         ? redirect()->route('login')->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+// route to the logout
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('logout');
