@@ -21,7 +21,6 @@
 /* change buttons*/
 
 #change-buttons {
-    background-color: var(--green);
     color: var(--white);
     text-align: center;
 
@@ -30,7 +29,6 @@
     text-transform: uppercase;
     font-weight: 500;
     margin-left: 10px;
-    background-color: var(--green);
 }
 
 #change-buttons .red-buttons {
@@ -45,6 +43,17 @@
 #change-buttons button {
     background-color: var(--green);
     border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+}
+
+.row label {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--blue);
 }
 
 /* end change buttons*/
@@ -107,6 +116,12 @@
 
 /* end settings-bar*/
 
+/* check box  */
+.checkbox {
+    display: flex;
+}
+/* end check box  */
+
 /*Desktop view*/
 
 @media screen and (min-width: 980px) {
@@ -130,6 +145,10 @@
         text-align: center;
         width: 50%;
     }
+
+    #red-buttons button {
+    }
+
     /* 
     #password-form,
     input {

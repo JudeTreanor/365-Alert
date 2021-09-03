@@ -25,21 +25,25 @@
 
     </header>
 
-    <ul id="navigation">
-        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
-        <li><a href="<?php echo e(route('about')); ?>">About</a></li>
-        <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
-        <li><a href="<?php echo e(route('alerts')); ?>">Alert</a></li>
-        <li><a href="<?php echo e(route('procedures')); ?>">Procedures</a></li>
-        <li><a href="<?php echo e(route('terms')); ?>">Terms</a></li>
-        <li><a href="<?php echo e(route('user')); ?>">User</a></li>
-        <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
-        <li><a href="<?php echo e(route('alert-details')); ?>">Alert Details</a></li>
-    </ul>
+    
+        <ul id="navigation">
+            <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+            <li><a href="<?php echo e(route('about')); ?>">About</a></li>
+            <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
+            <li><a href="<?php echo e(route('alerts')); ?>">Alert</a></li>
+            <li><a href="<?php echo e(route('procedures')); ?>">Procedures</a></li>
+            <li><a href="<?php echo e(route('terms')); ?>">Terms</a></li>
+            <li><a href="<?php echo e(route('user')); ?>">User</a></li>
+            <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
+            <li><a href="<?php echo e(route('alert-details')); ?>">Alert Details</a></li>
+        </ul>
 
-    <ul class="register">
-        <button><a href="<?php echo e(route('home')); ?>">My Account</a></button>
-    </ul>
+        <ul class="register">
+            <button><a href="<?php echo e(route('home')); ?>">My Account</a></button>
+            <button><a href="<?php echo e(route('home')); ?>">Log Out</a></button>
+        </ul>
+    
+
 
 
     <main class="content">

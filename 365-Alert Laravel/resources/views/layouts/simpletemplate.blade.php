@@ -37,6 +37,7 @@
 
 
 
+
     <main class="content">
         @yield('content')
     </main>
@@ -64,7 +65,9 @@
     </footer>
     {{-- @include('layouts.nav') --}}
     @yield('scripts')
+
     <script src="{{ URL::asset('js/templateTwo.js') }}"></script>
+
 </body>
 
 </html>

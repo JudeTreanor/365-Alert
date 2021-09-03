@@ -15,7 +15,7 @@
 <?php $__env->startSection('content'); ?>
 <link rel="stylesheet" href="<?php echo e(URL::asset('css/login.css')); ?>">
 <img src="<?php echo e(URL::asset('../css/logos/house.svg')); ?>" alt="">
-<h3>Register</h3>
+<h3>Sign up</h3>
 
 
 <?php if($errors->any()): ?>
@@ -30,7 +30,8 @@
 <form action="" method="post" id="register" >
     <!-- Security token for Laravel : Mandatory in forms -->
     <?php echo csrf_field(); ?>
-    <input type="text" name="username" placeholder="Username" class="input-username"><br>
+    <input type="text" name="firstname" placeholder="First name" class="input-first"><br>
+    <input type="text" name="lastname" placeholder="Last name" class="input-last"><br>
     <input type="email" name="email" placeholder="Email" class="input-email"><br>
     <input type="password" name="password" placeholder="Password" class="input-password" ><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>

@@ -11,6 +11,6 @@ class Alert extends Model
 
     public function alertPlaylist()
     {
-        return $this->belongsTo(Playlist::class);
+        return $this->belongsTo(Playlist::class, 'alert_id', 'id');
     }
 }
