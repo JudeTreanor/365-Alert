@@ -25,7 +25,7 @@
 
     </header>
 
-    
+
         <ul id="navigation">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('about') }}">About</a></li>
@@ -40,9 +40,9 @@
 
         <ul class="register">
             <button><a href="{{ route('home') }}">My Account</a></button>
-            <button><a href="{{ route('home') }}">Log Out</a></button>
+            <button><a href="{{ route('logout') }}">Log Out</a></button>
         </ul>
-    
+
 
 
 
