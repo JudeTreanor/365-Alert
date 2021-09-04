@@ -61,7 +61,9 @@
             <p id="river">River <?php echo e($alert->river); ?></p>
             <p id="water_level">Water Level: <?php echo e($alert->water_level . " cm"); ?></p>
             <p id="updated"><?php echo e($alert->updated_at); ?></p>
-            
+            <a href="<?php echo e(route('add-alert', ['alert_id' => $alert->id])); ?>">
+                <button class="buttons_container" type="submit">Add To List</button>
+            </a>
         </div>
     </article>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

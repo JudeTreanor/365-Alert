@@ -104,4 +104,6 @@ require __DIR__ . '/myauth.php';
 
 // Route to add to the playlist a specific alert
 
-Route::get('/add-alert/{user_id}/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
+Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
+
+// Route::get()
