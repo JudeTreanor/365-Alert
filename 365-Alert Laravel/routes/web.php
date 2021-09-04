@@ -102,7 +102,7 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
 
-Route::get("client-settings/{id}", [UserController::class, 'loggedUserShow'])->name("client-settings");
+Route::get("client-settings/", [UserController::class, 'loggedUserShow'])->name("client-settings");
 
 
 

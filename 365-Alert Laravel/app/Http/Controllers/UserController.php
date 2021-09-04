@@ -94,9 +94,9 @@ class UserController extends Controller
     {
         $id = Auth::user()->id;
         // Look for the specific User ID
-        dd($id);
+
         $users = User::find($id);
 
-        return view('client-settings', ['users' => $users]);
+        return view('client-settings', ['user' => $users]);
     }
 }
