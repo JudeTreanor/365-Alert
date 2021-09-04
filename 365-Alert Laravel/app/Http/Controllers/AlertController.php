@@ -8,6 +8,7 @@ use App\Models\Alert;
 use App\Models\User;
 use App\Models\Playlist;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class AlertController extends Controller
 {
@@ -141,9 +142,12 @@ class AlertController extends Controller
         return view('alerts', ['alerts' => $alerts, 'users' => $users]);
     }
 
-    public function addAlert($user_id, $alert_id)
+    public function addAlert($alert_id)
     {
         $playlist = new Playlist;
+
+        // $id = Auth::user()->id;
+        $user_id = 1;
 
         $playlist->user_id = $user_id;
         $playlist->alert_id = $alert_id;
@@ -154,7 +158,11 @@ class AlertController extends Controller
     }
     public function alertPlaylist()
     {
+        $id = Auth::user()->id;
         
+        $alerts = Playlist::all()->where('user_id', '=', $id);
+        
+
     }
 
 }
