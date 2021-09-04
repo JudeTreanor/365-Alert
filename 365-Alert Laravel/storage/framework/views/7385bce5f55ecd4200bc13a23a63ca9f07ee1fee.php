@@ -25,7 +25,7 @@
 
     </header>
 
-    
+
         <ul id="navigation">
             <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
             <li><a href="<?php echo e(route('about')); ?>">About</a></li>
@@ -40,9 +40,9 @@
 
         <ul class="register">
             <button><a href="<?php echo e(route('home')); ?>">My Account</a></button>
-            <button><a href="<?php echo e(route('home')); ?>">Log Out</a></button>
+            <button><a href="<?php echo e(route('logout')); ?>">Log Out</a></button>
         </ul>
-    
+
 
 
 
@@ -76,4 +76,5 @@
     <script src="<?php echo e(URL::asset('js/template.js')); ?>"></script>
 </body>
 
-</html><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/layouts/mytemplate.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/layouts/mytemplate.blade.php ENDPATH**/ ?>

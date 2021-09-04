@@ -32,6 +32,7 @@
         </article>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </section>
+    
 <?php $__env->stopSection(); ?>
 
 

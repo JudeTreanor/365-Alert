@@ -1,4 +1,4 @@
-# Clone your project
+co# Clone your project
 1-> Go to the folder application using cd command on your cmd or terminal
 
 2->Run composer install on your cmd or terminal
