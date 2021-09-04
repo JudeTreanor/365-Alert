@@ -15,19 +15,22 @@
     --purple: #2B3371;
 }
 
-main {
+
+main{
     font-family: 'Roboto', sans-serif;
-    color: var(--white);
+    color: var(--blue);
     justify-content: flex-start;
+    background-color: #EFEFEF;
+    padding: 20px;
 }
 
-h1 {
+#terms_title {
     color: var(--blue);
     padding-top: 20px;
     font-size: 3rem;
 }
 
-h2 {
+#we_are_title {
     font-size: 2rem;
     color: var(--blue);
 }

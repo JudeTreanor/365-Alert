@@ -11,10 +11,10 @@
 
 {{-- Main Content Section --}}
 @section('content')
-<h1>Terms and Conditions</h1>
+<h1 id="terms_title">Terms and Conditions</h1>
 <br> <br>
 <div class="form-group">
-    <h2>Who we are</h2>
+    <h2 id="we_are_title" >Who we are</h2>
     <br>
     <p>The flood information service is managed by the Environment Agency and will be referred to as ‘we’ from now on. The web pages and the services they operate will be referred to as ‘the site'.</p>
     <br>
@@ -133,7 +133,7 @@
     <br>
     <h2>Governing law</h2>
     <br>
-    <p>These terms and conditions are governed by and construed in accordance with the laws of England and Wales. <br>
+    <p>These terms and conditions are governed by and construed in accordance with the laws of Luxembourg. <br>
 
         Any dispute you have which relates to these terms and conditions, or your use of the site (whether it be contractual or non-contractual), will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
     <br>
