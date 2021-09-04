@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Alert;
+use App\Models\Playlist;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -12,8 +14,10 @@ class UserController extends Controller
     public function adminUsersList()
     {
         $users = User::all();
+        $alerts = Alert::all();
+        
 
-        return view('admin', ['users' => $users]);
+        return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
 
     // Function to return the Admin view to edit the User
@@ -92,7 +96,8 @@ class UserController extends Controller
 
     public function loggedUserShow()
     {
-        $id = Auth::user()->id;
+        // $id = Auth::user()->id;
+        $id = 1;
         // Look for the specific User ID
 
         $users = User::find($id);

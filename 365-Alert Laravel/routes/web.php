@@ -51,10 +51,6 @@ Route::post('/admin/edit/{id}', [UserController::class, 'adminUserUpdate']);
 // Route to delete specific user
 Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete']);
 
-// Route to the Alert Details page
-Route::get('/alert-details', function () {
-    return view('alert-details');
-})->name('alert-details');
 
 // Route to show a specific alert details
 Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
@@ -85,10 +81,6 @@ Route::get('terms', function () {
     return view('terms');
 })->name('terms');
 
-// Route to the User Control panel view
-Route::get('user', function () {
-    return view('user');
-})->name('user');
 
 // Route to the about page
 Route::get('client-settings', function () {

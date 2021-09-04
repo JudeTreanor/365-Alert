@@ -32,7 +32,16 @@
         </article>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </section>
-    
+
+    <section id="alerts-list">
+        <?php $__currentLoopData = $alerts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alert): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <article id="alert-article">
+            <div id="alerts">
+            </div>
+        </article>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </section>
+
 <?php $__env->stopSection(); ?>
 
 
