@@ -63,6 +63,9 @@
             <p id="river">River {{$alert->river}}</p>
             <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
             <p id="updated">{{$alert->updated_at}}</p>
+            <a href="{{ route('add-alert', ['alert_id' => $alert->id]) }}">
+                <button class="buttons_container" type="submit">Add To List</button>
+            </a>
         </div>
     </article>
     @endforeach

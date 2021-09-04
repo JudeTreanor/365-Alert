@@ -104,4 +104,5 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $users]);
     }
+    
 }
