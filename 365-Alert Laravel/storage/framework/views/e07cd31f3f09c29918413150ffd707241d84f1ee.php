@@ -65,4 +65,4 @@
     
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.mytemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/about.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.simpletemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/about.blade.php ENDPATH**/ ?>

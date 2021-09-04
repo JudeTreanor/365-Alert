@@ -37,9 +37,9 @@
         @foreach ($alerts as $alert)
         <article id="alert-article">
             <div id="alerts">
-                <p clas></p>
             </div>
         </article>
+        @endforeach
     </section>
 
 @endsection

@@ -103,7 +103,7 @@
             <section id="user-details">
                 <div class="checkbox">
                     <input id="cbox" type="checkbox">
-                    <p id="cbox">Lmao box gang</p>
+                    <p id="cbox"></p>
                 </div>
             </section>
         </body>

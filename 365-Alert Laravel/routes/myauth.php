@@ -82,7 +82,4 @@ Route::post('/reset-password/token={token}', function (Request $request) {
 })->middleware('guest')->name('password.update');
 
 // route to the logout
-Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
-
-    ->middleware(EnsureUserIsLoggedIn::class)->name('logout')
-    ->name('logout');
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware(EnsureUserIsLoggedIn::class)->name('logout');

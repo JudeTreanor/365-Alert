@@ -13,31 +13,57 @@
 <?php $__env->startSection('content'); ?>
 <section class="flood-map">
     <h1>Luxembourg Flood Map</h1>
-    <div class="map">
-        <img src="<?php echo e(URL::asset('pictures/Map2.PNG')); ?>" alt="">
-    </div>
+    <article class="map">
+        <img src="<?php echo e(URL::asset('pictures/Map_Vector_Blue-01.PNG')); ?>" alt="">
+    </article>
+</section>
+<section class="map_main_container" >
+    <article class="map_details_container">
+        <h2>Locations</h2>
+        <ol>
+            <li>Bigonville</li>
+            <li>Bissen</li>
+            <li>Bollendorf</li>
+            <li>Diekirch</li>
+            <li>Ettelbrück</li>
+            <li>Ettelbrück</li>
+            <li>Hesperange</li>
+            <li>Hunnebuer</li>
+            <li>Mersch</li>
+            <li>Pfaffenthal</li>
+            <li>Reichlange</li>
+            <li>Stadtbredimus</li>
+            <li>Steinsel</li>
+        </ol>
+    </article>
+    <article class="level_description">
+        <h3>Levels</h3>
+        <ul>
+            <li><div id="red_circle"></div>Extreme Danger</li>
+            <li><div id="orange_circle"></div>Danger</li>
+            <li><div id="yellow_circle"></div>Potential Danger</li>
+            <li><div id="green_circle"></div>Low Danger</li>
+            <li><div id="brown_circle"></div>Dry</li>
+        </ul>
+    </article>   
 </section>
 <h2 class="alerts_title">Alerts</h2>
 <section>
     <?php $__currentLoopData = $alerts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alert): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <article class="alert_container">
-        <div id="sidebar_color"></div>
-        <img src="<?php echo e(URL::asset('pictures/Alert_Warning_Red.svg')); ?>" alt="">
-        <div class="alert">
-            <h3 id="location"><?php echo e($alert->location); ?></h3>
-            <p id="alert_type"><?php echo e($alert->type); ?></p>
-            <p id="description">Description <?php echo e($alert->description); ?></p>
-            <p id="river">River: <?php echo e($alert->river); ?></p>
-            <p id="water_level">Water Level: <?php echo e($alert->water_level . " cm"); ?></p>
-            <p id="updated">Last updated: <?php echo e($alert->updated_at); ?></p>
-            <div class="buttons_container">
-                <button type="submit">Add To List</button>
-            </div>
-        </div>
+        <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+        <div class="extreme_danger_icon" id="alert_icon"></div>
         
+        <div class="alert">
+            <h4 id="location"><?php echo e($alert->location); ?></h4>
+            <p id="alert_type"><?php echo e($alert->type); ?></p>
+            <p id="description">The flood alert is in <?php echo e($alert->description); ?> status.</p>
+            <p id="river">River <?php echo e($alert->river); ?></p>
+            <p id="water_level">Water Level: <?php echo e($alert->water_level . " cm"); ?></p>
+            <p id="updated"><?php echo e($alert->updated_at); ?></p>
+            
+        </div>
     </article>
-    
-    
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </section>
 <?php $__env->stopSection(); ?>

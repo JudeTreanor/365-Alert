@@ -30,12 +30,11 @@
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('about') }}">About</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
-            <li><a href="{{ route('alerts') }}">Alert</a></li>
+            <li><a href="{{ route('alerts') }}">Alerts</a></li>
             <li><a href="{{ route('procedures') }}">Procedures</a></li>
             <li><a href="{{ route('terms') }}">Terms</a></li>
-            <li><a href="{{ route('user') }}">User</a></li>
+            <li><a href="{{ route('client-settings') }}">Client Settings</a></li>
             <li><a href="{{ route('admin') }}">Admin</a></li>
-            <li><a href="{{ route('alert-details') }}">Alert Details</a></li>
         </ul>
 
         <ul class="register">
