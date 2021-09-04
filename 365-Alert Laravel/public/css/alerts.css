@@ -28,8 +28,12 @@ section {
 }
 /*Flood Map Image*/
 
-.flood-map img {
-	width: 100%;
+.map_image {
+	background-image: url(../pictures/Map_Vector_Blue-01.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vw;
 }
 
 /*Title*/
@@ -49,6 +53,8 @@ section {
 	display: flex;
 	margin: 5px;
 	margin-bottom: 15px;
+	justify-content: center;
+	gap: 20px;
 }
 .map_details_container h2 {
 	text-align: left;
@@ -104,33 +110,24 @@ section {
 
 /*Circles on Map Location*/
 
-#location_1{
-	position: fixed;
-	top: 440px;
-	right: 326px;
-}
-
-
-ol {
+#locations_list {
 	list-style-position: inside;
 	text-align: left;
 	padding: 5px;
 	color: var(--darkgrey);
 	column-count: 2;
-	
-
 }
-ol li {
+#locations_list li {
 	font-size: 13px;
 }
 
-ul li {
+#levels_list li {
 	font-size: 13px;
 	list-style: none;
 	display: flex;
 }
 
-ul {
+#levels_list {
 	padding: 5px;
 }
 
@@ -289,14 +286,12 @@ ul {
 	background-image: url(../pictures/Alert_Warning_Red.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
 }
 
 .extreme_danger_icon {
 	background-image: url(../pictures/Alert_Warning_Red.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
 }
 
 /*Orange: Danger*/
@@ -308,7 +303,6 @@ ul {
 	background-image: url(../pictures/Alert_Warning_Orange.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
 }
 
 /*Yellow: Potential Danger*/
@@ -321,7 +315,6 @@ ul {
 	background-image: url(../pictures/Alert_Warning_Yellow.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
 }
 
 /*Green: Low Danger*/
@@ -334,7 +327,6 @@ ul {
 	background-image: url(../pictures/Alert_Warning_Green.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
 }
 
 /*Brown: Dried Up River*/
@@ -347,5 +339,75 @@ ul {
 	background-image: url(../pictures/Alert_Warning_Dry.svg);
 	background-repeat: no-repeat;
 	width: 120px;
-	margin-top: 20px;
+}
+
+
+/*Responsive tablet*/
+
+@media 
+  (min-device-width: 700px){
+
+	/*List*/
+    .map_main_container {
+		display: block;
+		height: 100%;
+		width: 25%;
+
+	}
+
+	.map_details_container h2 {
+		font-size: 20px;
+	}
+
+	.map_image{
+		background-position: center;
+		width: 85%;
+	}
+
+	#locations_list li {
+		font-size: 18px;
+	}
+	
+	#locations_list{
+		column-count: 1;
+	}
+
+	#levels_list li {
+		font-size: 18px;
+	}
+	
+	#levels_list {
+		padding: 5px;
+	}
+
+	.level_description h3 {
+		font-size: 20px;
+	}
+
+	.flex_container{
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+	}
+}
+
+/*Responsive desktop*/
+
+@media 
+  (min-device-width: 1200px) {
+
+	/*List*/
+
+	.flex_container{
+		margin-left: 200px;
+		margin-right: 200px;
+		justify-content: center;
+	}
+
+	.map_image{
+		background-position: top;
+		background-size: contain;
+		width: 600px;
+		height: 600px;
+	}
 }

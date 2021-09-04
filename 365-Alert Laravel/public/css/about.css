@@ -112,14 +112,13 @@ main {
 /*Responsive Mode Tablet and Desktop*/
 
 @media 
-  (min-device-width: 800px) 
-  and (max-device-width: 1280px) {
+  (min-device-width: 800px) {
     #about_us_description{
         font-size: 22px;
         font-family: Roboto;
         color: white;
         font-weight: 400;
-        padding: 200px;
+        padding: 100px;
     }
     
     .about_team {

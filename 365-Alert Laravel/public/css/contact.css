@@ -23,10 +23,11 @@ main {
 }
 
 /*Intro Image*/
-.contact_image img {
-	width: 100%;
-    margin-bottom: -10px;
-    
+.contact_image {
+	background-image: url(../pictures/Contact_Page.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
 }
 
 /*Intro Title*/
@@ -46,6 +47,10 @@ form {
 	background-color: #efefef;
 	padding: 50px;
 
+}
+
+label{
+    font-size: 14px;
 }
 
 #submit_button {
@@ -110,6 +115,7 @@ label{
 .images img{
     height: 100px;
     margin-bottom: 50px;
+    padding: 15px;
 }
 
 
