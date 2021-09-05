@@ -158,10 +158,16 @@ class AlertController extends Controller
     }
     public function alertPlaylist()
     {
-        $id = Auth::user()->id;
+        // Look for the specific User ID
+        // $id = Auth::user()->id;
+
+        $id = 1;
         
         $alerts = Playlist::all()->where('user_id', '=', $id);
         
+        $users = User::find($id);
+
+        return view('client-settings', ['user' => $users]);
 
     }
 
