@@ -106,4 +106,3 @@ require __DIR__ . '/myauth.php';
 
 Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
 
-// Route::get()
