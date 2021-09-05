@@ -94,7 +94,7 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
 
-Route::get("client-settings/", [UserController::class, 'loggedUserShow'])->name("client-settings");
+Route::get("client-settings/", [AlertController::class, 'alertPlaylist'])->name("client-settings");
 
 
 
@@ -106,4 +106,3 @@ require __DIR__ . '/myauth.php';
 
 Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
 
-// Route::get()
