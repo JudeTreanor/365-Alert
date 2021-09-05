@@ -14,7 +14,7 @@
         <body>
 
 
-            <img src="{{ URL::asset('../css/logos/User_WhiteStroke_Circle.svg') }}" alt="">
+            <img src="{{ URL::asset('../css/logos/User_WhiteStroke_Circle.svg') }}" alt="" id="image_user">
             <h1 id="client">My Account</h1>
 
             <section id="settings-bar">
@@ -52,7 +52,6 @@
                         <button type="submit">Change Phone</button>
                     </div>
                 </div>
-                </div>
 
             </section>
             <section id="settings-bar">
@@ -60,21 +59,21 @@
             </section>
             <section id="change-password">
                 <form class="row" action="sumbit">
-                    <div class="col current-password">
-                        <label for="current_password">Current Password</label>
+                    <div class="col_current-password">
+                        <label for="current_password">Current Password</label><br>
                         <input type="text" name="current_password" id="current_password"
                             placeholder="Enter Current Password">
                     </div>
                     <div class="col new-password">
-                        <label for="new_password">New Password</label>
+                        <label for="new_password">New Password</label><br>
                         <input type="text" name="new_password" id="new_password" placeholder="Enter New Password">
                     </div>
                     <div class="col confirm-password">
-                        <label for="confirm_password">Confirm New Password</label>
+                        <label for="confirm_password">Confirm New Password</label><br>
                         <input type="text" name="confirm_password" id="confirm_password" placeholder="Confirm New Password">
                     </div>
                     <div class="col">
-                        <input class="sub-button" value="Send" type="submit">
+                        <input class="sub-button" value="Update Password" type="submit">
                     </div>
 
                 </form>
@@ -82,7 +81,7 @@
             <section id="settings-bar">
                 <h2>Alert Notifications</h2>
             </section>
-
+            <section>
             @foreach ($alerts as $alert)
             @foreach ($alert as $a)
             <article class="alert_container">
@@ -100,9 +99,17 @@
                         <button class="buttons_container" type="submit">Add To List</button>
                     </a>
                 </div>
+            </section>
             </article>
             @endforeach
             @endforeach
+            <section id="unsub_container">
+                <h3>Unsubscribe</h3>
+                <div class="container_checkbox">
+                    <input type="checkbox" name="checkbox_unsub" id="checkbox_unsub">
+                    <label for="checkbox">Unsubscribe from 365Alert services, I no longer wish to be contacted.</label>
+                </div>
+            </section>
         </body>
     </main>
 @endsection
