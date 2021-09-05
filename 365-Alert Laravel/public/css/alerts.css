@@ -28,12 +28,9 @@ section {
 }
 /*Flood Map Image*/
 
-.map_image {
-	background-image: url(../pictures/Map_Vector_Blue-01.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 100vw;
+.map_image img{
+	width: 100%;
+	height: 100%;
 }
 
 /*Title*/
@@ -64,6 +61,8 @@ section {
 	padding: 5px;
 	color: var(--darkgrey);
 }
+
+
 
 /*Circles on Map Toggle Colors*/
 
@@ -108,18 +107,15 @@ section {
 	background-color: var(--alertbrown);
 }
 
-/*Circles on Map Location*/
-
 #locations_list {
 	list-style-position: inside;
 	text-align: left;
-	padding: 5px;
 	color: var(--darkgrey);
 	column-count: 2;
 }
 #locations_list li {
 	font-size: 13px;
-}
+}	
 
 #levels_list li {
 	font-size: 13px;
@@ -143,13 +139,16 @@ section {
 	color: var(--darkgrey);
 }
 
+
 /*map details - level*/
 #red_circle {
 	width: 10px;
 	height: 10px;
 	border-radius: 100%;
 	background-color: var(--red);
-	margin-right: 5px;
+	padding-right: 10px;
+	margin-right: 10px;
+
 }
 
 #orange_circle {
@@ -157,15 +156,16 @@ section {
 	height: 10px;
 	border-radius: 100%;
 	background-color: var(--orange);
-	margin-right: 5px;
-}
+	padding-right: 10px;
+	margin-right: 10px;}
 
 #yellow_circle {
 	width: 10px;
 	height: 10px;
 	border-radius: 100%;
 	background-color: var(--yellow);
-	margin-right: 5px;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 #green_circle {
@@ -173,7 +173,8 @@ section {
 	height: 10px;
 	border-radius: 100%;
 	background-color: var(--alertgreen);
-	margin-right: 5px;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 #brown_circle {
@@ -181,10 +182,11 @@ section {
 	height: 10px;
 	border-radius: 100%;
 	background-color: var(--alertbrown);
-	margin-right: 5px;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
-/*Alerts section*/
+/*Alerts intro section*/
 
 .alerts_title {
 	background-color: var(--dark_green);
@@ -242,9 +244,6 @@ section {
 	margin-bottom: 10px;
 }
 
-.alert_container img {
-	width: 120px;
-}
 
 .buttons_container {
 	margin-top: 20px;
@@ -283,9 +282,6 @@ section {
 
 .extreme_danger_sidebar {
 	background-color: var(--red);
-	background-image: url(../pictures/Alert_Warning_Red.svg);
-	background-repeat: no-repeat;
-	width: 120px;
 }
 
 .extreme_danger_icon {
@@ -347,67 +343,100 @@ section {
 @media 
   (min-device-width: 700px){
 
-	/*List*/
-    .map_main_container {
-		display: block;
-		height: 100%;
-		width: 25%;
-
+	/*Map and List*/
+    
+	.flex_container{
+		display: flex;
+		gap: 40px;
+		margin-right: 40px;
 	}
 
-	.map_details_container h2 {
-		font-size: 20px;
-	}
 
-	.map_image{
-		background-position: center;
-		width: 85%;
-	}
+	/*  Alerts*/
 
+	#locations_list {
+		list-style-position: inside;
+		column-count: 1;
+
+	}
 	#locations_list li {
 		font-size: 18px;
-	}
+		margin-right: 25px;
+		padding-right: 25px;
+		text-align-last: left;
+	}	
 	
-	#locations_list{
-		column-count: 1;
-	}
-
 	#levels_list li {
 		font-size: 18px;
 	}
 	
 	#levels_list {
 		padding: 5px;
+	
 	}
 
 	.level_description h3 {
 		font-size: 20px;
 	}
 
-	.flex_container{
-		display: flex;
-		flex-direction: row;
-		gap: 30px;
+
+	.map_details_container h2{
+		font-size: 20px;
 	}
+
+	
+
+
 }
 
 /*Responsive desktop*/
 
 @media 
-  (min-device-width: 1200px) {
+  (min-device-width: 900px) {
 
-	/*List*/
+	/*List and Map*/
+	
+	.map_image{
+		width: 80vh;
+
+	}
 
 	.flex_container{
-		margin-left: 200px;
-		margin-right: 200px;
-		justify-content: center;
+		margin: 0 auto;
+		width: 1000px;
 	}
 
-	.map_image{
-		background-position: top;
-		background-size: contain;
-		width: 600px;
-		height: 600px;
+	.content{
+		background-color: var(--green);
 	}
+
+	
+	/*Alerts*/
+
+	#alert_icon {
+		width: 400px;
+		height: 400px;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.alert{
+		margin: 0 auto;
+		width: 800px;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.alert_container{
+		height: 280px;
+		justify-content: center;
+		align-content: center;
+	}
+	
+
+	
+
+
+
+	
 }

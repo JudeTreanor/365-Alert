@@ -20,14 +20,185 @@
     --yellow: #FFcc01;
 }
 
+body,
+main,
+section {
+	background-color: #fff;
+}
+/*Flood Map Image*/
 
-/*Luxembourg Flood Map section*/
-
-main {
-    text-align: -webkit-center;
+.map_image img{
+	width: 100%;
+	height: 100%;
 }
 
-.flood-map h2 {
+/*Title*/
+
+.flood-map h1 {
+	background-color: var(--dark_green);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--white);
+	padding: 50px;
+	font-family: Roboto;
+}
+
+/*Map details*/
+
+.map_main_container {
+	display: flex;
+	margin: 5px;
+	margin-bottom: 15px;
+	justify-content: center;
+	gap: 20px;
+}
+.map_details_container h2 {
+	text-align: left;
+	text-align: left;
+	font-family: Roboto;
+	font-size: 15px;
+	padding: 5px;
+	color: var(--darkgrey);
+}
+
+
+
+/*Circles on Map Toggle Colors*/
+
+
+.red_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--red);	
+}
+
+.orange_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--orange);
+}
+
+.yellow_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--yellow);
+}
+
+.green_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--alertgreen);
+}
+
+.brown_circle_map {
+	color: white;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background-color: var(--alertbrown);
+}
+
+#locations_list {
+	list-style-position: inside;
+	text-align: left;
+	color: var(--darkgrey);
+	column-count: 2;
+}
+#locations_list li {
+	font-size: 13px;
+}	
+
+#levels_list li {
+	font-size: 13px;
+	list-style: none;
+	display: flex;
+}
+
+#levels_list {
+	padding: 5px;
+}
+
+.level_description h3 {
+	padding-bottom: 10px;
+	padding-left: 5px;
+	font-size: 15px;
+}
+
+.level_description {
+	text-align: left;
+	padding: 5px;
+	color: var(--darkgrey);
+}
+
+
+/*map details - level*/
+#red_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--red);
+	padding-right: 10px;
+	margin-right: 10px;
+
+}
+
+#orange_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--orange);
+	padding-right: 10px;
+	margin-right: 10px;}
+
+#yellow_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--yellow);
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+#green_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--alertgreen);
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+#brown_circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: var(--alertbrown);
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+/*Alerts intro section start*/
+.alerts_title{
+    background-color: var(--dark_green);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--white);
+	padding: 30px;
+}
+
+/*Alerts intro section end*/
+
+/* Need Help section start */
+
+.need-help {
     background-color: var(--dark_green);
     text-transform: uppercase;
     font-weight: 600;
@@ -35,213 +206,58 @@ main {
     padding: 30px;
 }
 
-.flood-map img {
+#image_cgdis{
     width: 100%;
 }
 
-
-/*My Alerts section*/
-
-.my-alerts {
-    background-color: var(--green);
+.help_container{
+    position: relative;  
 }
 
-.my-alerts h2 {
-    background-color: var(--dark_green);
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--white);
-    padding: 30px;
-}
-
-
-/* Red alert*/
-
-.icon-alert-red {
-    border-left: 10px solid var(--red);
-    border-radius: 10px;
-    background: url('../pictures/Alert_Warning_Red.svg') no-repeat -60px 25px/240px var(--white);
-    padding: 30px 0 30px 100px;
-    min-height: 100px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.red-alert h3 {
-    padding-left: 20px;
-}
-
-.red-alert p {
-    color: var(--grey);
-    padding-bottom: 10px;
-    padding-left: 20px;
-}
-
-.red-alert #extreme {
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-.red-buttons button {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-left: 10px;
-    border-radius: 20px;
-}
-
-.red-buttons {
-    padding-top: 30px;
-    padding-left: 10px;
-    margin-left: -100px;
-}
-
-
-/* .alert {
-
-    position: relative;
-}
-
-#danger {
+#icons_container{
     position: absolute;
-    padding-left: 20px;
-} */
-
-
-/* Orange alert*/
-
-.icon-alert-orange {
-    border-left: 10px solid var(--orange);
-    border-radius: 10px;
-    background: url('../pictures/Alert_Warning_Orange.svg') no-repeat -60px 25px/240px var(--white);
-    padding: 30px 0 30px 100px;
-    min-height: 100px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.orange-alert h3 {
-    padding-left: 20px;
-}
-
-.orange-alert p {
-    color: var(--grey);
-    padding-bottom: 10px;
-    padding-left: 20px;
-}
-
-.orange-alert #extreme {
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-.orange-buttons button {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-left: 10px;
-    border-radius: 20px;
-}
-
-.orange-buttons {
-    padding-top: 30px;
-    padding-left: 10px;
-    margin-left: -100px;
-}
-
-
-/* Yellow alert*/
-
-.icon-alert-yellow {
-    border-left: 10px solid var(--yellow);
-    border-radius: 10px;
-    background: url('../pictures/Alert_Warning_Yellow.svg') no-repeat -60px 25px/240px var(--white);
-    padding: 30px 0 30px 100px;
-    min-height: 100px;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.yellow-alert h3 {
-    padding-left: 20px;
-}
-
-.yellow-alert p {
-    color: var(--grey);
-    padding-bottom: 10px;
-    padding-left: 20px;
-}
-
-.yellow-alert #extreme {
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-.yellow-buttons button {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-left: 10px;
-    border-radius: 20px;
-}
-
-.yellow-buttons {
-    padding-top: 30px;
-    padding-left: 10px;
-    margin-left: -100px;
-}
-
-
-/* Need Help section */
-
-.need-help h2 {
-    background-color: var(--dark_green);
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--white);
-    padding: 30px;
-}
-
-.need-help img {
-    width: 100%;
-}
-
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
-}
-
-.bottom-center {
-    position: absolute;
-    bottom: 8px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top:70%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+
 }
 
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 10px;
+#icons_container div{
+    margin: 10px;
+
 }
 
-.container #bottom-text {
-    background-color: red;
+#number_112, #website, #gov_app{
+    color: var(--white);
+    text-align: center; 
+    font-size: 13px;    
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    
 }
 
-@media screen and (min-width: 1200px) {}
+#icon_number, #icon_website, #icon_app  {
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Need Help section end*/
