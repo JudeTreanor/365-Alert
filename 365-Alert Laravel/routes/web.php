@@ -113,8 +113,6 @@ Route::get("client-settings/", [UserController::class, 'loggedUserShow'])->name(
 // Route to add to the playlist a specific alert
 Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
 
-<<<<<<< Updated upstream
-=======
 //route of login,register,forgot-password, reset-password, logout
 require __DIR__ . '/myauth.php';
 >>>>>>> Stashed changes
