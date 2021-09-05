@@ -60,21 +60,27 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+//route to post contact page
 Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-submit');
 
-// Route to the Home page
+
+// Route to the Home page logged in
 Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+
+//route to the home page logged out
 Route::get('/', function () {
     return view('home1');
 })->name('home1');
+
 
 // Route to the procedures
 Route::get('/procedures', function () {
     return view('procedures');
 })->name('procedures');
+
 
 // Route to the terms and conditions
 Route::get('terms', function () {
@@ -87,22 +93,28 @@ Route::get('client-settings', function () {
     return view('client-settings');
 })->name('client-settings');
 
+
 // Route to submit the User modification
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
+
 
 //Route to get the api
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
+<<<<<<< Updated upstream
 
 Route::get("client-settings/", [AlertController::class, 'alertPlaylist'])->name("client-settings");
+=======
+//route to client settings
+Route::get("client-settings/", [UserController::class, 'loggedUserShow'])->name("client-settings");
+>>>>>>> Stashed changes
 
-
-
-
-
-require __DIR__ . '/myauth.php';
 
 // Route to add to the playlist a specific alert
-
 Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
 
+<<<<<<< Updated upstream
+=======
+//route of login,register,forgot-password, reset-password, logout
+require __DIR__ . '/myauth.php';
+>>>>>>> Stashed changes

@@ -16,10 +16,16 @@
 <img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
 <h3>Forgot password</h3>
 
-<form action="" method="post" id="PassForget" >
-    @csrf
-
-    <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
+<form action="{{route('password.email')}}" method="post" id="PassForget" >
+    {!! csrf_field() !!}
+    @if (count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+    <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" class="input-email" onfocus="this.placeholder=''"
     onblur="this.placeholder='email'">
 
     <input type="submit" value="Send" id="send1">
