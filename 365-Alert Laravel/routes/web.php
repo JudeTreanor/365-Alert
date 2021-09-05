@@ -101,13 +101,8 @@ Route::post('user', [UserController::class, 'modification-submit'])->name('modif
 //Route to get the api
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');
 
-<<<<<<< Updated upstream
 
 Route::get("client-settings/", [AlertController::class, 'alertPlaylist'])->name("client-settings");
-=======
-//route to client settings
-Route::get("client-settings/", [UserController::class, 'loggedUserShow'])->name("client-settings");
->>>>>>> Stashed changes
 
 
 // Route to add to the playlist a specific alert
@@ -115,4 +110,3 @@ Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name(
 
 //route of login,register,forgot-password, reset-password, logout
 require __DIR__ . '/myauth.php';
->>>>>>> Stashed changes
