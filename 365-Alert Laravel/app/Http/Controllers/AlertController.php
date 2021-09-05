@@ -162,8 +162,9 @@ class AlertController extends Controller
         // $id = Auth::user()->id;
 
         $id = 1;
-        
+
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
         
         $users = User::find($id);
         
@@ -172,8 +173,9 @@ class AlertController extends Controller
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
-        
+
         return view('client-settings', ['user' => $users, 'alerts' => $alerts]);
+
 
     }
 
