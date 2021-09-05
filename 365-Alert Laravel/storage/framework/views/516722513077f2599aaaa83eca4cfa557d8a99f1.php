@@ -28,40 +28,39 @@
                 warning times.</p>
         </div>
 
-        <div class="icon-block icon-alert-red">
-            <h3>Extreme danger</h3>
-            <br>
-            <p>The flood prediction center is in alert
-                status. Flood reports are updated at
-                least once a day or in case of a change
-                of situation. Water levels are updated
-                up to every 15 minutes.</p>
-        </div>
-
-        <div class="icon-block icon-alert-orange">
-            <h3>Danger</h3>
-            <br>
-            <p>The flood prediction center is in prealert status. Information about flooding
-                is made available and updated if there
-                is a change of situation. Water levels
-                are updated up to every 15 minutes.</p>
-        </div>
-
-        <div class="icon-block icon-alert-yellow">
-            <h3>Potential Danger</h3>
-            <br>
-            <p>The flood prediction center is on
-                standby. The provision of flood reports
-                is not activated. Water levels are
-                updated up to every 15 minutes.</p>
-        </div>
-
-        <div class="icon-block icon-alert-green">
-            <h3>No Danger</h3>
-            <br>
-            <p>The provision of flood reports is not
-                activated.</p>
-        </div>
+        <article class="danger_levels_container">
+            <div class="icon-block icon-alert-red">
+                <h3>Extreme d   anger</h3>
+                <br>
+                <p>The flood prediction center is in alert
+                    status. Flood reports are updated at
+                    least once a day or in case of a change
+                    of situation. Water levels are updated
+                    up to every 15 minutes.</p>
+            </div>
+            <div class="icon-block icon-alert-orange">
+                <h3>Danger</h3>
+                <br>
+                <p>The flood prediction center is in prealert status. Information about flooding
+                    is made available and updated if there
+                    is a change of situation. Water levels
+                    are updated up to every 15 minutes.</p>
+            </div>
+            <div class="icon-block icon-alert-yellow">
+                <h3>Potential Danger</h3>
+                <br>
+                <p>The flood prediction center is on
+                    standby. The provision of flood reports
+                    is not activated. Water levels are
+                    updated up to every 15 minutes.</p>
+            </div>
+            <div class="icon-block icon-alert-green">
+                <h3>No Danger</h3>
+                <br>
+                <p>The provision of flood reports is not
+                    activated.</p>
+            </div>
+        </article>
     </section>
 
     <section class="safety">

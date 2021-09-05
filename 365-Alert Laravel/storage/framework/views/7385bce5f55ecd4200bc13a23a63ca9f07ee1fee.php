@@ -41,6 +41,7 @@
             <button><a href="<?php echo e(route('home')); ?>">My Settings</a></button>
             <button><a href="<?php echo e(route('logout')); ?>">Log Out</a></button>
         </ul>
+        <?php echo csrf_field(); ?>
 
 
 
