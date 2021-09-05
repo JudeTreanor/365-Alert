@@ -9,7 +9,7 @@
 @endsection
 {{-- Main Content Section --}}
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">s
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
 
 <h3>Reset password</h3>
