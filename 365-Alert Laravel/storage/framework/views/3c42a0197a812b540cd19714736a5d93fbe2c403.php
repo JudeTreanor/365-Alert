@@ -13,7 +13,7 @@
 <?php $__env->startSection('content'); ?>
 <main>
     <section class="contact_image">
-        <img src="<?php echo e(URL::asset('pictures/Contact_Page.jpg')); ?>" alt="contact_image">
+        <div></div>
     </section>
     <h2 id="contact_title">Contact Us</h2>
 
@@ -30,11 +30,11 @@
     </div>
 
     <section class="images">
-        <img src="<?php echo e(URL::asset('pictures/GOV_Contact_Page.jpg')); ?>" alt="GOV_link" >
-        <img src="<?php echo e(URL::asset('pictures/MeteoLux_Contact Page.jpg')); ?>" alt="MeteoLux">
-        <img src="<?php echo e(URL::asset('pictures/MeteoAlarm_Contact_Page.png')); ?>" alt="MeteoAlarm">
-        <img src="<?php echo e(URL::asset('pictures/CGDIS_Contact_Page.jpg')); ?>" alt="CGDIS">
-        <img src="<?php echo e(URL::asset('pictures/RSS_Contact Page.jpg')); ?>" alt="RSS">
+        <a href="https://www.inondations.lu/"><img src="<?php echo e(URL::asset('pictures/GOV_Contact_Page.jpg')); ?>" alt="GOV_link" ></a>
+        <a href="https://www.meteolux.lu/"><img src="<?php echo e(URL::asset('pictures/MeteoLux_Contact Page.jpg')); ?>" alt="MeteoLux"></a>
+        <a href="https://www.meteoalarm.org/en/"><img src="<?php echo e(URL::asset('pictures/MeteoAlarm_Contact_Page.png')); ?>" alt="MeteoAlarm"></a>
+        <a href="https://112.public.lu/fr/organisation/administration.html"><img src="<?php echo e(URL::asset('pictures/CGDIS_Contact_Page.jpg')); ?>" alt="CGDIS"></a>
+        <a href="https://rss-hydro.lu/"><img src="<?php echo e(URL::asset('pictures/RSS_Contact Page.jpg')); ?>" alt="RSS"></a>
     </section>
 </main>
 
