@@ -50,6 +50,10 @@ p {
     color: black;
 }
 
+.content {
+	height: 800px;
+}
+
 .icon_365{
     width: 300px;
 }

@@ -13,39 +13,41 @@
 @section('content')
 <section class="flood-map">
     <h1>Luxembourg Flood Map</h1>
-    <article class="map">
-        <img src="{{URL::asset('pictures/Map_Vector_Blue-01.PNG')}}" alt="">
-    </article>
 </section>
-<section class="map_main_container" >
-    <article class="map_details_container">
-        <h2>Locations</h2>
-        <ol>
-            <li>Bigonville</li>
-            <li>Bissen</li>
-            <li>Bollendorf</li>
-            <li>Diekirch</li>
-            <li>Ettelbrück</li>
-            <li>Ettelbrück</li>
-            <li>Hesperange</li>
-            <li>Hunnebuer</li>
-            <li>Mersch</li>
-            <li>Pfaffenthal</li>
-            <li>Reichlange</li>
-            <li>Stadtbredimus</li>
-            <li>Steinsel</li>
-        </ol>
+<section class="flex_container">
+    <article class="map_image">
+        <div></div>
     </article>
-    <article class="level_description">
-        <h3>Levels</h3>
-        <ul>
-            <li><div id="red_circle"></div>Extreme Danger</li>
-            <li><div id="orange_circle"></div>Danger</li>
-            <li><div id="yellow_circle"></div>Potential Danger</li>
-            <li><div id="green_circle"></div>Low Danger</li>
-            <li><div id="brown_circle"></div>Dry</li>
-        </ul>
-    </article>   
+    <article class="map_main_container" >
+        <div class="map_details_container">
+            <h2>Locations</h2>
+            <ol id="locations_list">
+                <li>Bigonville</li>
+                <li>Bissen</li>
+                <li>Bollendorf</li>
+                <li>Diekirch</li>
+                <li>Ettelbrück</li>
+                <li>Ettelbrück</li>
+                <li>Hesperange</li>
+                <li>Hunnebuer</li>
+                <li>Mersch</li>
+                <li>Pfaffenthal</li>
+                <li>Reichlange</li>
+                <li>Stadtbredimus</li>
+                <li>Steinsel</li>
+            </ol>
+        </div>
+        <div class="level_description">
+            <h3>Levels</h3>
+            <ul id="levels_list" >
+                <li><div id="red_circle"></div>Extreme Danger</li>
+                <li><div id="orange_circle"></div>Danger</li>
+                <li><div id="yellow_circle"></div>Potential Danger</li>
+                <li><div id="green_circle"></div>Low Danger</li>
+                <li><div id="brown_circle"></div>Dry</li>
+            </ul>
+        </div>
+    </article>
 </section>
 <h2 class="alerts_title">Alerts</h2>
 <section>
@@ -61,9 +63,9 @@
             <p id="river">River {{$alert->river}}</p>
             <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
             <p id="updated">{{$alert->updated_at}}</p>
-            {{-- <a href="{{ route('add-alert', ['user_id'=> Auth::user()->id , 'alert_id' => $alert->id ]) }}">
+            <a href="{{ route('add-alert', ['alert_id' => $alert->id]) }}">
                 <button class="buttons_container" type="submit">Add To List</button>
-            </a> --}}
+            </a>
         </div>
     </article>
     @endforeach
