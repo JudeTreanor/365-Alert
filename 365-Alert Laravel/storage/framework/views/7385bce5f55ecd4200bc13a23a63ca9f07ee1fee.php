@@ -27,7 +27,7 @@
 
     </header>
 
-
+    <?php if(auth()->guard()->check()): ?>
     <ul id="navigation">
         <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
         <li><a href="<?php echo e(route('about')); ?>">About</a></li>
@@ -38,12 +38,19 @@
         <li><a href="<?php echo e(route('client-settings')); ?>">Client Settings</a></li>
         <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
     </ul>
-
+    <?php endif; ?>
+    <?php if(auth()->guard()->guest()): ?>
+    <ul id="navigation">
+        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+        <li><a href="<?php echo e(route('about')); ?>">About</a></li>
+        <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
+    </ul>
+    <?php endif; ?>
     <ul class="register">
         <button><a href="<?php echo e(route('home')); ?>">My Settings</a></button>
         <button><a href="<?php echo e(route('logout')); ?>">Log Out</a></button>
     </ul>
-    <?php echo csrf_field(); ?>
+
 
 
 
