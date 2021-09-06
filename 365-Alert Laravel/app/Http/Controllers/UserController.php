@@ -15,7 +15,7 @@ class UserController extends Controller
     {
         $users = User::all();
         $alerts = Alert::all();
-        
+
 
         return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
@@ -59,7 +59,7 @@ class UserController extends Controller
         // retrieve the users
         $users = User::all();
         $alerts = Alert::all();
-        
+
         // function to return the admin page
         return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
@@ -131,15 +131,14 @@ class UserController extends Controller
         $user->save();
 
         $alerts = array();
-        
+
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
-        
+
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
-
     }
 }

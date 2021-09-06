@@ -1,59 +1,60 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /*Variables for colors*/
 
 :root {
-	--grey: #efefef;
-	--green: #0b9e99;
-	--blue: #16354d;
-	--dark_green: #037c87;
-	--purple: #2b3371;
-	--darkgrey: #686565c4;
+    --grey: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
+    --darkgrey: #686565c4;
 }
 section,
-body,main {
-	background-color: var(--grey);
+body,
+main {
+    background-color: var(--grey);
 }
 
 /* image*/
 
-.intro_container{
-	background-color: var(--dark_green);
-	height: 300px;
+.intro_container {
+    background-color: var(--dark_green);
+    height: 300px;
 }
 
 #image_user {
-	width: 200px;
+    width: 200px;
 }
 
 #client {
-	color: white;
-	font-size: 26px;
-	margin-bottom: 40px;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 40px;
 }
 
 /* user details*/
 .user-username,
 .user-email,
 .user-phone {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .user-username h2,
 .user-email h2,
 .user-phone h2 {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 .user-username p,
 .user-email p,
 .user-phone p {
-	font-size: 16px;
-	color: var(--darkgrey);
+    font-size: 16px;
+    color: var(--darkgrey);
 }
 
 /* end user details*/
@@ -61,88 +62,93 @@ body,main {
 /* change buttons*/
 
 .red-buttons button {
-	color: white;
-	text-transform: uppercase;
-	font-family: Roboto;
-	font-size: 14px;
-	font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
     padding: 15px 50px 15px 50px;
-	background-color: #0b9e99;
-	border-style: none;
-	border-radius: 20px;
-	text-align: center;
-	width: 250px;
-	margin-bottom: 20px;
+    background-color: #0b9e99;
+    border-style: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
 }
 
 .row label {
-	font-size: 24px;
-	font-weight: 500;
-	color: var(--blue);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--blue);
 }
 
 /* end change buttons*/
 
 #change-password {
-	background-color: var(--white);
-	text-align: left;
-	padding: 10px 50px 10px 50px;
+    background-color: var(--white);
+    text-align: left;
+    padding: 10px 50px 10px 50px;
+}
+
+#change-password .sub-button:hover {
+    background-color: white; /* Green */
+    color: var(--dark_green);
 }
 
 #change-password .sub-button {
-	color: white;
-	text-transform: uppercase;
-	font-family: Roboto;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 10px 50px 10px 50px;
-	background-color: #0b9e99;
-	border-style: none;
-	border-radius: 20px;
-	text-align: center;
-	width: 250px;
-	margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 50px 10px 50px;
+    background-color: #0b9e99;
+    border-style: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
 }
 
 #change-password .row {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #change-password .row .col {
-	width: 100%;
+    width: 100%;
 }
 
 #change-password input {
-	margin-bottom: 50px;
-	margin-top: 8px;
-	border-radius: 25px;
-	border: 1px solid rgb(201, 201, 201);
-	height: 50px;
-	width: 250px;
-	padding-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 8px;
+    border-radius: 25px;
+    border: 1px solid rgb(201, 201, 201);
+    height: 50px;
+    width: 250px;
+    padding-left: 20px;
 }
 
 #change-password label {
-	font-size: 18px;
-	font-family: Roboto;
-	font-weight: 600;
-	color: var(--blue);
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 600;
+    color: var(--blue);
 }
 
 .col_current-password {
-	margin-top: 30px;
-	font-family: Roboto;
+    margin-top: 30px;
+    font-family: Roboto;
 }
 /*user-details*/
 
 #user-details {
-	background-color: var(--white);
-	text-transform: capitalize;
-	text-align: left;
-	font-weight: 600;
-	color: var(--blue);
-	padding: 50px;
+    background-color: var(--white);
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: 600;
+    color: var(--blue);
+    padding: 50px;
 }
 
 /* end user-details */
@@ -150,104 +156,100 @@ body,main {
 /*settings-bar*/
 
 #settings-bar {
-	background-color: var(--blue);
-	text-transform: capitalize;
-	font-weight: 600;
-	color: var(--white);
-	padding: 50px;
+    background-color: var(--blue);
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--white);
+    padding: 50px;
 }
 
 /* end settings-bar*/
 /* alert section*/
 
-.alert{
-	text-align: left;
-	margin-left: 50px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+.alert {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.alert button{
-	margin-top: 10px;
+.alert button {
+    margin-top: 10px;
 }
 
-.alert h4{
-	font-size: 18px;	
-	padding-bottom: 5px;
+.alert h4 {
+    font-size: 18px;
+    padding-bottom: 5px;
 }
 
-.alert p{
-	font-size: 16px;	
-	color: var(--darkgrey);
-	padding-bottom: 15px;
-
+.alert p {
+    font-size: 16px;
+    color: var(--darkgrey);
+    padding-bottom: 15px;
 }
 
-.alert button{
-	color: white;
-	text-transform: uppercase;
-	font-family: Roboto;
-	font-size: 14px;
-	font-weight: 600;
-	background-color: #0b9e99;
-	border-style: none;
+.alert button {
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #0b9e99;
+    border-style: none;
     border-radius: 20px;
-    text-align: center; 
+    text-align: center;
     padding: 15px 50px 15px 50px;
-	width: 250px;
-
+    width: 250px;
 }
-
 
 /* end alert section*/
 /* unsub section  */
 
 .container_checkbox {
-	padding: 50px;
+    padding: 50px;
 }
 
 #unsub_container h3 {
-	background-color: var(--blue);
-	text-transform: capitalize;
-	font-weight: 600;
-	color: var(--white);
-	padding: 50px;
-	font-size: 24px;
+    background-color: var(--blue);
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--white);
+    padding: 50px;
+    font-size: 24px;
 }
 
 #unsub_container label {
-	font-size: 16px;
-	font-family: Roboto;
-	color: var(--blue);
+    font-size: 16px;
+    font-family: Roboto;
+    color: var(--blue);
 }
 
 /* end unsub section   */
 
+.buttons_container:hover {
+    background-color: white; /* Green */
+    color: var(--dark_green);
+}
+
 /*Desktop view*/
 
 @media screen and (min-width: 860px) {
-	#user-details,
-	#change-password {
-		margin: 0 auto;
-		width: 900px;
-		align-items: center;
-	}
-	.red-buttons {
-		display: flex;
-		justify-content: space-between;
-		width: 800px;
-		align-items: center;
-	}
+    #user-details,
+    #change-password {
+        margin: 0 auto;
+        width: 900px;
+        align-items: center;
+    }
+    .red-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 800px;
+        align-items: center;
+    }
 
-	.alert_container{
-		margin: 0 auto;
-		width: 900px;
-		align-items: center;
-	}
-
-	
-
-
-
-	
+    .alert_container {
+        margin: 0 auto;
+        width: 900px;
+        align-items: center;
+    }
 }
