@@ -159,9 +159,9 @@ class AlertController extends Controller
     public function alertPlaylist()
     {
         // Look for the specific User ID
-        $id = Auth::user()->id;
+        // $id = Auth::user()->id;
 
-        //$id = 1;
+        $id = 1;
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
@@ -180,8 +180,8 @@ class AlertController extends Controller
     }
     public function homePlaylist()
     {
-        $id = Auth::user()->id;
-        //$id = 1;
+        // $id = Auth::user()->id;
+        $id = 1;
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
