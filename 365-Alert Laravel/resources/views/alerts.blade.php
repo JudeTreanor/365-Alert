@@ -53,8 +53,22 @@
 <section>
     @foreach ($alerts as $alert)
     <article class="alert_container">
-        <div class="extreme_danger_sidebar" id="sidebar_color"></div>
-        <div class="extreme_danger_icon" id="alert_icon"></div>
+        @if($alert->type === 'Extreme Danger')
+            <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+            <div class="extreme_danger_icon" id="alert_icon"></div>
+        @elseif($alert->type === 'Danger')
+            <div class="danger_sidebar" id="sidebar_color"></div>
+            <div class="danger_icon" id="alert_icon"></div>
+        @elseif($alert->type === 'Potential Danger')
+            <div class="potential_danger_sidebar" id="sidebar_color"></div>
+            <div class="potential_danger_icon" id="alert_icon"></div>
+        @elseif($alert->type === 'Low Danger')
+            <div class="low_danger_sidebar" id="sidebar_color"></div>
+            <div class="low_danger_icon" id="alert_icon"></div>
+        @elseif($alert->type === 'Dried Up River')
+            <div class="dried_up_sidebar" id="sidebar_color"></div>
+            <div class="dried_up_icon" id="alert_icon"></div>
+        @endif
         <div class="alert">
             <h4 id="location">{{$alert->location}}</h4>
             <p id="alert_type">{{$alert->type}}</p>
