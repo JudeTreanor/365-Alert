@@ -64,7 +64,7 @@
             <div class="potential_danger_icon" id="alert_icon"></div>
             <?php elseif($a->type === 'Low Danger'): ?>
             <div class="low_danger_sidebar" id="sidebar_color"></div>
-            <div class="low_danger_icon" id="alert_icon"></div>21
+            <div class="low_danger_icon" id="alert_icon"></div>
             <?php elseif($a->type === 'Dried Up River'): ?>
             <div class="dried_up_sidebar" id="sidebar_color"></div>
             <div class="dried_up_icon" id="alert_icon"></div>
