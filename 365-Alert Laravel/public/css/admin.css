@@ -81,7 +81,7 @@
 
 
 .alert_container{
-    margin: 20px;
+    margin: 50px;
     border-bottom-color:#b6b0b0c4;
     border-bottom-style: solid;
     border-bottom-width: thin;
@@ -112,11 +112,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
 
     }
 
     #user-details{
         column-count: 2;
+        column-gap: 100px;
     }
     
     #buttons_cont{
