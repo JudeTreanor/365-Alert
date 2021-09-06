@@ -53,6 +53,22 @@
 <section>
     <?php $__currentLoopData = $alerts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alert): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php $__currentLoopData = $alert; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($a->type === 'Extreme Danger'): ?>
+            <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+            <div class="extreme_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Danger'): ?>
+            <div class="danger_sidebar" id="sidebar_color"></div>
+            <div class="danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Potential Danger'): ?>
+            <div class="potential_danger_sidebar" id="sidebar_color"></div>
+            <div class="potential_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Low Danger'): ?>
+            <div class="low_danger_sidebar" id="sidebar_color"></div>
+            <div class="low_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Dried Up River'): ?>
+            <div class="dried_up_sidebar" id="sidebar_color"></div>
+            <div class="dried_up_icon" id="alert_icon"></div>
+            <?php endif; ?>
             <article class="alert_container">
                 <div class="extreme_danger_sidebar" id="sidebar_color"></div>
                 <div class="extreme_danger_icon" id="alert_icon"></div>
