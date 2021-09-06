@@ -28,28 +28,27 @@
     </header>
 
     <?php if(auth()->guard()->check()): ?>
-    <ul id="navigation">
-        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
-        <li><a href="<?php echo e(route('about')); ?>">About</a></li>
-        <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
-        <li><a href="<?php echo e(route('alerts')); ?>">Alerts</a></li>
-        <li><a href="<?php echo e(route('procedures')); ?>">Procedures</a></li>
-        <li><a href="<?php echo e(route('terms')); ?>">Terms</a></li>
-        <li><a href="<?php echo e(route('client-settings')); ?>">Client Settings</a></li>
-        <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
-    </ul>
+        <ul id="navigation">
+            <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+            <li><a href="<?php echo e(route('about')); ?>">About</a></li>
+            <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
+            <li><a href="<?php echo e(route('alerts')); ?>">Alerts</a></li>
+            <li><a href="<?php echo e(route('procedures')); ?>">Procedures</a></li>
+            <li><a href="<?php echo e(route('terms')); ?>">Terms</a></li>
+            <li><a href="<?php echo e(route('admin')); ?>">Admin</a></li>
+        </ul>
+        <ul class="register">
+            <button><a href="<?php echo e(route('client-settings')); ?>">My Settings</a></button>
+            <button><a href="<?php echo e(route('logout')); ?>">Log Out</a></button>
+        </ul>
     <?php endif; ?>
     <?php if(auth()->guard()->guest()): ?>
-    <ul id="navigation">
-        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
-        <li><a href="<?php echo e(route('about')); ?>">About</a></li>
-        <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
-    </ul>
+        <ul id="navigation-short">
+            <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+            <li><a href="<?php echo e(route('about')); ?>">About</a></li>
+            <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
+        </ul>
     <?php endif; ?>
-    <ul class="register">
-        <button><a href="<?php echo e(route('home')); ?>">My Settings</a></button>
-        <button><a href="<?php echo e(route('logout')); ?>">Log Out</a></button>
-    </ul>
 
 
 
@@ -109,6 +108,7 @@
     
     <?php echo $__env->yieldContent('scripts'); ?>
     <script src="<?php echo e(URL::asset('js/template.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('js/guestnav.js')); ?>"></script>
 </body>
 
 </html>
