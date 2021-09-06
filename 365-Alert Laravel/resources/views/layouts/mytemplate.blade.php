@@ -23,8 +23,8 @@
 
         <h2 id="logo"><a href="{{ route('home') }}">365 Alert</a></h2>
 
-        <img id="user-icon" src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt="">
-
+        
+        <a href="{{ route('login')}}"><img id="user-icon" src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt=""></a>
     </header>
 
     @auth

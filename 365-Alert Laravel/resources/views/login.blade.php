@@ -1,5 +1,5 @@
 {{-- Extending the template --}}
-@extends('layouts.simpletemplate')
+@extends('layouts.mytemplate')
 
 {{-- Setting the Page title --}}
 @section('title', 'Login')
@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }}">
 
 @endsection
-<body>
 
-<main>
 {{-- Main Content Section --}}
 @section('content')
 
@@ -44,6 +42,7 @@
     <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
     <input type="submit" value="login" id="submit2">
 </form>
+<a href="{{ route('register') }}"><button id="submit2">Don't have an account yet ? Register here!</button></a>
 
 @endsection
 
@@ -55,6 +54,5 @@
 
 {{-- Scripts links --}}
 @section('scripts')
-</main>
-</body>
+
 @endsection

@@ -123,11 +123,11 @@ ul #navigation-short {
     background-color: var(--dark_green);
 }
 
-ul #navigation-short {
+/* ul #navigation-short {
     display: flex;
     justify-content: space-between;
     list-style: none;
-}
+} */
 
 #navigation-short {
     position: absolute;
@@ -146,6 +146,8 @@ ul #navigation-short {
 
 #navigation-short.opened {
     transform: translateX(0%);
+    opacity: 0.9;
+    width: 100%;
 }
 
 #navigation-short>li>a:active {
@@ -244,7 +246,7 @@ footer img {
 /*Desktop view*/
 
 @media screen and (min-width: 900px) {
-    header img {
+    header #action {
         display: none;
     }
     header h2 {
@@ -268,7 +270,7 @@ footer img {
     }
     #navigation-short {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         height: 30px;
         text-decoration: none;
         transform: translateX(0);

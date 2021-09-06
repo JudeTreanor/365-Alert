@@ -23,8 +23,8 @@
 
         <h2 id="logo"><a href="<?php echo e(route('home')); ?>">365 Alert</a></h2>
 
-        <img id="user-icon" src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt="">
-
+        
+        <a href="<?php echo e(route('login')); ?>"><img id="user-icon" src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt=""></a>
     </header>
 
     <?php if(auth()->guard()->check()): ?>

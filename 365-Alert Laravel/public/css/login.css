@@ -22,8 +22,7 @@
 }
 input {
     margin-bottom: 17px;
-    width: 291;
-    height: 43;
+    padding: 10px 50px;
     border-radius: 15px;
     color: #037c87;
     border-style: none;
@@ -75,7 +74,6 @@ p {
     background-position: left;
     background-repeat: no-repeat;
     padding-left: 45px;
-
 }
 
 a{

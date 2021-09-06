@@ -1,3 +1,7 @@
+
+
+
+
 <?php $__env->startSection('title', 'Login'); ?>
 
 
@@ -5,9 +9,7 @@
     <link rel="stylesheet" href="<?php echo e(URL::asset('css/login.css')); ?>">
 
 <?php $__env->stopSection(); ?>
-<body>
 
-<main>
 
 <?php $__env->startSection('content'); ?>
 
@@ -41,6 +43,7 @@
     <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
     <input type="submit" value="login" id="submit2">
 </form>
+<a href="<?php echo e(route('register')); ?>"><button id="submit2">Don't have an account yet ? Register here!</button></a>
 
 <?php $__env->stopSection(); ?>
 
@@ -52,8 +55,7 @@
 
 
 <?php $__env->startSection('scripts'); ?>
-</main>
-</body>
+
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.simpletemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.mytemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/login.blade.php ENDPATH**/ ?>
