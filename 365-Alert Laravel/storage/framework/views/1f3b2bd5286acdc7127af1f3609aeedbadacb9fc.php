@@ -16,7 +16,7 @@
 </section>
 <section class="flex_container">
     <article class="map_image">
-        <div></div>
+        <img src="<?php echo e(URL::asset('pictures/Map_Vector_Blue-01.png')); ?>" alt="luxembourg_map">
     </article>
     <article class="map_main_container" >
         <div class="map_details_container">
@@ -55,7 +55,6 @@
     <article class="alert_container">
         <div class="extreme_danger_sidebar" id="sidebar_color"></div>
         <div class="extreme_danger_icon" id="alert_icon"></div>
-        
         <div class="alert">
             <h4 id="location"><?php echo e($alert->location); ?></h4>
             <p id="alert_type"><?php echo e($alert->type); ?></p>
@@ -63,7 +62,7 @@
             <p id="river">River <?php echo e($alert->river); ?></p>
             <p id="water_level">Water Level: <?php echo e($alert->water_level . " cm"); ?></p>
             <p id="updated"><?php echo e($alert->updated_at); ?></p>
-            <a href="<?php echo e(route('add-alert', ['alert_id' => $alert->id])); ?>">
+            <a href="<?php echo e(route('add-alert', ['alert_id' => $alert->id])); ?>" class="buttons_container">
                 <button class="buttons_container" type="submit">Add To List</button>
             </a>
         </div>
