@@ -22,14 +22,13 @@
     --alertbrown: #a37114;
 }
 
-body {
+body,section, main {
     background-color: #efefef;
 }
 
 .home {
     text-align: center;
 }
-
 
 
 /* register-box _ intro image */
@@ -61,8 +60,11 @@ body {
     margin-bottom: 20px;
 }
 
-.intro-text{
+
+.intro-text {
     padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 24px;
 }
 
 
@@ -91,6 +93,93 @@ body {
     margin-top: -60px; 
 }
 
+
+/*Flood Map*/
+
+.flood-map {
+    background-color: var(--dark_green);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 30px;
+    color: white;
+    font-size: 24px;
+}
+
+.image_map{
+    background: url('../pictures/Map_Vector_mobile-01.png')no-repeat center center/cover;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+}
+
+.flood_container{
+    background-color: var(--green);
+}
+
+
+/*Tablet View - Responsive*/
+
+
+@media (min-device-width: 600px) {
+    /*Icons*/
+
+    .icons_flex {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    .img1, .img2, .img3{
+        width: 200px;
+        padding: 30px;
+    }
+
+
+    .i_container p{
+        font-size: 13px;
+    }
+
+    .image_map{
+        background: url('../pictures/Map_Vector_desktop-01.png')no-repeat center center/cover;
+        background-position: center;
+        background-size: contain;
+        height: 100vh;
+    }
+
+    .flood_container{
+        background-color: var(--grey);
+    }
+    
+    
+
+
+}
+
+/*Desktop View - Responsive*/
+
+@media (min-device-width: 1000px) {
+    /*Icons*/
+
+    .icons_flex {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    .img1, .img2, .img3{
+        width: 300px;
+    }
+
+    .i_container p{
+        font-size: 16px;
+    }
+    
+    
+
+
+}
+
+    
+
+    
 
 
 
