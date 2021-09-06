@@ -1,4 +1,4 @@
-* {
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -65,6 +65,7 @@ main {
     min-height: 100px;
     text-align: left;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .red-alert h3 {
@@ -121,6 +122,7 @@ main {
     min-height: 100px;
     text-align: left;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .orange-alert h3 {
@@ -166,6 +168,7 @@ main {
     min-height: 100px;
     text-align: left;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .yellow-alert h3 {
@@ -244,4 +247,27 @@ main {
     background-color: red;
 }
 
-@media screen and (min-width: 1200px) {}
+
+/* Desktop version  */
+
+@media screen and (min-width: 1200px) {
+    /* .my-alerts {
+        display: inline-block;
+    }
+    .icon-alert-red {
+        display: inline-block;
+    }
+    .red-buttons {
+        padding-left: 128px;
+        margin-left: 365px;
+        display: inline-grid;
+    }
+    .need-help img {
+        width: auto;
+        height: 550px;
+    }
+    .red-buttons button {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+} */
