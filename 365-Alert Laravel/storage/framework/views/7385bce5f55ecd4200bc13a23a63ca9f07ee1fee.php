@@ -44,7 +44,7 @@
     <?php endif; ?>
     <?php if(auth()->guard()->guest()): ?>
         <ul id="navigation-short">
-            <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+            <li><a href="<?php echo e(route('home1')); ?>">Home</a></li>
             <li><a href="<?php echo e(route('about')); ?>">About</a></li>
             <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
         </ul>
