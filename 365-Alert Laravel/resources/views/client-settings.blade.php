@@ -31,9 +31,9 @@
             <p>{{ $user->contact }}</p>
         </div>
         <div id="change-buttons">
-            <div class="red-buttons">
-                <button type="submit">Change Details</button>
-            </div>
+            <a href="{{ route('client-settings-edit', ['id' => $user->id]) }}" class="buttons_container">
+                <button class="buttons_container" type="submit">Edit User</button>
+            </a>
         </div>
     </section>
     <section id="settings-bar">
