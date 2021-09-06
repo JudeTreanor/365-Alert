@@ -26,11 +26,11 @@ class AlertController extends Controller
         // Decode the JSON file into an Object
         $responseBodys = json_decode($response->getBody());
 
-        // Looping through the Object 
+        // Looping through the Object
         foreach ($responseBodys as $response) {
             // Nested Loop to Iterate through the alert_levels array
             foreach ($response->alert_levels as $key => $level) {
-                
+
                 // Conditionals to save the water levels into variables and rehuse them to check
                 // if the current water levels are at certain levels or normal
                 if ($level->name === 'Cote d’alerte') {
@@ -51,15 +51,15 @@ class AlertController extends Controller
 
                         // Save on the model instance
                         $alert->save();
-                    } 
-                    
+                    }
+
                 } else if ($level->name === 'Cote de préalerte') {
 
                     $orangeAlertLevel = $level->value;
 
                     // Checking if current water level is higher then the alert level
                     if ($response->current->value >= $orangeAlertLevel) {
-                        
+
                         // Find the alert
                         $alert = Alert::find($response->id);
 
@@ -72,8 +72,8 @@ class AlertController extends Controller
 
                         // Save on the model instance
                         $alert->save();
-                    } 
-                    
+                    }
+
                 } else if ($level->name === 'Cote de vigilance') {
 
                     $yellowAlertLevel = $level->value;
@@ -96,7 +96,7 @@ class AlertController extends Controller
 
                     // If the water level is not higher then any of the alerts it's in green/good status then run this code
                     } else {
-                        
+
                         // Find the alert
                         $alert = Alert::find($response->id);
 
@@ -114,7 +114,7 @@ class AlertController extends Controller
 
                 // If the water level is lower then the minimum water levels
                 if ($response->current->value <= $response->minimum->value) {
-                    
+
                     // Find the alert
                     $alert = Alert::find($response->id);
 
@@ -138,7 +138,7 @@ class AlertController extends Controller
 
         $alerts = Alert::all();
         $users = User::all();
-        
+
         return view('alerts', ['alerts' => $alerts, 'users' => $users]);
     }
 
@@ -146,8 +146,8 @@ class AlertController extends Controller
     {
         $playlist = new Playlist;
 
-        // $id = Auth::user()->id;
-        $user_id = 1;
+        $user_id = Auth::user()->id;
+        //$user_id = 1;
 
         $playlist->user_id = $user_id;
         $playlist->alert_id = $alert_id;
@@ -165,33 +165,58 @@ class AlertController extends Controller
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
+        $user = User::find($id);
         
-        $users = User::find($id);
-        
+
         $alerts = array();
-        
+
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
 
-        return view('client-settings', ['user' => $users, 'alerts' => $alerts]);
+        return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
 
 
     }
     public function homePlaylist()
     {
+        // $id = Auth::user()->id;
         $id = 1;
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
         $alerts = array();
-        
+
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
 
         return view('home', ['alerts' => $alerts]);
 
+    }
+
+    public function alert_edit_show($id)
+    {
+        $alert = Alert::find($id);
+
+        return view('alert-edit', ['alert' => $alert]);
+    }
+    public function alert_edit_submit(Request $request, $id)
+    {
+        $alert = Alert::find($id);
+
+        $alert->water_caution_level = $request->water_caution_level;
+        $alert->water_prealert_level = $request->water_prealert_level;
+        $alert->water_alert_level = $request->water_alert_level;
+
+        $alert->save();
+
+        // retrieve the users
+        $users = User::all();
+        $alerts = Alert::all();
+        
+        // function to return the admin page
+        return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
 
 }

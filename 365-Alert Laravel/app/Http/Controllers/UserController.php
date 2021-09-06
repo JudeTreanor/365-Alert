@@ -34,8 +34,8 @@ class UserController extends Controller
         $user = User::find($id);
 
         // Set the Attributes
-        $user->first_name = $request->first_name;
-        $user->last_name = $request->last_name;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->contact = $request->contact;
@@ -43,11 +43,12 @@ class UserController extends Controller
         // Save on the model instance
         $user->save();
 
-        // Retrieve the User
+        // Retrieve the User and the Alerts
         $users = User::all();
+        $alerts = Alert::all();
 
         // Return the Client Settings View
-        return view('admin', ['users' => $users]);
+        return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
 
     // Function to delete an user as an Admin
@@ -57,8 +58,10 @@ class UserController extends Controller
 
         // retrieve the users
         $users = User::all();
+        $alerts = Alert::all();
+        
         // function to return the admin page
-        return view('admin', ['users' => $users]);
+        return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
 
     // Function to return the user info to edit a specific user settings
@@ -104,5 +107,39 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $users]);
     }
-    
+    public function editClientSettingsShow()
+    {
+        // Look for the specific User ID
+        // $id = Auth::user()->id;
+
+        $id = 1;
+
+        $user = User::find($id);
+
+        return view('client-settings-edit', ['user' => $user]);
+    }
+    public function editClientSettingSubmit(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->email = $request->email;
+        $user->contact = $request->contact;
+        $user->password = $request->password;
+
+        $user->save();
+
+        $alerts = array();
+        
+        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
+        
+        foreach ($playlistAlerts as $alert) {
+            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
+        }
+
+        return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
+
+    }
 }

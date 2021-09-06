@@ -2,11 +2,11 @@
 @extends('layouts.mytemplate')
 
 {{-- Setting the Page title --}}
-@section('title', 'Admin User Edit')
+@section('title', 'Client Settings Edit')
 
 {{-- CSS Link --}}
 @section('css')
-<link rel="stylesheet" href="{{ URL::asset('css/admin.css'); }}">
+<link rel="stylesheet" href="{{ URL::asset(''); }}">
 @endsection
 
 {{-- Main Content Section --}}
