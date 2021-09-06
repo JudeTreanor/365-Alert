@@ -70,28 +70,7 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </section>
-<h2 class="need-help">Need Help?</h2>
-<section  class="help_container">
-    <img src="<?php echo e(URL::asset('pictures/CGDIS_3_copie.jpg')); ?>" id="image_cgdis" alt="help">
-    <article id="icons_container">
-        <a href="tel">
-            <div>
-                <img src="<?php echo e(URL::asset('pictures/CGDIS_112_White.SVG')); ?>" id="icon_number" alt="help">
-                <p id="number_112">112</p>
-            </div>
-        </a>
-        <a href="WWW.112.PUBLIC.LU">
-            <div>
-                <img src="<?php echo e(URL::asset('pictures/CGDIS_Website_White.SVG')); ?>" id="icon_website" alt="help">
-                <p id="website"><a href="url" style="color:white">www.112.public.lu</a></p>
-            </div>
-        </a>
-        <div>
-            <img src="<?php echo e(URL::asset('pictures/CGDIS_APP_White.SVG')); ?>" id="icon_app" alt="help">
-            <p id="gov_app">GOUVALERT</p>
-        </div>
-    </article>
-</section>
+
 <?php $__env->stopSection(); ?>
 
 
