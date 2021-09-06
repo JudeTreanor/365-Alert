@@ -107,5 +107,39 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $users]);
     }
-    
+    public function editClientSettingsShow()
+    {
+        // Look for the specific User ID
+        // $id = Auth::user()->id;
+
+        $id = 1;
+
+        $user = User::find($id);
+
+        return view('client-settings-edit', ['user' => $user]);
+    }
+    public function editClientSettingSubmit(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->email = $request->email;
+        $user->contact = $request->contact;
+        $user->password = $request->password;
+
+        $user->save();
+
+        $alerts = array();
+        
+        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
+        
+        foreach ($playlistAlerts as $alert) {
+            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
+        }
+
+        return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
+
+    }
 }
