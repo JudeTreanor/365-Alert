@@ -25,6 +25,7 @@ li {
     list-style: none;
 }
 
+
 @media screen and (min-width: 600px) {
 }
 
@@ -41,18 +42,6 @@ li {
 
 .register-box .intro-text {
 margin-bottom: 18px;
-}
-
-.register-box .btn {
-
-}
-
-.register-box .btn.btn-register {
-
-}
-
-.register-box .btn.btn-login {
-
 }
 
 
@@ -77,3 +66,38 @@ margin-bottom: 18px;
 #procedures {
     margin-bottom: 50px;
 }
+
+/*Responsive desktop*/
+
+@media (min-device-width: 900px) {
+    /*List and Map*/
+    .map_image {
+        width: 80vh;
+    }
+    .flex_container {
+        margin: 0 auto;
+        width: 1000px;
+    }
+    .content {
+        background-color: var(--green);
+    }
+    /*Alerts*/
+    #alert_icon {
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-content: center;
+    }
+    .alert {
+        margin: 0 auto;
+        width: 800px;
+        justify-content: center;
+        align-content: center;
+    }
+    .alert_container {
+        height: 280px;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
