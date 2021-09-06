@@ -18,8 +18,9 @@ class EnsureUserIsLoggedIn
     {
         if (!$request->session()->exists('email')) {
             // user value cannot be found in session
-            return redirect('/login');
+            return redirect('/');
         }
         return $next($request);
     }
 }
+
