@@ -52,19 +52,23 @@
 <h2 class="alerts_title">My Alerts</h2>
 <section>
     @foreach ($alerts as $alert)
-    <article class="alert_container">
-        <div class="extreme_danger_sidebar" id="sidebar_color"></div>
-        <div class="extreme_danger_icon" id="alert_icon"></div>
-        <div class="alert">
-            <h4 id="location">{{$alert->location}}</h4>
-            <p id="alert_type">{{$alert->type}}</p>
-            <p id="description">The flood alert is in {{$alert->description}} status.</p>
-            <p id="river">River {{$alert->river}}</p>
-            <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
-            <p id="updated">{{$alert->updated_at}}</p>
-        </div>
-    </article>
-    @endforeach
+            @foreach ($alert as $a)
+            <article class="alert_container">
+                <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+                <div class="extreme_danger_icon" id="alert_icon"></div>
+                {{-- <img src="{{URL::asset('pictures/Alert_Warning_Red.svg')}}" alt=""> --}}
+                <div class="alert">
+                    <h4 id="location">{{$a->location}}</h4>
+                    <p id="alert_type">{{$a->type}}</p>
+                    <p id="description">The flood alert is in {{$a->description}} status.</p>
+                    <p id="river">River {{$a->river}}</p>
+                    <p id="water_level">Water Level: {{$a->water_level . " cm"}}</p>
+                    <p id="updated">{{$a->updated_at}}</p>
+                </div>
+            </section>
+            </article>
+            @endforeach
+            @endforeach
 </section>
 <h2 class="need-help">Need Help?</h2>
 <section  class="help_container">

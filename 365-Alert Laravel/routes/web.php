@@ -63,12 +63,7 @@ Route::get('/contact', function () {
 //route to post contact page
 Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-submit');
 
-
-// Route to the Home page logged in
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
-
+Route::get("/home", [AlertController::class, 'homePlaylist'])->name("home");
 
 //route to the home page logged out
 Route::get('/', function () {

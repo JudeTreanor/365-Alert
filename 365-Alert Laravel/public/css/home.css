@@ -1,4 +1,4 @@
-* {
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -63,7 +63,6 @@ section {
 
 
 
-/*Circles on Map Toggle Colors*/
 
 
 .red_circle_map {
@@ -98,12 +97,14 @@ section {
 	background-color: var(--alertgreen);
 }
 
+
 .brown_circle_map {
 	color: white;
 	width: 22px;
 	height: 22px;
 	border-radius: 100%;
 	background-color: var(--alertbrown);
+
 }
 
 #locations_list {
@@ -147,7 +148,6 @@ section {
 	background-color: var(--red);
 	padding-right: 10px;
 	margin-right: 10px;
-
 }
 
 #orange_circle {
@@ -244,20 +244,3 @@ section {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Need Help section end*/
