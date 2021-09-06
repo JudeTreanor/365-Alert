@@ -32,7 +32,7 @@
         </div>
         <div id="change-buttons">
             <a href="{{ route('client-settings-edit', ['id' => $user->id]) }}" class="buttons_container">
-                <button class="buttons_container" type="submit">Edit User</button>
+                <button class="buttons_container" type="submit">Edit account details</button>
             </a>
         </div>
     </section>
@@ -44,9 +44,6 @@
         @foreach ($alerts as $alert)
         @foreach ($alert as $a)
         <article class="alert_container">
-            <div id="sidebar_color"></div>
-            <div id="alert_icon"></div>
-            {{-- <img src="{{URL::asset('pictures/Alert_Warning_Red.svg')}}" alt=""> --}}
             <div class="alert">
                 <h4 id="location">{{$a->location}}</h4>
                 <p id="river">River {{$a->river}}</p>
@@ -60,6 +57,7 @@
     @endforeach
     <section id="unsub_container">
         <h3>Unsubscribe</h3>
+        <p>I wish to unsubscribe from 365 Alert services.</p>
         <a href="{{ route('unsubscribe', ['id' => $user->id])}}"><button>Unsubscribe</button></a>
     </section>
 </main>

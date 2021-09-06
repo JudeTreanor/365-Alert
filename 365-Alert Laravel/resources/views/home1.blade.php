@@ -14,7 +14,6 @@
 
 
 <section class="home">
-
     <div class="register-box">
         <p class="intro-text">Be alert 365 days if potential flood appears</p>
         <p>
@@ -24,7 +23,6 @@
             <a class="btn btn-login" href="{{ route('login') }}">Login</a>
         </p>
     </div>
-
     <ul>
         <li>
             <img src="" alt="">
@@ -34,13 +32,8 @@
             <span>Check the water level <br>of any location</span>
             <img class="img" src="{{URL::asset('../pictures/Procedures_Main.svg')}}" id="img3" alt=""><br>
             <span id="procedures">Follow important safest <br>procedures</span>
-
         </li>
     </ul>
-    <div>
-        <h3>LUXEMBOURG FLOOD</h3>
-        <img src="{{URL::asset('../pictures/Map2.png')}}" id="map" alt="">
-    </div>
 </section>
 
 
