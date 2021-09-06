@@ -72,6 +72,7 @@ Route::get('/', function () {
     return view('home1');
 })->name('home1');
 
+Route::get('client-settings/delete/{id}', [UserController::class, 'unsubscribe'])->name('unsubscribe');
 
 // Route to the procedures
 Route::get('/procedures', function () {
@@ -87,7 +88,6 @@ Route::get('terms', function () {
 
 // Route to submit the User modification
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
-
 
 //Route to get the api
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');

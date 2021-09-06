@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Variables for colors*/
+
+:root {
+	--grey: #efefef;
+	--green: #0b9e99;
+	--blue: #16354d;
+	--dark_green: #037c87;
+	--purple: #2b3371;
+	--darkgrey: #dcdcdc;
+}
+
+/*Main*/
+
+main {
+	background-color: #efefef;
+}

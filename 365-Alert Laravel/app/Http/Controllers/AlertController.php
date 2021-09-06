@@ -134,7 +134,7 @@ class AlertController extends Controller
 
     public function showAlerts()
     {
-        $this->getApi();
+        // $this->getApi();
 
         $alerts = Alert::all();
         $users = User::all();
@@ -144,24 +144,26 @@ class AlertController extends Controller
 
     public function addAlert($alert_id)
     {
-        $playlist = new Playlist;
 
-        //$user_id = Auth::user()->id;
+        // $user_id = Auth::user()->id;
         $user_id = 1;
 
-        $playlist->user_id = $user_id;
-        $playlist->alert_id = $alert_id;
+        $playlist = Playlist::firstOrNew(
+            ['user_id' => $user_id, 'alert_id' => $alert_id]
+        );
+        if ($playlist != null) {
+            $playlist->save();
+        }
 
-        $playlist->save();
 
         return back()->withInput();
     }
     public function alertPlaylist()
     {
         // Look for the specific User ID
-        $id = Auth::user()->id;
+        // $id = Auth::user()->id;
 
-        //$id = 1;
+        $id = 1;
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
