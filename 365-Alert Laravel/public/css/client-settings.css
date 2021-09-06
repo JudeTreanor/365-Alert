@@ -1,105 +1,144 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 /*Variables for colors*/
 
-/* :root {
-    --white: #efefef;
-    --green: #0b9e99;
-    --blue: #16354d;
-    --dark_green: #037c87;
-    --purple: #2b3371;
-} */
+:root {
+	--grey: #efefef;
+	--green: #0b9e99;
+	--blue: #16354d;
+	--dark_green: #037c87;
+	--purple: #2b3371;
+	--darkgrey: #686565c4;
+}
+section,
+body,
+main {
+	background-color: var(--grey);
+}
+
+/* image*/
+
+#image_user {
+	width: 200px;
+}
+
+#client {
+	color: white;
+	font-size: 26px;
+	margin-bottom: 40px;
+}
 
 /* user details*/
+.user-username,
+.user-email,
+.user-phone {
+	margin-bottom: 50px;
+}
 
-#user-details .user-username,
-#user-details .user-email,
-#user-details .user-phone {
-    margin-bottom: 50px;
+.user-username h2,
+.user-email h2,
+.user-phone h2 {
+	font-size: 18px;
+}
+
+.user-username p,
+.user-email p,
+.user-phone p {
+	font-size: 16px;
+	color: var(--darkgrey);
 }
 
 /* end user details*/
 
 /* change buttons*/
 
-#change-buttons {
-    color: var(--white);
-    text-align: center;
-
-    border: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-left: 10px;
-}
-
-#change-buttons .red-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#change-buttons .red-buttons button {
-    margin: 8px;
-}
-#change-buttons button {
-    background-color: var(--green);
-    border: none;
-    border-radius: 25px;
-    height: 50px;
-    width: 200px;
-    color: white;
-    font-size: 20px;
+.red-buttons button {
+	color: white;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 50px 10px 50px;
+	background-color: #0b9e99;
+	border-style: none;
+	border-radius: 20px;
+	text-align: center;
+	width: 250px;
+	margin-bottom: 20px;
 }
 
 .row label {
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--blue);
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--blue);
 }
 
 /* end change buttons*/
 
 #change-password {
-    background-color: var(--white);
-    text-align: left;
-    padding: 50px;
-}
-
-#change-password .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-#change-password .row .col {
-    width: 100%;
-}
-
-#change-password input {
-    margin-bottom: 50px;
-    border-radius: 25px;
-    border: 2px solid;
-    height: 50px;
-    width: 70%;
-    padding-left: 20px;
-}
-
-#change-password label {
-    display: block;
-    line-height: 20px;
-    margin-bottom: 4px;
+	background-color: var(--white);
+	text-align: left;
+	padding: 10px 50px 10px 50px;
 }
 
 #change-password .sub-button {
-    margin-top: 24px;
+	color: white;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 50px 10px 50px;
+	background-color: #0b9e99;
+	border-style: none;
+	border-radius: 20px;
+	text-align: center;
+	width: 250px;
+	margin-bottom: 20px;
 }
 
+#change-password .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#change-password .row .col {
+	width: 100%;
+}
+
+#change-password input {
+	margin-bottom: 50px;
+	margin-top: 8px;
+	border-radius: 25px;
+	border: 1px solid rgb(201, 201, 201);
+	height: 50px;
+	width: 250px;
+	padding-left: 20px;
+}
+
+#change-password label {
+	font-size: 18px;
+	font-family: Roboto;
+	font-weight: 600;
+	color: var(--blue);
+}
+
+.col_current-password {
+	margin-top: 30px;
+	font-family: Roboto;
+}
 /*user-details*/
 
 #user-details {
-    background-color: var(--white);
-    text-transform: capitalize;
-    text-align: left;
-    font-weight: 500;
-    color: var(--purple);
-    padding: 50px;
+	background-color: var(--white);
+	text-transform: capitalize;
+	text-align: left;
+	font-weight: 600;
+	color: var(--blue);
+	padding: 50px;
 }
 
 /* end user-details */
@@ -107,64 +146,51 @@
 /*settings-bar*/
 
 #settings-bar {
-    background-color: var(--blue);
-    text-transform: capitalize;
-    font-weight: 500;
-    color: var(--white);
-    padding: 50px;
+	background-color: var(--blue);
+	text-transform: capitalize;
+	font-weight: 600;
+	color: var(--white);
+	padding: 50px;
 }
 
 /* end settings-bar*/
 
-/* check box  */
-.checkbox {
-    display: flex;
+/* unsub section  */
+
+.container_checkbox {
+	padding: 50px;
 }
-/* end check box  */
+
+#unsub_container h3 {
+	background-color: var(--blue);
+	text-transform: capitalize;
+	font-weight: 600;
+	color: var(--white);
+	padding: 50px;
+	font-size: 24px;
+}
+
+#unsub_container label {
+	font-size: 18px;
+	font-family: Roboto;
+	color: var(--blue);
+}
+
+/* end unsub section   */
 
 /*Desktop view*/
 
-@media screen and (min-width: 980px) {
-    #user-details {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #change-buttons .red-buttons {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 25px;
-    }
-
-    #change-buttons {
-        border-radius: 25px;
-    }
-
-    #change-password .row .col {
-        text-align: center;
-        width: 50%;
-    }
-
-    #red-buttons button {
-    }
-
-    /* 
-    #password-form,
-    input {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 100px;
-    }
-    #current-password,
-    #new-password,
-    #confirm-password,
-    #subbutton {
-        width: 35%;
-    }
-    #subbutton {
-        width: 185px;
-        margin-top: 15px;
-    } */
+@media screen and (min-width: 860px) {
+	#user-details,
+	#change-password {
+		margin: 0 auto;
+		width: 900px;
+		align-items: center;
+	}
+	.red-buttons {
+		display: flex;
+		justify-content: space-between;
+		width: 800px;
+		align-items: center;
+	}
 }
