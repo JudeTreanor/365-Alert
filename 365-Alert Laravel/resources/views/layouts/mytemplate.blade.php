@@ -108,6 +108,7 @@
     {{-- @include('layouts.nav') --}}
     @yield('scripts')
     <script src="{{ URL::asset('js/template.js') }}"></script>
+    <script src="{{ URL::asset('js/guestnav.js') }}"></script>
 </body>
 
 </html>
