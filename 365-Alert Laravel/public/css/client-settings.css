@@ -15,12 +15,16 @@
 	--darkgrey: #686565c4;
 }
 section,
-body,
-main {
+body,main {
 	background-color: var(--grey);
 }
 
 /* image*/
+
+.intro_container{
+	background-color: var(--dark_green);
+	height: 300px;
+}
 
 #image_user {
 	width: 200px;
@@ -62,7 +66,7 @@ main {
 	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 600;
-	padding: 10px 50px 10px 50px;
+    padding: 15px 50px 15px 50px;
 	background-color: #0b9e99;
 	border-style: none;
 	border-radius: 20px;
@@ -154,7 +158,48 @@ main {
 }
 
 /* end settings-bar*/
+/* alert section*/
 
+.alert{
+	text-align: left;
+	margin-left: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.alert button{
+	margin-top: 10px;
+}
+
+.alert h4{
+	font-size: 18px;	
+	padding-bottom: 5px;
+}
+
+.alert p{
+	font-size: 16px;	
+	color: var(--darkgrey);
+	padding-bottom: 15px;
+
+}
+
+.alert button{
+	color: white;
+	text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: #0b9e99;
+	border-style: none;
+    border-radius: 20px;
+    text-align: center; 
+    padding: 15px 50px 15px 50px;
+	width: 250px;
+
+}
+
+
+/* end alert section*/
 /* unsub section  */
 
 .container_checkbox {
@@ -171,7 +216,7 @@ main {
 }
 
 #unsub_container label {
-	font-size: 18px;
+	font-size: 16px;
 	font-family: Roboto;
 	color: var(--blue);
 }
@@ -193,4 +238,16 @@ main {
 		width: 800px;
 		align-items: center;
 	}
+
+	.alert_container{
+		margin: 0 auto;
+		width: 900px;
+		align-items: center;
+	}
+
+	
+
+
+
+	
 }

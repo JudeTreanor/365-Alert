@@ -13,8 +13,10 @@
 @section('content')
    <form action="" method="post">
     @csrf
-    <label for="username">Username</label>
-    <input type="text" name="username" placeholder="Username" value="{{$user->username}}"><br>
+    <label for="username">First Name</label>
+    <input type="text" name="firstname" placeholder="Username" value="{{$user->firstname}}"><br>
+    <label for="username">Last Name</label>
+    <input type="text" name="lastname" placeholder="Username" value="{{$user->lastname}}"><br>
     <label for="email">Email</label>
     <input type="email" name="email" placeholder="Email" value="{{$user->email}}"><br>
     <label for="Phone Number">Phone Number</label>
