@@ -64,14 +64,14 @@
             <div class="potential_danger_icon" id="alert_icon"></div>
             @elseif($a->type === 'Low Danger')
             <div class="low_danger_sidebar" id="sidebar_color"></div>
-            <div class="low_danger_icon" id="alert_icon"></div>
+            <div class="low_danger_icon" id="alert_icon"></div>21
             @elseif($a->type === 'Dried Up River')
             <div class="dried_up_sidebar" id="sidebar_color"></div>
             <div class="dried_up_icon" id="alert_icon"></div>
             @endif
             <article class="alert_container">
-                <div class="extreme_danger_sidebar" id="sidebar_color"></div>
-                <div class="extreme_danger_icon" id="alert_icon"></div>
+                <div  id="sidebar_color"></div>
+                <div  id="alert_icon"></div>
                 {{-- <img src="{{URL::asset('pictures/Alert_Warning_Red.svg')}}" alt=""> --}}
                 <div class="alert">
                     <h4 id="location">{{$a->location}}</h4>
