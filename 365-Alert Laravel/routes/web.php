@@ -57,7 +57,7 @@ Route::get('/alert-edit/{id}', [AlertController::class, 'alert_edit_show'])->nam
 
 Route::post('/alert-edit/{id}', [AlertController::class, 'alert_edit_submit'])->name('alert-submit');
 
-// Route to the Contact page
+// Route to the Contact page.
 Route::get('/contact', [ContactUsController::class, 'showContactForm'])->name('contact');
 Route::post('/contact', [ContactUsController::class, 'submitContactForm'])->name('contact.submit');
 
