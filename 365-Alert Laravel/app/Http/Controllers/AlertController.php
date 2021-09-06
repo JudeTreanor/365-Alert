@@ -52,7 +52,6 @@ class AlertController extends Controller
                         // Save on the model instance
                         $alert->save();
                     }
-
                 } else if ($level->name === 'Cote de préalerte') {
 
                     $orangeAlertLevel = $level->value;
@@ -73,7 +72,6 @@ class AlertController extends Controller
                         // Save on the model instance
                         $alert->save();
                     }
-
                 } else if ($level->name === 'Cote de vigilance') {
 
                     $yellowAlertLevel = $level->value;
@@ -94,7 +92,7 @@ class AlertController extends Controller
                         // Save on the model instance
                         $alert->save();
 
-                    // If the water level is not higher then any of the alerts it's in green/good status then run this code
+                        // If the water level is not higher then any of the alerts it's in green/good status then run this code
                     } else {
 
                         // Find the alert
@@ -134,7 +132,7 @@ class AlertController extends Controller
 
     public function showAlerts()
     {
-        $this->getApi();
+        // $this->getApi();
 
         $alerts = Alert::all();
         $users = User::all();
@@ -144,15 +142,18 @@ class AlertController extends Controller
 
     public function addAlert($alert_id)
     {
-        $playlist = new Playlist;
 
-        $user_id = Auth::user()->id;
-        //$user_id = 1;
 
-        $playlist->user_id = $user_id;
-        $playlist->alert_id = $alert_id;
+        // $user_id = Auth::user()->id;
+        $user_id = 1;
 
-        $playlist->save();
+        $playlist = Playlist::firstOrNew(
+            ['user_id' => $user_id, 'alert_id' => $alert_id]
+        );
+        if ($playlist != null) {
+            $playlist->save();
+        }
+
 
         return back()->withInput();
     }
@@ -165,8 +166,8 @@ class AlertController extends Controller
 
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
+
         $user = User::find($id);
-        
 
         $alerts = array();
 
@@ -175,11 +176,10 @@ class AlertController extends Controller
         }
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
-
-
     }
     public function homePlaylist()
     {
+
         // $id = Auth::user()->id;
         $id = 1;
 
@@ -192,7 +192,6 @@ class AlertController extends Controller
         }
 
         return view('home', ['alerts' => $alerts]);
-
     }
 
     public function alert_edit_show($id)
@@ -214,9 +213,8 @@ class AlertController extends Controller
         // retrieve the users
         $users = User::all();
         $alerts = Alert::all();
-        
+
         // function to return the admin page
         return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
-
 }

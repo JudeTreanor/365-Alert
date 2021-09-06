@@ -17,4 +17,8 @@ class Playlist extends Model
     {
         return $this->hasMany(Alert::class, 'alerts_id');
     }
+    protected $fillable = [
+        'user_id',
+        'alert_id'
+    ];
 }

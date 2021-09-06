@@ -53,6 +53,22 @@
 <section>
     <?php $__currentLoopData = $alerts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alert): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php $__currentLoopData = $alert; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($a->type === 'Extreme Danger'): ?>
+            <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+            <div class="extreme_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Danger'): ?>
+            <div class="danger_sidebar" id="sidebar_color"></div>
+            <div class="danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Potential Danger'): ?>
+            <div class="potential_danger_sidebar" id="sidebar_color"></div>
+            <div class="potential_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Low Danger'): ?>
+            <div class="low_danger_sidebar" id="sidebar_color"></div>
+            <div class="low_danger_icon" id="alert_icon"></div>
+            <?php elseif($a->type === 'Dried Up River'): ?>
+            <div class="dried_up_sidebar" id="sidebar_color"></div>
+            <div class="dried_up_icon" id="alert_icon"></div>
+            <?php endif; ?>
             <article class="alert_container">
                 <div class="extreme_danger_sidebar" id="sidebar_color"></div>
                 <div class="extreme_danger_icon" id="alert_icon"></div>
@@ -70,28 +86,7 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </section>
-<h2 class="need-help">Need Help?</h2>
-<section  class="help_container">
-    <img src="<?php echo e(URL::asset('pictures/CGDIS_3_copie.jpg')); ?>" id="image_cgdis" alt="help">
-    <article id="icons_container">
-        <a href="tel">
-            <div>
-                <img src="<?php echo e(URL::asset('pictures/CGDIS_112_White.SVG')); ?>" id="icon_number" alt="help">
-                <p id="number_112">112</p>
-            </div>
-        </a>
-        <a href="WWW.112.PUBLIC.LU">
-            <div>
-                <img src="<?php echo e(URL::asset('pictures/CGDIS_Website_White.SVG')); ?>" id="icon_website" alt="help">
-                <p id="website"><a href="url" style="color:white">www.112.public.lu</a></p>
-            </div>
-        </a>
-        <div>
-            <img src="<?php echo e(URL::asset('pictures/CGDIS_APP_White.SVG')); ?>" id="icon_app" alt="help">
-            <p id="gov_app">GOUVALERT</p>
-        </div>
-    </article>
-</section>
+
 <?php $__env->stopSection(); ?>
 
 
