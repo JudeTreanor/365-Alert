@@ -29,14 +29,34 @@
                 <p class="label">Phone Number</p>
                 <p class="user-data">{{ $user->contact }}</p>
             </div>
+            <a href="{{ route('edit-user', ['id' => $user->id]) }}" class="buttons_container">
+                <button class="buttons_container" type="submit">Edit User</button>
+            </a>
+            <a href="{{ route('delete-user', ['id' => $user->id]) }}" class="buttons_container">
+                <button class="buttons_container" type="submit">Delete User</button>
+            </a>
         </article>
         @endforeach
     </section>
 
     <section id="alerts-list">
         @foreach ($alerts as $alert)
-        <article id="alert-article">
-            <div id="alerts">
+        <article class="alert_container">
+            <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+            <div class="extreme_danger_icon" id="alert_icon"></div>
+            <div class="alert">
+                <h4 id="location">{{$alert->location}}</h4>
+                <p id="alert_type">{{$alert->type}}</p>
+                <p id="description">The flood alert is in {{$alert->description}} status.</p>
+                <p id="river">River {{$alert->river}}</p>
+                <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
+                <p id="water_level">Water Caution Level: {{$alert->water_caution_level . " cm"}}</p>
+                <p id="water_level">Water Pre-Alert Level: {{$alert->water_prealert_level . " cm"}}</p>
+                <p id="water_level">Water Alert Level: {{$alert->water_alert_level . " cm"}}</p>
+                <p id="updated">{{$alert->updated_at}}</p>
+                <a href="{{ route('alert-edit', ['id' => $alert->id]) }}" class="buttons_container">
+                    <button class="buttons_container" type="submit">Edit Alert Settings</button>
+                </a>
             </div>
         </article>
         @endforeach
