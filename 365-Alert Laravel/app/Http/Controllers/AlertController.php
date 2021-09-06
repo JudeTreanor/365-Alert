@@ -178,5 +178,20 @@ class AlertController extends Controller
 
 
     }
+    public function homePlaylist()
+    {
+        $id = 1;
+
+        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
+        $alerts = array();
+        
+        foreach ($playlistAlerts as $alert) {
+            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
+        }
+
+        return view('home', ['alerts' => $alerts]);
+
+    }
 
 }
