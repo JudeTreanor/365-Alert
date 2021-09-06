@@ -178,5 +178,44 @@ class AlertController extends Controller
 
 
     }
+    public function homePlaylist()
+    {
+        $id = 1;
+
+        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
+        $alerts = array();
+        
+        foreach ($playlistAlerts as $alert) {
+            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
+        }
+
+        return view('home', ['alerts' => $alerts]);
+
+    }
+
+    public function alert_edit_show($id)
+    {
+        $alert = Alert::find($id);
+
+        return view('alert-edit', ['alert' => $alert]);
+    }
+    public function alert_edit_submit(Request $request, $id)
+    {
+        $alert = Alert::find($id);
+
+        $alert->water_caution_level = $request->water_caution_level;
+        $alert->water_prealert_level = $request->water_prealert_level;
+        $alert->water_alert_level = $request->water_alert_level;
+
+        $alert->save();
+
+        // retrieve the users
+        $users = User::all();
+        $alerts = Alert::all();
+        
+        // function to return the admin page
+        return view('admin', ['users' => $users, 'alerts' => $alerts]);
+    }
 
 }
