@@ -146,8 +146,8 @@ class AlertController extends Controller
     {
         $playlist = new Playlist;
 
-        $user_id = Auth::user()->id;
-        //$user_id = 1;
+        // $user_id = Auth::user()->id;
+        $user_id = 1;
 
         $playlist->user_id = $user_id;
         $playlist->alert_id = $alert_id;
