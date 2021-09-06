@@ -16,30 +16,30 @@
         @foreach ($users as $user)
 
         <article id="user-article">    
-            <div id="names">
+            <div id="user-details">
                 <p class="label">First Name</p>
                 <p class="user-data">{{ $user->firstname }}</p>
                 <p class="label">Last Name</p>
                 <p class="user-data">{{ $user->lastname}}</p>
-            </div>
-            <div id="contact">
                 <p class="label">Email</p>
                 <p class="user-data">{{ $user->email }}</p>
-                <p class="label">Passwrod</p>
+                <p class="label">Password</p>
                 <p class="user-data">{{ $user->password }}</p>
                 <p class="label">Phone Number</p>
                 <p class="user-data">{{ $user->contact }}</p>
             </div>
-            <a href="{{ route('edit-user', ['id' => $user->id]) }}" class="buttons_container">
-                <button class="buttons_container" type="submit">Edit User</button>
-            </a>
-            <a href="{{ route('delete-user', ['id' => $user->id]) }}" class="buttons_container">
-                <button class="buttons_container" type="submit">Delete User</button>
-            </a>
+            <div id="buttons_cont">
+                <a href="{{ route('edit-user', ['id' => $user->id]) }}" class="buttons_container">
+                    <button class="buttons_container" type="submit">Edit User</button>
+                </a><br>
+                <a href="{{ route('delete-user', ['id' => $user->id]) }}" class="buttons_container">
+                    <button class="buttons_container" type="submit">Delete User</button>
+                </a>
+            </div>
         </article>
         @endforeach
     </section>
-
+    <h2 id="alerts-title">Alerts Settings</h2>
     <section id="alerts-list">
         @foreach ($alerts as $alert)
 
@@ -48,8 +48,6 @@
             <div class="extreme_danger_icon" id="alert_icon"></div>
             <div class="alert">
                 <h4 id="location">{{$alert->location}}</h4>
-                <p id="alert_type">{{$alert->type}}</p>
-                <p id="description">The flood alert is in {{$alert->description}} status.</p>
                 <p id="river">River {{$alert->river}}</p>
                 <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
                 <p id="water_level">Water Caution Level: {{$alert->water_caution_level . " cm"}}</p>

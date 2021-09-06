@@ -6,7 +6,7 @@
 
 {{-- CSS Link --}}
 @section('css')
-<link rel="stylesheet" href="{{ URL::asset('css/home.css'); }}">
+<link rel="stylesheet" href="{{ URL::asset('css/alert-edit.css'); }}">
 @endsection
 
 {{-- Main Content Section --}}
