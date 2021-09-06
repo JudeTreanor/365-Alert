@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Models\Alert;
+use App\Models\Playlist;
 
 class RegisteredUserController extends Controller
 {
@@ -54,6 +56,18 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         //return redirect(RouteServiceProvider::HOME);
-        return view('home');
+        $id = Auth::user()->id;
+
+        //$id = 1;
+
+        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
+
+        $alerts = array();
+
+        foreach ($playlistAlerts as $alert) {
+            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
+        }
+
+        return view('home', ['alerts' => $alerts]);
     }
 }
