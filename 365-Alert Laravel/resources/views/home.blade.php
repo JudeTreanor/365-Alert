@@ -70,7 +70,7 @@
             @endforeach
             @endforeach
 </section>
-<h2 class="need-help">Need Help?</h2>
+{{-- <h2 class="need-help">Need Help?</h2>
 <section  class="help_container">
     <img src="{{URL::asset('pictures/CGDIS_3_copie.jpg')}}" id="image_cgdis" alt="help">
     <article id="icons_container">
@@ -91,7 +91,7 @@
             <p id="gov_app">GOUVALERT</p>
         </div>
     </article>
-</section>
+</section> --}}
 @endsection
 
 {{-- Footer Section --}}
