@@ -144,7 +144,7 @@ class AlertController extends Controller
 
     public function addAlert($alert_id)
     {
-        
+
         // $user_id = Auth::user()->id;
         $user_id = 1;
 
@@ -154,6 +154,7 @@ class AlertController extends Controller
         if ($playlist != null) {
             $playlist->save();
         }
+
 
         return back()->withInput();
     }

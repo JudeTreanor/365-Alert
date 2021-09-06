@@ -28,6 +28,7 @@
     </header>
 
     @auth
+    // The user is authenticated...
     <ul id="navigation">
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About</a></li>
@@ -40,6 +41,7 @@
     </ul>
     @endauth
     @guest
+    // The user is not authenticated...
     <ul id="navigation">
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About</a></li>
