@@ -6,7 +6,7 @@
 
 {{-- CSS Link --}}
 @section('css')
-<link rel="stylesheet" href="{{ URL::asset('css/admin.css'); }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/admin.css') }}">
 @endsection
 
 {{-- Main Content Section --}}
@@ -14,6 +14,7 @@
     <h1 id="section-title">Users</h1>
     <section id="users-list">
         @foreach ($users as $user)
+
         <article id="user-article">    
             <div id="names">
                 <p class="label">First Name</p>
@@ -41,6 +42,7 @@
 
     <section id="alerts-list">
         @foreach ($alerts as $alert)
+
         <article class="alert_container">
             <div class="extreme_danger_sidebar" id="sidebar_color"></div>
             <div class="extreme_danger_icon" id="alert_icon"></div>
@@ -59,6 +61,7 @@
                 </a>
             </div>
         </article>
+
         @endforeach
     </section>
 
@@ -66,10 +69,10 @@
 
 {{-- Footer Section --}}
 @section('footer')
-    
+
 @endsection
 
 {{-- Scripts links --}}
 @section('scripts')
-    
+
 @endsection
