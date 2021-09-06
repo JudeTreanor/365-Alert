@@ -27,7 +27,8 @@
 
     </header>
 
-
+    @auth
+    // The user is authenticated...
     <ul id="navigation">
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About</a></li>
@@ -38,12 +39,20 @@
         <li><a href="{{ route('client-settings') }}">Client Settings</a></li>
         <li><a href="{{ route('admin') }}">Admin</a></li>
     </ul>
-
+    @endauth
+    @guest
+    // The user is not authenticated...
+    <ul id="navigation">
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
+    </ul>
+    @endguest
     <ul class="register">
         <button><a href="{{ route('home') }}">My Settings</a></button>
         <button><a href="{{ route('logout') }}">Log Out</a></button>
     </ul>
-    @csrf
+
 
 
 
