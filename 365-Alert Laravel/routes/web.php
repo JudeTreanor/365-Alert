@@ -43,17 +43,19 @@ Route::get('/email', function () {
 Route::get('/admin', [UserController::class, 'adminUsersList'])->name('admin');
 
 // Route to edit a specific user selected in the list
-Route::get('/admin/edit/{id}', [UserController::class, 'adminUserEdit']);
+Route::get('/admin/edit/{id}', [UserController::class, 'adminUserEdit'])->name('edit-user');
 
 // Route to update the user information
 Route::post('/admin/edit/{id}', [UserController::class, 'adminUserUpdate']);
 
 // Route to delete specific user
-Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete']);
+Route::get('/admin/delete/{id}', [UserController::class, 'adminUserDelete'])->name('delete-user');
 
 
 // Route to show a specific alert details
-Route::post('/alerts/{id}', [AlertController::class, 'alert-show'])->name('alert-show');
+Route::get('/alert-edit/{id}', [AlertController::class, 'alert_edit_show'])->name('alert-edit');
+
+Route::post('/alert-edit/{id}', [AlertController::class, 'alert_edit_submit'])->name('alert-submit');
 
 // Route to the Contact page
 Route::get('/contact', function () {
