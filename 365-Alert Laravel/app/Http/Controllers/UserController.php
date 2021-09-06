@@ -141,4 +141,10 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
     }
+    public function unsubscribe($id)
+    {
+        User::destroy($id);
+
+        return view('home1');
+    }
 }
