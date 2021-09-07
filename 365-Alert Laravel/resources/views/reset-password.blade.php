@@ -25,9 +25,9 @@
 
 <form action="{{ route('password.update', ['token' => $token]) }}" method="post" id="PassReset" >
     @csrf
-    <input type="hidden" name="token" value="{{$token}}">
-    <input type="email" name="email" value="{{ old('email') }}" placeholder="email" class="input-email" >
-    <input type="password" name="password" placeholder="New password" class="input-password" onfocus="this.placeholder=''" onblur="this.placeholder='password'">
+    <input type="hidden" name="token" value="{{$token}}"><br>
+    <input type="email" name="email" value="{{ old('email') }}" placeholder="email" class="input-email" ><br>
+    <input type="password" name="password" placeholder="New password" class="input-password" onfocus="this.placeholder=''" onblur="this.placeholder='password'"><br>
     <input type="password" name="password_confirmation" placeholder="Confirm password" class="input-password"><br>
 
 
