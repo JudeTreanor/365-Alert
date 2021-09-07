@@ -132,5 +132,15 @@ form {
     color: white;
 }
 
+input:hover {
+    background-color: var(--grey);
+    color: white;
+}
+
+#submit:hover {
+    background-color: var(--white);
+    color: var(--green);
+}
+
 footer {
 }
