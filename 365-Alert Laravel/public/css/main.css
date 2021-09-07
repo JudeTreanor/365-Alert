@@ -114,7 +114,6 @@ ul #navigation-short {
     transform: translateX(0%);
 }
 
-
 #navigation>li>a:active {
     background-color: var(--dark_green);
 }
@@ -122,6 +121,7 @@ ul #navigation-short {
 #navigation-short>li>a:active {
     background-color: var(--dark_green);
 }
+
 
 /* ul #navigation-short {
     display: flex;
@@ -142,7 +142,6 @@ ul #navigation-short {
     height: 100vh;
     width: 50%;
 }
-
 
 #navigation-short.opened {
     transform: translateX(0%);
@@ -247,6 +246,9 @@ footer img {
 
 @media screen and (min-width: 900px) {
     header #action {
+        display: none;
+    }
+    header img {
         display: none;
     }
     header h2 {

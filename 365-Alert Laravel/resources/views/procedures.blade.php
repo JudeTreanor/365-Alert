@@ -194,25 +194,7 @@
                 </p>
                 <br>
                 <br>
-
-                <div id="help">
-                    <h3>Need Help?</h3>
-                </div>
-            </div>
-
-    </section>
-
-    <section class="last">
-        <div class="help">
-            <div class="call">
-                <p>112</p>
-                <img src="{{URL::asset('pictures/CGDIS_112_White.svg')}}" alt="">
-            </div>
-            <div class="web">
-                <p></p>
-            </div>
-        </div>
-    </section>
+                
 </main>
 @endsection
 
