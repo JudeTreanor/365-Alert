@@ -23,8 +23,7 @@
                 <p class="user-data"><?php echo e($user->lastname); ?></p>
                 <p class="label">Email</p>
                 <p class="user-data"><?php echo e($user->email); ?></p>
-                <p class="label">Password</p>
-                <p class="user-data"><?php echo e($user->password); ?></p>
+                
                 <p class="label">Phone Number</p>
                 <p class="user-data"><?php echo e($user->contact); ?></p>
             </div>
