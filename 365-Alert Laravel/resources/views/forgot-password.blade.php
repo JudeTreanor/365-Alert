@@ -1,5 +1,5 @@
 {{-- Extending the template --}}
-@extends('layouts.simpletemplate')
+@extends('layouts.mytemplate')
 
 {{-- Setting the Page title --}}
 @section('title', 'Forgot Password')
@@ -13,7 +13,7 @@
 
 {{-- Main Content Section --}}
 @section('content')
-<img src="{{URL::asset('../css/logos/house.svg')}}" alt="">
+<img src="{{URL::asset('../css/logos/house.svg')}}" alt="" class="icon_365">
 <h3>Forgot password</h3>
 
 <form action="{{route('password.email')}}" method="post" id="PassForget" >
@@ -26,7 +26,7 @@
     </ul>
 @endif
     <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" class="input-email" onfocus="this.placeholder=''"
-    onblur="this.placeholder='email'">
+    onblur="this.placeholder='email'"><br>
 
     <input type="submit" value="Send" id="send1">
 

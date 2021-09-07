@@ -12,10 +12,6 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Middleware\EnsureUserIsLoggedIn;
 
 
-
-
-
-
 // Route to the show the login page
 Route::get('/login', function () {
     return view('login');
@@ -40,8 +36,6 @@ Route::post('/register', [RegisteredUserController::class, 'store'])->name('regi
 Route::get('/forgot-password', function () {
     return view('forgot-password');
 })->middleware('guest')->name('password.request');
-
-
 // Route to submit the forgotten password form
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
@@ -51,8 +45,8 @@ Route::post('/forgot-password', function (Request $request) {
     );
 
     return $status === Password::RESET_LINK_SENT
-        ? back()->with(['status' => __($status)])
-        : back()->withErrors(['email' => __($status)]);
+        ? back()->with(['status' => ($status)])
+        : back()->withErrors(['email' => ($status)]);
 })->middleware('guest')->name('password.email');
 
 
@@ -85,8 +79,8 @@ Route::post('/reset-password/token={token}', function (Request $request) {
     );
 
     return $status === Password::PASSWORD_RESET
-        ? redirect()->route('login')->with('status', __($status))
-        : back()->withErrors(['email' => [__($status)]]);
+        ? redirect()->route('login')->with('status', ($status))
+        : back()->withErrors(['email' => [($status)]]);
 })->middleware('guest')->name('password.update');
 
 
@@ -94,4 +88,3 @@ Route::post('/reset-password/token={token}', function (Request $request) {
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
 ->middleware('auth')
 ->name('logout');
-
