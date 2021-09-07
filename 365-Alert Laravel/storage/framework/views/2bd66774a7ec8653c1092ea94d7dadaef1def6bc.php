@@ -13,37 +13,30 @@
 
 <?php $__env->startSection('content'); ?>
 
-<img src="<?php echo e(URL::asset('../css/logos/house.svg')); ?>" alt="" class="icon_365" >
-<h3>Login</h3>
+    <img src="<?php echo e(URL::asset('../css/logos/house.svg')); ?>" alt="" class="icon_365">
+    <h3>Login</h3>
 
-<?php if(session('status')): ?>
-    <div class="alert alert-success">
-        <?php echo e(session('status')); ?>
+    <?php if(session('status')): ?>
+        <div class="alert alert-success">
+            <?php echo e(session('status')); ?>
 
-    </div>
-<?php endif; ?>
+        </div>
+    <?php endif; ?>
 
-<?php if($errors->any()): ?>
-    <div class="alert alert-danger">
-        <ul>
-            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <li><?php echo e($error); ?></li>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </ul>
-    </div>
-<?php endif; ?>
-<form action="" method="post">
-    <!-- Security token for Laravel : Mandatory in forms -->
-    <?php echo csrf_field(); ?>
-    <section class="flex_container">
-        <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
-        onblur="this.placeholder='Email'" >
-        <input type="password" name="password" placeholder="Password" class="input-password" >
-    </section>
-    <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
-    <input type="submit" value="login" id="submit2">
-</form>
-<a href="<?php echo e(route('register')); ?>"><button id="submit2">Don't have an account yet ? Register here!</button></a>
+    <form action="" method="post">
+        <!-- Security token for Laravel : Mandatory in forms -->
+        <?php echo csrf_field(); ?>
+        <section class="flex_container">
+            <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
+                onblur="this.placeholder='Email'">
+            <p class="login_errors"><?php echo e($errors->first('email')); ?></p>
+            <input type="password" name="password" placeholder="Password" class="input-password">
+            <p class="login_errors"><?php echo e($errors->first('password')); ?></p>
+        </section>
+        <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
+        <input type="submit" value="login" id="submit2">
+    </form>
+    <a href="<?php echo e(route('register')); ?>">Don't have an account yet? Register here!</a>
 
 <?php $__env->stopSection(); ?>
 

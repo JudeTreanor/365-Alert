@@ -1,9 +1,16 @@
 :root {
-    --white: #efefef;
+    --grey: #efefef;
     --green: #0b9e99;
     --blue: #16354d;
     --dark_green: #037c87;
     --purple: #2b3371;
+    --darkgrey: #dcdcdc;
+    --red: #d90000;
+    --orange: #ff6501;
+    --darkgrey: #8f8f8f;
+    --yellow: #ffcc01;
+    --alertgreen: #12600a;
+    --alertbrown: #a37114;
 }
 
 .content{
@@ -61,7 +68,6 @@
     margin-bottom: 10px;   
     margin-top: 10px; 
     margin: 5px;   
- 
 }
 
 /*Alert Settings */
@@ -105,25 +111,49 @@
 	padding-bottom: 5px;
 
 }
+button:hover {
+    background-color: rgb(46, 100, 100);
+    color: var(--grey);
+}
+
+button:active {
+    background-color: var(--grey);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 /*tablet view*/
 @media screen and (min-width: 600px) {
 	#user-article{
         display: flex;
-        flex-direction: row;
+        /* flex-direction: row; */
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        width: 95%;
 
     }
 
     #user-details{
         column-count: 2;
-        column-gap: 100px;
+        width: 60%;
+        justify-content: space-between;
+        
+        /* column-gap: 100px; */
     }
     
     #buttons_cont{
-        margin-left: 100px;
-
+        /* margin-left: 100px; */
+        width: 40%;
     }
 
+}
+@media screen and (min-width: 900px){
+    #user-article {
+        flex-wrap: nowrap;
+    }
+    #users-list{
+    margin: 0 auto;
+    width: 100%;
+    }
 }
