@@ -76,9 +76,12 @@
             <p id="river">River {{$alert->river}}</p>
             <p id="water_level">Water Level: {{$alert->water_level . " cm"}}</p>
             <p id="updated">{{$alert->updated_at}}</p>
-            <a href="{{ route('add-alert', ['alert_id' => $alert->id]) }}" class="buttons_container">
-                <button class="buttons_container" type="submit">Add To List</button>
-            </a>
+            <div id="flex_buttons">
+                <a style="text-decoration:none" href="{{ route('add-alert', ['alert_id' => $alert->id]) }}" class="buttons_container">
+                    <button type="submit" id="button_hover">Add To List</button>
+                </a>
+                <a href="{{ route('procedures') }}" class="buttons_container"><button id="button_hover">Procedures</button></a>
+            </div>
         </div>
     </article>
     @endforeach

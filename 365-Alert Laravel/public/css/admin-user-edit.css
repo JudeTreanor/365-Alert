@@ -72,3 +72,18 @@ main {
 
 	
 }
+
+/*Hover*/
+
+#submit_btn:hover {
+    background-color: rgb(46, 100, 100);
+    color: var(--grey);
+}
+
+#submit_btn:active {
+    background-color: var(--grey);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+

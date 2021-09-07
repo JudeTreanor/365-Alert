@@ -16,8 +16,10 @@
 <section class="home">
     <div class="register-box">
         <p class="intro-text">Be alert 365 days <br> if potential flood appears</p>
-        <li><a class="btn-register" href="{{ route('register') }}">Sign up</a></li><br>
-        <li><a class="btn-login" href="{{ route('login') }}">Login</a></li>
+
+        <a style="text-decoration:none" class="btn-register" id="flex_buttons" href="{{ route('register') }}">Sign up</a>
+        <a style="text-decoration:none" class="btn-login" id="flex_buttons" href="{{ route('login') }}">Login</a>
+
     </div>
     <ul class="icons_container">
         <li class="icons_flex">
