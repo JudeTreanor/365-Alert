@@ -4,8 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
-class EnsureUserIsAdmin
+
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,12 +18,16 @@ class EnsureUserIsAdmin
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {
-        if (!$request->session()->has('admin')){
-            return redirect('/home');
-        }
+    { 
+        $id = Auth::user()->id;
 
+        $user = User::find($id);
+
+        if($user->admin != 1){
+            return redirect()->route('home');
+        }
         return $next($request);
+    
     }
 
 

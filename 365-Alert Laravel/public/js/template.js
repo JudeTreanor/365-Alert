@@ -9,4 +9,3 @@ function open() {
     navigation.classList.toggle('opened');
 }
 button.addEventListener('click', open);
-

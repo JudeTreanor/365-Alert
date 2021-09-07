@@ -64,7 +64,7 @@ body,section, main {
 .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 
@@ -81,7 +81,8 @@ body,section, main {
 
 .icons_container p {
     margin: 0 auto;
-    width: 200px; 
+    width: 200px;
+ 
 }
 
 .i_container{
@@ -117,8 +118,8 @@ body,section, main {
 }
 
 
-/*Tablet View - Responsive*/
 
+/*Tablet View - Responsive*/
 
 @media (min-device-width: 600px) {
     /*Icons*/
@@ -145,12 +146,6 @@ body,section, main {
         height: 100vh;
     }
 
-    .flood_container{
-        background-color: var(--grey);
-    }
-    
-    
-
 
 }
 
@@ -171,9 +166,6 @@ body,section, main {
     .i_container p{
         font-size: 16px;
     }
-    
-    
-
 
 }
 
