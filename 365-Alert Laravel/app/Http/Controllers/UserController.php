@@ -99,9 +99,10 @@ class UserController extends Controller
 
     public function loggedUserShow()
     {
-        $id = Auth::user()->id;
 
         // Look for the specific User ID
+        $id = Auth::user()->id;
+
         $users = User::find($id);
 
         return view('client-settings', ['user' => $users]);
@@ -138,12 +139,21 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
     }
-    public function unsubscribe()
-    {   
+    public function deleteAccount()
+    {
         $id = Auth::user()->id;
 
         User::destroy($id);
 
-        return view('home1');
+        return redirect()->route('home1');
+    }
+
+    public function unsubscribe()
+    {
+        $id = Auth::user()->id;
+
+        $playlist = Playlist::where('user_id', '=', $id)->delete();
+
+        return redirect()->route('client-settings');
     }
 }

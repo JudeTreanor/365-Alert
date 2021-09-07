@@ -23,8 +23,18 @@
 
         <h2 id="logo"><a href="<?php echo e(route('home')); ?>">365 Alert</a></h2>
 
-        
-        <a href="<?php echo e(route('login')); ?>"><img id="user-icon" src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt=""></a>
+
+        <?php if(auth()->guard()->guest()): ?>
+            <div class="user-container">
+                <a href="<?php echo e(route('login')); ?>"><img id="user-icon"
+                        src="<?php echo e(URL::asset('pictures/User_WhiteStroke_Header.svg')); ?>" alt=""></a>
+            <?php endif; ?>
+            <?php if(auth()->guard()->check()): ?>
+                <a href="<?php echo e(route('client-settings')); ?>"><img id="user-icon"
+                        src="<?php echo e(URL::asset('pictures/ClientSettings_WhiteStroke_Header.svg')); ?>" alt=""></a>
+                <img id="user-icon" src="<?php echo e(URL::asset('pictures/User_WhiteFull_Header_Logged.svg')); ?>" alt=""></a>
+            </div>
+        <?php endif; ?>
     </header>
 
     <?php if(auth()->guard()->check()): ?>
