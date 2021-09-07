@@ -75,7 +75,7 @@ li{
 .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 
@@ -93,6 +93,7 @@ li{
 .icons_container p {
     margin: 0 auto;
     width: 200px;
+
 }
 
 .i_container{
@@ -128,8 +129,8 @@ li{
 }
 
 
-/*Tablet View - Responsive*/
 
+/*Tablet View - Responsive*/
 
 @media (min-device-width: 600px) {
     /*Icons*/
@@ -156,12 +157,10 @@ li{
         height: 100vh;
     }
 
+
     .flood_container{
         background-color: var(--grey);
     }
-
-
-
 
 }
 
@@ -182,9 +181,6 @@ li{
     .i_container p{
         font-size: 16px;
     }
-
-
-
 
 }
 
