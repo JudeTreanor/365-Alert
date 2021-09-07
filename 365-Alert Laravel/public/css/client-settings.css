@@ -183,6 +183,16 @@ main {
     margin-bottom: 20px;
 }
 
+.buttons_container:hover {
+    background-color: var(--white);
+    color: var(--green);
+}
+.buttons_container:active {
+    background-color: var(--grey);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 #unsub_container button {
     color: white;
     text-transform: uppercase;
