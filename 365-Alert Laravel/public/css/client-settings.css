@@ -96,7 +96,6 @@ main {
 }
 /* end user-details */
 
- 
 /*settings-bar*/
 
 #settings-bar {
@@ -170,9 +169,8 @@ main {
 
 /* end unsub section   */
 
-
 .buttons_container {
-	color: white;
+    color: white;
     text-transform: uppercase;
     font-family: Roboto;
     font-size: 14px;
@@ -185,8 +183,8 @@ main {
     margin-bottom: 20px;
 }
 
-#unsub_container button{
-	color: white;
+#unsub_container button {
+    color: white;
     text-transform: uppercase;
     font-family: Roboto;
     font-size: 14px;
@@ -199,33 +197,30 @@ main {
     margin-bottom: 20px;
 }
 
-#unsub_container p{
-	margin-top: 40px;
-	margin-bottom: 20px;
-
+#unsub_container p {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
-
 
 /*Desktop view*/
 
 @media screen and (min-width: 860px) {
-	#user-details,
-	#change-password {
-		margin: 0 auto;
-		width: 900px;
-		align-items: center;
-	}
-	.red-buttons {
-		display: flex;
-		justify-content: space-between;
-		width: 800px;
-		align-items: center;
-	}
+    #user-details,
+    #change-password {
+        margin: 0 auto;
+        width: 900px;
+        align-items: center;
+    }
+    .red-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 800px;
+        align-items: center;
+    }
 
-	.alert_container{
-		margin: 0 auto;
-		width: 900px;
-		align-items: center;
-	}
-
-	
+    .alert_container {
+        margin: 0 auto;
+        width: 900px;
+        align-items: center;
+    }
+}
