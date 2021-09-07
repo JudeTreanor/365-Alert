@@ -97,7 +97,7 @@ class AlertController extends Controller
 
                         // Find the alert
                         $alert = Alert::find($response->id);
-
+                        
                         // Set the Attributes
                         $alert->type = 'Low Danger';
                         $alert->description = 'awareness';
@@ -216,5 +216,11 @@ class AlertController extends Controller
 
         // function to return the admin page
         return view('admin', ['users' => $users, 'alerts' => $alerts]);
+    }
+    public function removeAlert($id)
+    {
+        $alert = Playlist::where('alert_id', $id)->delete();
+
+        return redirect()->route('client-settings');
     }
 }
