@@ -99,8 +99,8 @@ class UserController extends Controller
 
     public function loggedUserShow()
     {
-        // $id = Auth::user()->id;
-        $id = 1;
+        $id = Auth::user()->id;
+        // $id = 1;
         // Look for the specific User ID
 
         $users = User::find($id);
@@ -110,9 +110,9 @@ class UserController extends Controller
     public function editClientSettingsShow()
     {
         // Look for the specific User ID
-        // $id = Auth::user()->id;
+        $id = Auth::user()->id;
 
-        $id = 1;
+        // $id = 1;
 
         $user = User::find($id);
 

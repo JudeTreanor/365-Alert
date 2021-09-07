@@ -99,5 +99,7 @@ Route::post('client-settings-edit/{id}', [UserController::class, 'editClientSett
 // Route to add to the playlist a specific alert
 Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->name('add-alert');
 
+Route::get('/unsubscribe', [UserController::class, 'unsubscribe'])->name('unsubscribe');
+
 //route of login,register,forgot-password, reset-password, logout
 require __DIR__ . '/myauth.php';
