@@ -101,5 +101,16 @@ Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->middl
 
 Route::get('unsubscribe', [UserController::class, 'unsubscribe'])->middleware('auth')->name('unsubscribe');
 
+// Route to Delete the account
+Route::get('/unsubscribe', [UserController::class, 'unsubscribe'])->name('unsubscribe');
+
+// Route to remove an alert from the playlist/favorites
+Route::get('/removealert/{id}', [AlertController::class, 'removeAlert'])->name('removealert');
+
+// Route to the Contact page
+Route::get('/contact', [ContactUsController::class, 'showContactForm'])->name('contact');
+
+Route::post('/contact', [ContactUsController::class, 'submitContactForm'])->name('contact.submit');
+
 //route of login,register,forgot-password, reset-password, logout
 require __DIR__ . '/myauth.php';

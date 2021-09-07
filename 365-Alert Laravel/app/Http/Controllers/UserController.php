@@ -100,10 +100,9 @@ class UserController extends Controller
     public function loggedUserShow()
     {
         $id = Auth::user()->id;
-     
+
         // Look for the specific User ID
         $users = User::find($id);
-
 
         return view('client-settings', ['user' => $users]);
     }
