@@ -180,7 +180,7 @@ section {
     background-color: var(--alertbrown);
     padding-right: 10px;
     margin-right: 10px;
-}    
+}
 
 .alerts_title {
     background-color: var(--dark_green);
@@ -199,6 +199,9 @@ section {
     font-family: Roboto;
     font-size: 15px;
     color: white;
+    display: grid;
+    justify-content: flex-start;
+    text-align: justify;
 }
 
 .alert_container {
@@ -206,7 +209,6 @@ section {
     margin: 0 auto;
     display: flex;
     margin-bottom: 10px;
-    
 }
 
 #alert_icon {
@@ -241,10 +243,10 @@ section {
 
 .buttons_container {
     margin-top: 20px;
-    display: flex;
     justify-content: left;
     align-items: left;
     background-color: #efefef;
+    margin-bottom: 8px;
 }
 
 .buttons_container button {
@@ -258,7 +260,7 @@ section {
     border-style: none;
     border-radius: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 #alert_type {
@@ -429,7 +431,7 @@ section {
         margin: 0 auto;
         width: 1000px;
     }
-    
+
     /*Alerts*/
     #alert_icon {
         width: 400px;
@@ -440,9 +442,11 @@ section {
     .alert {
         margin: 0 auto;
         width: 800px;
-        justify-content: center;
-        align-content: center;
-    }
+        display: grid;
+    justify-content: flex-start;
+    text-align: justify;
+}
+
     .alert_container {
         height: 280px;
         justify-content: center;
