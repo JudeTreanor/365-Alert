@@ -28,7 +28,7 @@
     <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" class="input-email" onfocus="this.placeholder=''"
     onblur="this.placeholder='email'"><br>
 
-    <input type="submit" value="Send" id="send1">
+    <input type="submit" value="Send" id="submit2">
 
     @endsection
 
