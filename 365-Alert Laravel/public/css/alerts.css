@@ -120,6 +120,7 @@ section {
 
 #locations_list li {
     font-size: 13px;
+    white-space: nowrap;
 }
 
 #levels_list li {
@@ -215,6 +216,9 @@ section {
     font-family: Roboto;
     font-size: 15px;
     color: white;
+    display: grid;
+    justify-content: flex-start;
+    text-align: justify;
 }
 
 .alert_container {
@@ -255,9 +259,6 @@ section {
 
 .buttons_container {
     margin-top: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
     background-color: #efefef;
 }
 
@@ -412,8 +413,9 @@ section {
     .alert {
         margin: 0 auto;
         width: 800px;
-        justify-content: center;
-        align-content: center;
+        display: grid;
+        justify-content: flex-start;
+        text-align: justify;
     }
     .alert_container {
         height: 280px;

@@ -6,7 +6,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\VisitorContact;
 use Illuminate\Support\Facades\Mail;
-
 use Illuminate\Support\Facades\Session;
 
 

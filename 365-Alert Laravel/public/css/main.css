@@ -119,6 +119,7 @@ ul #navigation-short {
     transform: translateX(0%);
 }
 
+
 #navigation {
     position: absolute;
     top: 10;
@@ -136,6 +137,7 @@ ul #navigation-short {
 #navigation.opened {
     transform: translateX(0%);
 }
+
 
 #navigation>li>a:active {
     background-color: var(--dark_green);
