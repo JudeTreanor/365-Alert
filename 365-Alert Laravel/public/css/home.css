@@ -108,11 +108,14 @@ section {
     text-align: left;
     color: var(--darkgrey);
     column-count: 2;
+    column-gap: 60px;
 }
 
 #locations_list li {
     font-size: 13px;
+    white-space: nowrap;
 }
+
 
 #levels_list li {
     font-size: 13px;
@@ -399,6 +402,7 @@ section {
     #locations_list {
         list-style-position: inside;
         column-count: 1;
+
     }
     #locations_list li {
         font-size: 18px;
@@ -406,6 +410,7 @@ section {
         padding-right: 25px;
         text-align-last: left;
     }
+
     #levels_list li {
         font-size: 18px;
     }
@@ -427,7 +432,7 @@ section {
     }
     .flex_container {
         margin: 0 auto;
-        width: 1000px;
+        width: 80%;
     }
     
     /*Alerts*/
