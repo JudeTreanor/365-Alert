@@ -52,27 +52,24 @@
 <h2 class="alerts_title">My Alerts</h2>
 <section>
     <?php $__currentLoopData = $alerts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alert): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php $__currentLoopData = $alert; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if($a->type === 'Extreme Danger'): ?>
-            <div class="extreme_danger_sidebar" id="sidebar_color"></div>
-            <div class="extreme_danger_icon" id="alert_icon"></div>
-            <?php elseif($a->type === 'Danger'): ?>
-            <div class="danger_sidebar" id="sidebar_color"></div>
-            <div class="danger_icon" id="alert_icon"></div>
-            <?php elseif($a->type === 'Potential Danger'): ?>
-            <div class="potential_danger_sidebar" id="sidebar_color"></div>
-            <div class="potential_danger_icon" id="alert_icon"></div>
-            <?php elseif($a->type === 'Low Danger'): ?>
-            <div class="low_danger_sidebar" id="sidebar_color"></div>
-            <div class="low_danger_icon" id="alert_icon"></div>
-            <?php elseif($a->type === 'Dried Up River'): ?>
-            <div class="dried_up_sidebar" id="sidebar_color"></div>
-            <div class="dried_up_icon" id="alert_icon"></div>
-            <?php endif; ?>
+        <?php $__currentLoopData = $alert; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <article class="alert_container">
-                <div  id="sidebar_color"></div>
-                <div  id="alert_icon"></div>
-                
+                <?php if($a->type === 'Extreme Danger'): ?>
+                    <div class="extreme_danger_sidebar" id="sidebar_color"></div>
+                    <div class="extreme_danger_icon" id="alert_icon"></div>
+                <?php elseif($a->type === 'Danger'): ?>
+                    <div class="danger_sidebar" id="sidebar_color"></div>
+                    <div class="danger_icon" id="alert_icon"></div>
+                <?php elseif($a->type === 'Potential Danger'): ?>
+                    <div class="potential_danger_sidebar" id="sidebar_color"></div>
+                    <div class="potential_danger_icon" id="alert_icon"></div>
+                <?php elseif($a->type === 'Low Danger'): ?>
+                    <div class="low_danger_sidebar" id="sidebar_color"></div>
+                    <div class="low_danger_icon" id="alert_icon"></div>
+                <?php elseif($a->type === 'Dried Up River'): ?>
+                    <div class="dried_up_sidebar" id="sidebar_color"></div>
+                    <div class="dried_up_icon" id="alert_icon"></div>
+                <?php endif; ?>
                 <div class="alert">
                     <h4 id="location"><?php echo e($a->location); ?></h4>
                     <p id="alert_type"><?php echo e($a->type); ?></p>
@@ -80,11 +77,13 @@
                     <p id="river">River <?php echo e($a->river); ?></p>
                     <p id="water_level">Water Level: <?php echo e($a->water_level . " cm"); ?></p>
                     <p id="updated"><?php echo e($a->updated_at); ?></p>
+                    <a href="<?php echo e(route('add-alert', ['alert_id' => $a->id])); ?>" class="buttons_container">
+                        <button class="buttons_container" type="submit">Add To List</button>
+                    </a>
                 </div>
-            </section>
             </article>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </section>
 
 <?php $__env->stopSection(); ?>

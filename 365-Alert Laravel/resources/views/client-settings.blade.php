@@ -47,7 +47,7 @@
             <div class="alert">
                 <h4 id="location">{{$a->location}}</h4>
                 <p id="river">River {{$a->river}}</p>
-                <a href="{{ route('add-alert', ['alert_id' => $a->id]) }}">
+                <a href="{{ route('removealert', ['id' => $a->id]) }}">
                     <button class="buttons_container" type="submit">Delete Alert</button>
                 </a>
             </div>
