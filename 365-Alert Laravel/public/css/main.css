@@ -54,12 +54,12 @@ header a {
     text-transform: uppercase;
 }
 
-#nav-two>li {
+#navigation-short>li {
     list-style: none;
     padding-bottom: 20px;
 }
 
-#nav-two>li>a {
+#navigation-short>li>a {
     text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
@@ -90,6 +90,12 @@ ul #navigation {
     list-style: none;
 }
 
+ul #navigation-short {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
 #navigation {
     position: absolute;
     top: 10;
@@ -108,17 +114,22 @@ ul #navigation {
     transform: translateX(0%);
 }
 
+
 #navigation>li>a:active {
     background-color: var(--dark_green);
 }
 
-ul #nav-two {
+#navigation-short>li>a:active {
+    background-color: var(--dark_green);
+}
+
+/* ul #navigation-short {
     display: flex;
     justify-content: space-between;
     list-style: none;
-}
+} */
 
-#nav-two {
+#navigation-short {
     position: absolute;
     top: 10;
     left: 0;
@@ -132,11 +143,14 @@ ul #nav-two {
     width: 50%;
 }
 
-#nav-two.opened {
+
+#navigation-short.opened {
     transform: translateX(0%);
+    opacity: 0.9;
+    width: 100%;
 }
 
-#nav-two>li>a:active {
+#navigation-short>li>a:active {
     background-color: var(--dark_green);
 }
 
@@ -232,7 +246,7 @@ footer img {
 /*Desktop view*/
 
 @media screen and (min-width: 900px) {
-    header img {
+    header #action {
         display: none;
     }
     header h2 {
@@ -254,11 +268,29 @@ footer img {
         margin-top: -52px;
         margin-left: 180px;
     }
+    #navigation-short {
+        display: flex;
+        justify-content: flex-start;
+        height: 30px;
+        text-decoration: none;
+        transform: translateX(0);
+        margin-top: -52px;
+        margin-left: 180px;
+    }
     #navigation li a {
         margin-left: -15px;
         font-weight: 500;
     }
-    #nav-two {
+    #navigation-short li a {
+        color: var(--white);
+        text-decoration: none;
+        margin-left: -200px;
+        font-weight: 500;
+    }
+    #navigation-short li {
+        list-style: none;
+    }
+    #nav-navigation-short {
         display: flex;
         height: 30px;
         text-decoration: none;
@@ -266,7 +298,7 @@ footer img {
         margin-top: -52px;
         margin-left: 180px;
     }
-    #nav-two li a {
+    #navigation-short li a {
         margin-left: 20px;
         font-weight: 500;
     }

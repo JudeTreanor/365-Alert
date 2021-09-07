@@ -12,20 +12,26 @@
 {{-- Main Content Section --}}
 @section('content')
 <main>
+
     <section class="contact_image">
         <div></div>
     </section>
     <h2 id="contact_title">Contact Us</h2>
-
+@if(Session::has('message'))
+<div class="alert alert-success">
+{{Session('message')}}
+</div>
+@endif
     <div class="form_container">
         <form action="" method="POST" id="form">
+            @csrf
             <label for="name">Name</label><br>
             <input type="text" id="name" name="name"><br>
             <label for="email">Email</label><br>
             <input type="email" id="email" name="email"><br>
             <label for="message">Message</label><br>
             <textarea name="message" id="message" cols="22" rows="4"></textarea><br>
-            <div class="containerSubmit"><input type="submit" name="submit_button" id="submit_button" value="Send"></div>
+            <div class="containerSubmit"><input type="submit" name="contact.submit" id="submit_button" value="Send"></div>
         </form>
     </div>
 
@@ -42,10 +48,10 @@
 
 {{-- Footer Section --}}
 @section('footer')
-    
+
 @endsection
 
 {{-- Scripts links --}}
 @section('scripts')
-    
+
 @endsection

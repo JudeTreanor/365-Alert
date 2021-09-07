@@ -26,7 +26,7 @@ protected function redirectTo(){
         return route('admin.dashboard');
 
     }elseif(Auth()->user()->role == 2){
-        return route('user';)
+        return route('user.dashboard');
     }
 }
 }

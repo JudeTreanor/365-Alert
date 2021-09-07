@@ -6,10 +6,12 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\ContactUsController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Mail\VisitorContact;
 
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
@@ -32,11 +34,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-//Makes a mailable, access it from /email. Edit it in welcome.blade
-Route::get('/email', function () {
-    Mail::to('hello@example.com')->send(new WelcomeMail());
-    return new WelcomeMail();
-});
+/*Route::get('/email', function () {
+    return view('contact');
+});*/
 
 
 // Route for the admin page to display all of the users list
@@ -57,13 +57,11 @@ Route::get('/alert-edit/{id}', [AlertController::class, 'alert_edit_show'])->nam
 
 Route::post('/alert-edit/{id}', [AlertController::class, 'alert_edit_submit'])->name('alert-submit');
 
-// Route to the Contact page
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+// Route to the Contact page.
+Route::get('/contact', [ContactUsController::class, 'showContactForm'])->name('contact');
+Route::post('/contact', [ContactUsController::class, 'submitContactForm'])->name('contact.submit');
 
-//route to post contact page
-Route::post('/contact', [UserController::class, 'contact-form'])->name('contact-submit');
+
 
 Route::get("/home", [AlertController::class, 'homePlaylist'])->name("home");
 
@@ -72,7 +70,6 @@ Route::get('/', function () {
     return view('home1');
 })->name('home1');
 
-Route::get('client-settings/delete/{id}', [UserController::class, 'unsubscribe'])->name('unsubscribe');
 
 // Route to the procedures
 Route::get('/procedures', function () {
@@ -88,6 +85,7 @@ Route::get('terms', function () {
 
 // Route to submit the User modification
 Route::post('user', [UserController::class, 'modification-submit'])->name('modification-submit');
+
 
 //Route to get the api
 Route::get('/alerts', [AlertController::class, 'showAlerts'])->name('alerts');

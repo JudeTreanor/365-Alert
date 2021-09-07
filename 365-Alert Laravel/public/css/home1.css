@@ -1,103 +1,188 @@
-section {
-    width: 361px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    text-align: center;
+
+/*Variables for colors*/
+
+:root {
+    --grey: #efefef;
+    --green: #0b9e99;
+    --blue: #16354d;
+    --dark_green: #037c87;
+    --purple: #2b3371;
+    --darkgrey: #dcdcdc;
+    --red: #d90000;
+    --orange: #ff6501;
+    --darkgrey: #8f8f8f;
+    --yellow: #ffcc01;
+    --alertgreen: #12600a;
+    --alertbrown: #a37114;
 }
-h1 {
-    color: blue;
-}
-img {
-    width: 361px;
-}
-#img1,
-#img2,
-#img3 {
-    margin-bottom: -74px;
-}
-ul {
+
+body,section, main {
     background-color: #efefef;
 }
 
-h3 {
-    padding: 36px;
-}
-li {
-    list-style: none;
+.home {
+    text-align: center;
 }
 
 
-@media screen and (min-width: 600px) {
-}
-
-/* register-box */
+/* register-box _ intro image */
 .register-box {
-    padding: 40px 20px;
     background: url('../pictures/Home_Register_Cropped.jpg') no-repeat center center/cover;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
 
 }
 
-.register-box p {
-    margin: 18px 0;
-}
-
-.register-box .intro-text {
-margin-bottom: 18px;
-}
-
-
-/* end register box */
-
-#telefone {
-    opacity: 0.45;
-}
-
-.btn {
-    background-color: teal;
-    transform: none;
+.intro-text{
     color: white;
-    text-decoration: none;
-    width: 291px;
-    height: 43px;
-    border-radius: 15px;
-    padding: 2px 46px;
+    font-size: 16px;
+
+}
+
+.btn-register, .btn-login{
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    background-color: #0b9e99;
     border-style: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#procedures {
+
+.intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 24px;
+}
+
+
+/*Icons*/
+
+.icons_container {
+    background-color: #efefef;
+}
+
+.icons_container li {
+    list-style: none;
+
+}
+
+.icons_container p {
+    margin: 0 auto;
+    width: 200px; 
+}
+
+.i_container{
     margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
-/*Responsive desktop*/
-
-@media (min-device-width: 900px) {
-    /*List and Map*/
-    .map_image {
-        width: 80vh;
-    }
-    .flex_container {
-        margin: 0 auto;
-        width: 1000px;
-    }
-    .content {
-        background-color: var(--green);
-    }
-    /*Alerts*/
-    #alert_icon {
-        width: 400px;
-        height: 400px;
-        justify-content: center;
-        align-content: center;
-    }
-    .alert {
-        margin: 0 auto;
-        width: 800px;
-        justify-content: center;
-        align-content: center;
-    }
-    .alert_container {
-        height: 280px;
-        justify-content: center;
-        align-content: center;
-    }
+.i_container p{
+    margin-top: -60px; 
 }
+
+
+/*Flood Map*/
+
+.flood-map {
+    background-color: var(--dark_green);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 30px;
+    color: white;
+    font-size: 24px;
+}
+
+.image_map{
+    background: url('../pictures/Map_Vector_mobile-01.png')no-repeat center center/cover;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+}
+
+.flood_container{
+    background-color: var(--green);
+}
+
+
+/*Tablet View - Responsive*/
+
+
+@media (min-device-width: 600px) {
+    /*Icons*/
+
+    .icons_flex {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    .img1, .img2, .img3{
+        width: 200px;
+        padding: 30px;
+    }
+
+
+    .i_container p{
+        font-size: 13px;
+    }
+
+    .image_map{
+        background: url('../pictures/Map_Vector_desktop-01.png')no-repeat center center/cover;
+        background-position: center;
+        background-size: contain;
+        height: 100vh;
+    }
+
+    .flood_container{
+        background-color: var(--grey);
+    }
+    
+    
+
+
+}
+
+/*Desktop View - Responsive*/
+
+@media (min-device-width: 1000px) {
+    /*Icons*/
+
+    .icons_flex {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    .img1, .img2, .img3{
+        width: 300px;
+    }
+
+    .i_container p{
+        font-size: 16px;
+    }
+    
+    
+
+
+}
+
+    
+
+    
+
+
+
+
+
 

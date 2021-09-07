@@ -23,33 +23,32 @@
 
         <h2 id="logo"><a href="{{ route('home') }}">365 Alert</a></h2>
 
-        <img id="user-icon" src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt="">
-
+        
+        <a href="{{ route('login')}}"><img id="user-icon" src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt=""></a>
     </header>
 
     @auth
-    <ul id="navigation">
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('about') }}">About</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
-        <li><a href="{{ route('alerts') }}">Alerts</a></li>
-        <li><a href="{{ route('procedures') }}">Procedures</a></li>
-        <li><a href="{{ route('terms') }}">Terms</a></li>
-        <li><a href="{{ route('client-settings') }}">Client Settings</a></li>
-        <li><a href="{{ route('admin') }}">Admin</a></li>
-    </ul>
+        <ul id="navigation">
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <li><a href="{{ route('alerts') }}">Alerts</a></li>
+            <li><a href="{{ route('procedures') }}">Procedures</a></li>
+            <li><a href="{{ route('terms') }}">Terms</a></li>
+            <li><a href="{{ route('admin') }}">Admin</a></li>
+        </ul>
+        <ul class="register">
+            <button><a href="{{ route('client-settings') }}">My Settings</a></button>
+            <button><a href="{{ route('logout') }}">Log Out</a></button>
+        </ul>
     @endauth
     @guest
-    <ul id="navigation">
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('about') }}">About</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
-    </ul>
+        <ul id="navigation-short">
+            <li><a href="{{ route('home1') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+        </ul>
     @endguest
-    <ul class="register">
-        <button><a href="{{ route('home') }}">My Settings</a></button>
-        <button><a href="{{ route('logout') }}">Log Out</a></button>
-    </ul>
 
 
 
@@ -109,6 +108,7 @@
     {{-- @include('layouts.nav') --}}
     @yield('scripts')
     <script src="{{ URL::asset('js/template.js') }}"></script>
+    <script src="{{ URL::asset('js/guestnav.js') }}"></script>
 </body>
 
 </html>

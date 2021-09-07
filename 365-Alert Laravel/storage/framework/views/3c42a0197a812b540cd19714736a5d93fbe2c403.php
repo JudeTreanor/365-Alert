@@ -1,7 +1,3 @@
-
-
-
-
 <?php $__env->startSection('title', 'Contact'); ?>
 
 
@@ -12,20 +8,27 @@
 
 <?php $__env->startSection('content'); ?>
 <main>
+
     <section class="contact_image">
         <div></div>
     </section>
     <h2 id="contact_title">Contact Us</h2>
+<?php if(Session::has('message')): ?>
+<div class="alert alert-success">
+<?php echo e(Session('message')); ?>
 
+</div>
+<?php endif; ?>
     <div class="form_container">
         <form action="" method="POST" id="form">
+            <?php echo csrf_field(); ?>
             <label for="name">Name</label><br>
             <input type="text" id="name" name="name"><br>
             <label for="email">Email</label><br>
             <input type="email" id="email" name="email"><br>
             <label for="message">Message</label><br>
             <textarea name="message" id="message" cols="22" rows="4"></textarea><br>
-            <div class="containerSubmit"><input type="submit" name="submit_button" id="submit_button" value="Send"></div>
+            <div class="containerSubmit"><input type="submit" name="contact.submit" id="submit_button" value="Send"></div>
         </form>
     </div>
 
@@ -42,12 +45,12 @@
 
 
 <?php $__env->startSection('footer'); ?>
-    
+
 <?php $__env->stopSection(); ?>
 
 
 <?php $__env->startSection('scripts'); ?>
-    
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.mytemplate', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\GitHub\365-Alert\365-Alert Laravel\resources\views/contact.blade.php ENDPATH**/ ?>
