@@ -87,6 +87,16 @@ a {
     align-items: center;
 }
 
+input:hover {
+    background-color: var(--grey);
+    color: white;
+}
+
+#submit2:hover {
+    background-color: var(--white);
+    color: var(--green);
+}
+
 main {
     border-bottom: 3px solid white;
 }

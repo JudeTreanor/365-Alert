@@ -47,7 +47,7 @@
             <input type="checkbox" name="checkbox" value="check" id="agree" />
             <p>I have read and accept the <span><a href="terms"> Terms and Conditions</a></span></p>
         </div>
-        <input type="submit" value="Register" id="submit">
+        <input class="sub_button_register_page" type="submit" value="Register" id="submit">
         {{-- @endforeach
     @endif --}}
     </form>
