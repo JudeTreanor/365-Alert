@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\user;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -53,18 +54,19 @@ class AuthenticatedSessionController extends Controller
     }
     public function postLogin(Request $request)
     {
+        $credential = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
 
-        $this->validate($request, [
-            'name' => 'required',
-            'password' => 'required',
-        ]);
+        $remember_me  = (!empty($request->remember_me)) ? TRUE : FALSE;
 
-        $credentials = $this->getCredentials($request);
+        if (Auth::attempt($credential)) {
+            $user = User::where(["email" => $credential['email']])->first();
 
-        $remember = $request->input('remember_me');
+            Auth::login($user, $remember_me);
 
-        if (Auth::attempt($credentials, $remember)) {
-            return redirect()->intended($this->redirectPath());
+            // redirect authenticated user to another page
         }
     }
 }
