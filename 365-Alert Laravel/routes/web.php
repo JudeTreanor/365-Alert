@@ -102,6 +102,9 @@ Route::get('/add-alert/{alert_id}', [AlertController::class, 'addAlert'])->middl
 Route::get('unsubscribe', [UserController::class, 'unsubscribe'])->middleware('auth')->name('unsubscribe');
 
 // Route to Delete the account
+Route::get('/delete-account', [UserController::class, 'deleteAccount'])->middleware('auth')->name('delete-account');
+
+// Route to Unsubscribe the account
 Route::get('/unsubscribe', [UserController::class, 'unsubscribe'])->name('unsubscribe');
 
 // Route to remove an alert from the playlist/favorites

@@ -43,6 +43,10 @@ header a {
     color: var(--white);
 }
 
+header {
+    margin: 0 auto;
+}
+
 #navigation>li {
     list-style: none;
     padding-bottom: 20px;
@@ -119,7 +123,6 @@ ul #navigation-short {
     transform: translateX(0%);
 }
 
-
 #navigation {
     position: absolute;
     top: 10;
@@ -137,7 +140,6 @@ ul #navigation-short {
 #navigation.opened {
     transform: translateX(0%);
 }
-
 
 #navigation>li>a:active {
     background-color: var(--dark_green);
@@ -271,9 +273,6 @@ footer img {
 
 @media screen and (min-width: 900px) {
     header #action {
-        display: none;
-    }
-    header img {
         display: none;
     }
     header h2 {

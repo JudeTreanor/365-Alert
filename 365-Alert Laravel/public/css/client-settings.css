@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 /*Variables for colors*/
 
 :root {
@@ -14,11 +15,13 @@
     --purple: #2b3371;
     --darkgrey: #686565c4;
 }
+
 section,
 body,
 main {
     background-color: var(--grey);
 }
+
 
 /* image*/
 
@@ -31,13 +34,33 @@ main {
     width: 200px;
 }
 
+#logout-container {
+    background-color: var(--dark_green);
+    padding-bottom: 30px;
+}
+
+#logout-container button {
+    background-color: var(--green);
+    justify-content: space-around;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px var(--white) solid;
+    border-color: var(--white);
+    background-color: var(--green);
+    color: var(--white);
+    margin-left: 20px;
+}
+
 #client {
     color: white;
     font-size: 26px;
     margin-bottom: 40px;
 }
 
+
 /* user details*/
+
 .user-username,
 .user-email,
 .user-phone {
@@ -57,7 +80,9 @@ main {
     color: var(--darkgrey);
 }
 
+
 /* end user details*/
+
 
 /* change buttons*/
 
@@ -82,7 +107,9 @@ main {
     color: var(--blue);
 }
 
+
 /* end change buttons*/
+
 
 /*user-details*/
 
@@ -94,7 +121,10 @@ main {
     color: var(--blue);
     padding: 50px;
 }
+
+
 /* end user-details */
+
 
 /*settings-bar*/
 
@@ -106,7 +136,10 @@ main {
     padding: 50px;
 }
 
+
 /* end settings-bar*/
+
+
 /* alert section*/
 
 .alert {
@@ -145,7 +178,10 @@ main {
     width: 250px;
 }
 
+
 /* end alert section*/
+
+
 /* unsub section  */
 
 .container_checkbox {
@@ -166,6 +202,7 @@ main {
     font-family: Roboto;
     color: var(--blue);
 }
+
 
 /* end unsub section   */
 
@@ -202,6 +239,7 @@ main {
     margin-bottom: 20px;
 }
 
+
 /*Desktop view*/
 
 @media screen and (min-width: 860px) {
@@ -211,13 +249,15 @@ main {
         width: 900px;
         align-items: center;
     }
+    #logout-container {
+        display: none;
+    }
     .red-buttons {
         display: flex;
         justify-content: space-between;
         width: 800px;
         align-items: center;
     }
-
     .alert_container {
         margin: 0 auto;
         width: 900px;

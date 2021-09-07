@@ -20,19 +20,22 @@
     <header>
 
         <img id="action" src="{{ URL::asset('pictures/Menu_Colapsed_white.svg') }}" alt="">
+        
 
-        <h2 id="logo"><a href="{{ route('home') }}">365 Alert</a></h2>
+        <h2 id="logo"><a href="{{ route('home1') }}">365 Alert</a></h2>
 
 
         @guest
             <div class="user-container">
-                <a href="{{ route('login') }}"><img id="user-icon"
+                <a href="{{ route('home1') }}"><img id="user-icon"
                         src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt=""></a>
             @endguest
             @auth
+            <div>
                 <a href="{{ route('client-settings') }}"><img id="user-icon"
                         src="{{ URL::asset('pictures/ClientSettings_WhiteStroke_Header.svg') }}" alt=""></a>
                 <img id="user-icon" src="{{ URL::asset('pictures/User_WhiteFull_Header_Logged.svg') }}" alt=""></a>
+            </div>
             </div>
         @endauth
     </header>

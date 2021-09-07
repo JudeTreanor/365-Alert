@@ -139,12 +139,21 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
     }
-    public function unsubscribe()
+    public function deleteAccount()
     {
         $id = Auth::user()->id;
 
         User::destroy($id);
 
         return redirect()->route('home1');
+    }
+
+    public function unsubscribe()
+    {
+        $id = Auth::user()->id;
+
+        $playlist = Playlist::where('user_id', '=', $id)->delete();
+
+        return redirect()->route('client-settings');
     }
 }
