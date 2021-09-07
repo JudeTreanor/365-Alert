@@ -23,8 +23,8 @@
                 <p class="user-data">{{ $user->lastname}}</p>
                 <p class="label">Email</p>
                 <p class="user-data">{{ $user->email }}</p>
-                <p class="label">Password</p>
-                <p class="user-data">{{ $user->password }}</p>
+                {{-- <p class="label">Password</p>
+                <p class="user-data">{{ $user->password }}</p> --}}
                 <p class="label">Phone Number</p>
                 <p class="user-data">{{ $user->contact }}</p>
             </div>
