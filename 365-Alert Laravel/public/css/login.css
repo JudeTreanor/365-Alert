@@ -89,7 +89,7 @@ a {
 
 input:hover {
     background-color: var(--grey);
-    color: white;
+    color: var(--dark_green);
 }
 
 #submit2:hover {

@@ -23,8 +23,18 @@
 
         <h2 id="logo"><a href="{{ route('home') }}">365 Alert</a></h2>
 
-        
-        <a href="{{ route('login')}}"><img id="user-icon" src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt=""></a>
+
+        @guest
+            <div class="user-container">
+                <a href="{{ route('login') }}"><img id="user-icon"
+                        src="{{ URL::asset('pictures/User_WhiteStroke_Header.svg') }}" alt=""></a>
+            @endguest
+            @auth
+                <a href="{{ route('client-settings') }}"><img id="user-icon"
+                        src="{{ URL::asset('pictures/ClientSettings_WhiteStroke_Header.svg') }}" alt=""></a>
+                <img id="user-icon" src="{{ URL::asset('pictures/User_WhiteFull_Header_Logged.svg') }}" alt=""></a>
+            </div>
+        @endauth
     </header>
 
     @auth
