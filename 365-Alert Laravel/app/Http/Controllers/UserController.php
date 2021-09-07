@@ -99,20 +99,18 @@ class UserController extends Controller
 
     public function loggedUserShow()
     {
-        // $id = Auth::user()->id;
-        $id = 1;
+        $id = Auth::user()->id;
+     
         // Look for the specific User ID
-
         $users = User::find($id);
+
 
         return view('client-settings', ['user' => $users]);
     }
     public function editClientSettingsShow()
     {
         // Look for the specific User ID
-        // $id = Auth::user()->id;
-
-        $id = 1;
+        $id = Auth::user()->id;
 
         $user = User::find($id);
 
@@ -141,8 +139,10 @@ class UserController extends Controller
 
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
     }
-    public function unsubscribe($id)
-    {
+    public function unsubscribe()
+    {   
+        $id = Auth::user()->id;
+
         User::destroy($id);
 
         return view('home1');

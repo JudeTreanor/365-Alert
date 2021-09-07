@@ -58,7 +58,7 @@
     <section id="unsub_container">
         <h3>Unsubscribe</h3>
         <p>I wish to unsubscribe from 365 Alert services.</p>
-        <a href="{{ route('unsubscribe', ['id' => $user->id])}}"><button>Unsubscribe</button></a>
+        <a href="{{ route('unsubscribe')}}"><button>Unsubscribe</button></a>
     </section>
 </main>
 @endsection
