@@ -50,8 +50,21 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
+    }
+    public function postLogin(Request $request)
+    {
 
+        $this->validate($request, [
+            'name' => 'required',
+            'password' => 'required',
+        ]);
 
+        $credentials = $this->getCredentials($request);
 
+        $remember = $request->input('remember_me');
+
+        if (Auth::attempt($credentials, $remember)) {
+            return redirect()->intended($this->redirectPath());
+        }
     }
 }
