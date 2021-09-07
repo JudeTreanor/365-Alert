@@ -80,7 +80,12 @@ header img {
     width: 100px;
 }
 
+.user-container {
+    margin-right: 20px;
+}
+
 #user-icon {
+    margin-right: -20px;
     width: 75px;
 }
 
@@ -113,6 +118,26 @@ ul #navigation-short {
 #navigation.opened {
     transform: translateX(0%);
 }
+
+
+#navigation {
+    position: absolute;
+    top: 10;
+    left: 0;
+    background-color: var(--green);
+    transform: translateX(-100%);
+    transition-duration: 0.4s;
+    /* transition-timing-function: cubic-bezier(0.4, -0.4, 0.27, 1.4); */
+    transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    border-radius: 0 0 0 0;
+    height: 100vh;
+    width: 50%;
+}
+
+#navigation.opened {
+    transform: translateX(0%);
+}
+
 
 #navigation>li>a:active {
     background-color: var(--dark_green);
