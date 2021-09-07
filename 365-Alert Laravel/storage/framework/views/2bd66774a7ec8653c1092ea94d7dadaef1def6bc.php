@@ -32,6 +32,8 @@
             <p class="login_errors"><?php echo e($errors->first('email')); ?></p>
             <input type="password" name="password" placeholder="Password" class="input-password">
             <p class="login_errors"><?php echo e($errors->first('password')); ?></p>
+            <label for="checkbox">Remember me</label>
+            <input type="checkbox" name="remember_me">
         </section>
         <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
         <input type="submit" value="login" id="submit2">
