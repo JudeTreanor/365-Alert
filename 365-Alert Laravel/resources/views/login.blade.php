@@ -22,22 +22,15 @@
         </div>
     @endif
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     <form action="" method="post">
         <!-- Security token for Laravel : Mandatory in forms -->
         @csrf
         <section class="flex_container">
             <input type="email" name="email" placeholder="Email" class="input-email" onfocus="this.placeholder=''"
                 onblur="this.placeholder='Email'">
+            <p class="login_errors">{{ $errors->first('email') }}</p>
             <input type="password" name="password" placeholder="Password" class="input-password">
+            <p class="login_errors">{{ $errors->first('password') }}</p>
         </section>
         <p><span><a href="forgot-password">Forgot your password?</a></span></p><br>
         <input type="submit" value="login" id="submit2">

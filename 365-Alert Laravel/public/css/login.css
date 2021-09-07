@@ -96,6 +96,14 @@ input:hover {
     background-color: var(--white);
     color: var(--green);
 }
+#submit2:active {
+    background-color: var(--grey);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.login_errors {
+    color: white;
+}
 
 main {
     border-bottom: 3px solid white;
