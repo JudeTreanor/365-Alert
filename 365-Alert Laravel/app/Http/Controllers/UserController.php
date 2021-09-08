@@ -13,21 +13,25 @@ class UserController extends Controller
     // Function to return all viewers to the admin page and put them in a table
     public function adminUsersList()
     {
+        // Fetch all the User and Alert models on the database
         $users = User::all();
         $alerts = Alert::all();
 
-
+        // Return the admin view with the users and alerts collections
         return view('admin', ['users' => $users, 'alerts' => $alerts]);
     }
 
     // Function to return the Admin view to edit the User
     public function adminUserEdit($id)
-    {
+    {   
+        // Find the specific user as received in the function argument
         $user = User::find($id);
 
+        // Return the admin user edit view
         return view('admin-user-edit', ['user' => $user]);
     }
 
+    // Function for the admin to update the user editing 
     public function adminUserUpdate(Request $request, $id)
     {
         // Look for the specific User ID
@@ -42,102 +46,52 @@ class UserController extends Controller
 
         // Save on the model instance
         $user->save();
-
-        // Retrieve the User and the Alerts
-        $users = User::all();
-        $alerts = Alert::all();
-
-        // Return the Client Settings View
-        return view('admin', ['users' => $users, 'alerts' => $alerts]);
+        
+        // Return the admin view
+        return redirect()->route('admin');
     }
 
     // Function to delete an user as an Admin
     public function adminUserDelete($id)
     {
+        // Delete the user with the ID specified in the function argument
         User::destroy($id);
 
-        // retrieve the users
-        $users = User::all();
-        $alerts = Alert::all();
-
-        // function to return the admin page
-        return view('admin', ['users' => $users, 'alerts' => $alerts]);
+        // Return the admin view
+        return redirect()->route('admin');
     }
 
-    // Function to return the user info to edit a specific user settings
-    public function userShow($id)
-    {
-        // Look for the specific User ID
-        $user = User::find($id);
-
-        return view('user', ['user' => $user]);
-    }
-
-    // Function to update a specific user settings
-    public function userUpdate(Request $request, $id)
-    {
-        // Look for the specific User ID
-        $user = User::find($id);
-
-        // Set the Attributes
-        $user->firstName = $request->firstName;
-        $user->lastName = $request->lastName;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->contact = $request->contact;
-
-        // Save on the model instance
-        $user->save();
-
-        // Retrieve the User
-        $user = User::find($id);
-
-        // Return the Client Settings View
-        return view('user', ['user' => $user]);
-    }
-
-
-    public function loggedUserShow()
-    {
-
-        // Look for the specific User ID
-        $id = Auth::user()->id;
-
-        $users = User::find($id);
-
-        return view('client-settings', ['user' => $users]);
-    }
+    // Function to edit the client settings
     public function editClientSettingsShow()
     {
         // Look for the specific User ID
         $id = Auth::user()->id;
 
+        // Use that ID to find the corresponding model in the database
         $user = User::find($id);
 
+        // Return the client settings editing view with that specific user collection
         return view('client-settings-edit', ['user' => $user]);
     }
+
+    // Function to submit the client settings editing
     public function editClientSettingSubmit(Request $request, $id)
-    {
+    {   
+        // Look for the model in the database with the ID received in the function arguments
         $user = User::find($id);
 
+        // Set the attributes for that model
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
         $user->email = $request->email;
         $user->contact = $request->contact;
         $user->password = $request->password;
 
+        // Save the model on the database
         $user->save();
 
-        $alerts = array();
-
-        $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
-
-
-        foreach ($playlistAlerts as $alert) {
-            $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
-        }
-
-        return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
+        // Return the client settings view
+        return redirect()->route('client-settings');
     }
     public function deleteAccount()
     {

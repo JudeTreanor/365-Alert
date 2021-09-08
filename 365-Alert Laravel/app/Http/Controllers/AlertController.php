@@ -130,23 +130,26 @@ class AlertController extends Controller
         }
     }
 
+    // Function to show all the alerts at alerts page
     public function showAlerts()
     {
         // $this->getApi();
 
+        // Fetching the alerts and users
         $alerts = Alert::all();
         $users = User::all();
 
+        // Return the view alerts along with the alerts and users collection
         return view('alerts', ['alerts' => $alerts, 'users' => $users]);
     }
 
+    // Function to add a specific alert to the user playlist
     public function addAlert($alert_id)
     {
-
-
+        // Save the logged user ID in a variable
         $user_id = Auth::user()->id;
-        // $user_id = 1;
 
+        // Check if that alert already exists or not in the playlist and create one if not
         $playlist = Playlist::firstOrNew(
             ['user_id' => $user_id, 'alert_id' => $alert_id]
         );
@@ -154,73 +157,90 @@ class AlertController extends Controller
             $playlist->save();
         }
 
-
+        // Return to the previous page
         return back()->withInput();
     }
+
+    // Function to show the alerts playlist at the client settings page
     public function alertPlaylist()
     {
-        // Look for the specific User ID
+        // Save the logged user ID in a variable
         $id = Auth::user()->id;
 
-        // $id = 1;
-
+        // Grab all the alerts id's where the logged user ID is present
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
-
+        // Find the model for the specific user and save it in a variable
         $user = User::find($id);
 
+        // Create an alerts array to be filled using a loop and sent to the view 
         $alerts = array();
 
+        // Looping through the playlistAlerts to fill the array with all the alerts this user has on his playlist
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
 
+        // Return the client settings view along with the user collection and alerts array of the different alerts
         return view('client-settings', ['user' => $user, 'alerts' => $alerts]);
     }
+
+    // Function to show the homeview along with the users playlist of alerts
     public function homePlaylist()
     {
-
+        // Save the logged user ID in a variable
         $id = Auth::user()->id;
-        // $id = 1;
 
+        // Grab all the alerts id's where the logged user ID is present
         $playlistAlerts = Playlist::all()->where('user_id', '=', $id);
 
+        // Create an alerts array to be filled using a loop and sent to the view 
         $alerts = array();
 
+        // Looping through the playlistAlerts to fill the array with all the alerts this user has on his playlist
         foreach ($playlistAlerts as $alert) {
             $alerts[] = Alert::all()->where('id', '=', $alert->alert_id);
         }
 
+        // Return the home view along with the user collection and alerts array of the different alerts
         return view('home', ['alerts' => $alerts]);
     }
 
+    // Function to edit a specific alert
     public function alert_edit_show($id)
-    {
+    {   
+        // Find the alert model and save it to variable
         $alert = Alert::find($id);
 
+        // Return to the alert editing view with that specific alert information
         return view('alert-edit', ['alert' => $alert]);
     }
+
+    // Submit the alert editing function
     public function alert_edit_submit(Request $request, $id)
-    {
+    {   
+        // Find the alert according to the function arguements
         $alert = Alert::find($id);
 
+        // Changing the original model according to the request values
         $alert->water_caution_level = $request->water_caution_level;
         $alert->water_prealert_level = $request->water_prealert_level;
         $alert->water_alert_level = $request->water_alert_level;
 
+        // Saving the model on the database
         $alert->save();
 
-        // retrieve the users
-        $users = User::all();
-        $alerts = Alert::all();
-
-        // function to return the admin page
-        return view('admin', ['users' => $users, 'alerts' => $alerts]);
+        // Return the admin view
+        return redirect()->route('admin');
     }
-    public function removeAlert($id)
-    {
-        $alert = Playlist::where('alert_id', $id)->delete();
 
+    // Function to remove a specific alert from the user playlist
+    public function removeAlert($id)
+    {   
+        // find the alert with the id we received in the function arguements
+        Playlist::where('alert_id', $id)->delete();
+
+        // Return the client settings view
         return redirect()->route('client-settings');
     }
 }

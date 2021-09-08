@@ -22,8 +22,12 @@
         </section>
         <section id="user-details">
             <div class="user-username">
-                <h2>Username</h2>
+                <h2>First name</h2>
                 <p>{{ $user->firstname }}</p>
+            </div>
+            <div class="user-username">
+                <h2>Last name</h2>
+                <p>{{ $user->lastname }}</p>
             </div>
             <div class="user-email">
                 <h2>Email</h2>

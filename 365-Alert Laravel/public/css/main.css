@@ -280,6 +280,9 @@ footer img {
     header h2 {
         padding: 30px;
     }
+    #user-icon {
+        display: none;
+    }
     #logo {
         display: flex;
         justify-content: flex-start;
