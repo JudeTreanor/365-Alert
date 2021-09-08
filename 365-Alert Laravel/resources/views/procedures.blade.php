@@ -11,7 +11,7 @@
 
 {{-- Main Content Section --}}
 @section('content')
-<main>
+
     <section class="emergency">
         <div id="emergency">
             <img src="{{URL::asset('pictures/Emergency.jpg')}}" alt="">
@@ -195,7 +195,6 @@
                 <br>
                 <br>
                 
-</main>
 @endsection
 
 {{-- Footer Section --}}

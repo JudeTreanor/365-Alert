@@ -139,6 +139,8 @@ ul #navigation-short {
 
 #navigation.opened {
     transform: translateX(0%);
+    opacity: 0.9;
+    width: 100%;
 }
 
 #navigation>li>a:active {

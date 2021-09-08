@@ -132,7 +132,7 @@ class AlertController extends Controller
 
     public function showAlerts()
     {
-        $this->getApi();
+        // $this->getApi();
 
         $alerts = Alert::all();
         $users = User::all();
