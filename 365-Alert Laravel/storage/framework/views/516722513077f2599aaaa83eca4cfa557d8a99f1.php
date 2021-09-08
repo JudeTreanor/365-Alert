@@ -195,7 +195,6 @@
                 <br>
                 <br>
                 
-</main>
 <?php $__env->stopSection(); ?>
 
 
