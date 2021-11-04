@@ -1,2 +1,1 @@
-# 365 Alert
- CodingJobs Group Project aka 365 Alert
+A website that allows people to subscribe and receive alerts of possible real-time floods in Luxembourg. 
