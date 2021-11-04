@@ -66,7 +66,7 @@
         <section id="unsub_container">
             <h3>Unsubscribe</h3>
             <p>Remove the alerts from my favorites.</p>
-            <a href="{{ route('unsubscribe') }}"><button>Delte alerts</button></a>
+            <a href="{{ route('unsubscribe') }}"><button>Delete alerts</button></a>
             <p>You want to delete your account?</p>
             <a href="{{ route('delete-account') }}"><button>Delete account</button></a>
         </section>

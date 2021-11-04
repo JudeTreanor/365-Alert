@@ -133,7 +133,7 @@ class AlertController extends Controller
     // Function to show all the alerts at alerts page
     public function showAlerts()
     {
-        // $this->getApi();
+        $this->getApi();
 
         // Fetching the alerts and users
         $alerts = Alert::all();

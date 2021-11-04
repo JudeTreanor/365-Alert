@@ -85,7 +85,6 @@ class UserController extends Controller
         $user->lastname = $request->lastname;
         $user->email = $request->email;
         $user->contact = $request->contact;
-        $user->password = $request->password;
 
         // Save the model on the database
         $user->save();
